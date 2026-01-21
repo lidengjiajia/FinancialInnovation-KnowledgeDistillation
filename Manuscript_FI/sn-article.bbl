@@ -1,0 +1,292 @@
+\begin{thebibliography}{53}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{#2}}
+ \bibcommenthead
+
+\bibitem[{Agrawal et~al.(1993)Agrawal, Imieli{\'n}ski, and
+  Swami}]{agrawal1993mining}
+Agrawal R, Imieli{\'n}ski T, Swami A (1993) Mining association rules between
+  sets of items in large databases. In: Proceedings of the 1993 ACM SIGMOD
+  International Conference on Management of Data, pp 207--216,
+  \doi{10.1145/170035.170072}
+
+\bibitem[{Aguilar et~al.(2022)Aguilar, Medina-Perez, Loyola-Gonzalez
+  et~al.}]{aguilar2022}
+Aguilar DL, Medina-Perez MA, Loyola-Gonzalez O, et~al (2022) Towards an
+  interpretable autoencoder: a decision-tree-based autoencoder and its
+  application in anomaly detection. IEEE Trans Dependable Secure Comput
+  20(2):1048--1059. \doi{10.1109/TDSC.2022.3148331}
+
+\bibitem[{Altman and Saunders(1998)}]{altman1998credit}
+Altman EI, Saunders A (1998) Credit risk measurement: Developments over the
+  last 20 years. J Bank Finance 21(11-12):1721--1742.
+  \doi{10.1016/S0378-4266(97)00036-8}
+
+\bibitem[{Asencios et~al.(2023)Asencios, Asencios, and
+  Ramos}]{asencios2023profit}
+Asencios R, Asencios C, Ramos E (2023) Profit scoring for credit unions using
+  the multilayer perceptron, {XGBoost} and {TabNet} algorithms: Evidence from
+  peru. Expert Syst Appl 213:118709. \doi{10.1016/j.eswa.2022.118709}
+
+\bibitem[{Baesens et~al.(2003)Baesens, Setiono, Mues, and
+  Vanthienen}]{baesens2003}
+Baesens B, Setiono R, Mues C, et~al (2003) Using neural network rule extraction
+  and decision tables for credit-risk evaluation. Manage Sci 49(3):312--329.
+  \doi{https://doi.org/10.1287/mnsc.49.3.312.12739}
+
+\bibitem[{Beltman et~al.(2025)Beltman, Machado, and
+  Osterrieder}]{beltman2025predicting}
+Beltman J, Machado MR, Osterrieder JR (2025) Predicting retail customers'
+  distress in the finance industry: An early warning system approach. J Retail
+  Consum Serv 82:104101. \doi{10.1016/j.jretconser.2024.104101}
+
+\bibitem[{Bradley and Mangasarian(1998)}]{Bradley1998}
+Bradley PS, Mangasarian OL (1998) Feature selection via concave minimization
+  and support vector machines. In: Shavlik J (ed) Machine Learning: Proceedings
+  of the Fifteenth International Conference (ICML '98). Morgan Kaufmann, San
+  Francisco, CA, USA, pp 82--90
+
+\bibitem[{B{\"u}cker et~al.(2022)B{\"u}cker, Szepannek, Gosiewska, and
+  Biecek}]{bucker2022}
+B{\"u}cker M, Szepannek G, Gosiewska A, et~al (2022) Transparency,
+  auditability, and explainability of machine learning models in credit
+  scoring. J Oper Res Soc 73(1):70--90.
+  \doi{https://doi.org/10.1287/mnsc.49.3.312.12739}
+
+\bibitem[{Bussmann et~al.(2019)Bussmann, Giudici, Marinelli, and
+  Papenbrock}]{bussmann2019}
+Bussmann N, Giudici P, Marinelli D, et~al (2019) Explainable machine learning
+  in credit risk management. Working paper, SSRN, \doi{10.2139/ssrn.3506274}
+
+\bibitem[{Chen et~al.(2019)Chen, Zhang, Ding, Zhang, and Luo}]{CHEN2019}
+Chen SB, Zhang YM, Ding CHQ, et~al (2019) Extended adaptive {Lasso} for
+  multi-class and multi-label feature selection. Knowl-Based Syst 173:28--36.
+  \doi{10.1016/j.knosys.2019.02.021}
+
+\bibitem[{Dastile et~al.(2020)Dastile, {\c{C}}elik, and Potsane}]{DASTILE2020}
+Dastile X, {\c{C}}elik T, Potsane M (2020) Statistical and machine learning
+  models in credit scoring: A systematic literature survey. Appl Soft Comput
+  91:106263. \doi{10.1016/j.asoc.2020.106263}
+
+\bibitem[{Davis and Goadrich(2006)}]{davis2006pr}
+Davis J, Goadrich M (2006) The relationship between precision-recall and roc
+  curves. In: Proceedings of the 23rd International Conference on Machine
+  Learning (ICML), pp 233--240, \doi{10.1145/1143844.1143874}
+
+\bibitem[{Du et~al.(2019)Du, Liu, and Hu}]{Du2019}
+Du M, Liu N, Hu X (2019) Techniques for interpretable machine learning. Commun
+  ACM 63(1):68--77. \doi{10.1145/3359786}
+
+\bibitem[{Dumitrescu et~al.(2022)Dumitrescu, Hu{\'e}, Hurlin, and
+  Tokpavi}]{DUMITRESCU2022}
+Dumitrescu E, Hu{\'e} S, Hurlin C, et~al (2022) Machine learning for credit
+  scoring: Improving logistic regression with non-linear decision-tree effects.
+  Eur J Oper Res 297(3):1178--1192. \doi{10.1016/j.ejor.2021.06.053}
+
+\bibitem[{Fan et~al.(2025)Fan, Zuo, Zhu, and Lu}]{fan2025explainable}
+Fan MR, Zuo JX, Zhu JW, et~al (2025) Explainable anomaly-based intrusion
+  detection for specialized {IoT} environments enabled by rule extraction from
+  autoencoder. IEEE Internet Things J 12(12):19504--19521.
+  \doi{10.1109/JIOT.2025.3542142}
+
+\bibitem[{Feng et~al.(2021)Feng, Wang, Mangalathu et~al.}]{feng2021}
+Feng DC, Wang WJ, Mangalathu S, et~al (2021) Interpretable {XGBoost-SHAP}
+  machine-learning model for shear strength prediction of squat {RC} walls. J
+  Struct Eng (ASCE) 147(11):04021173. \doi{10.1061/(ASCE)ST.1943-541X.0003115}
+
+\bibitem[{Furlanello et~al.(2018)Furlanello, Lipton, Tschannen, Itti, and
+  Anandkumar}]{furlanello2018bornagain}
+Furlanello T, Lipton ZC, Tschannen M, et~al (2018) Born again neural networks.
+  In: International Conference on Machine Learning (ICML)
+
+\bibitem[{Gao et~al.(2025)Gao, Qin, Xiang, and Tan}]{GAO2025}
+Gao P, Qin J, Xiang X, et~al (2025) Knowledge distillation from relative
+  distribution. Expert Syst Appl 284:127736. \doi{10.1016/j.eswa.2025.127736}
+
+\bibitem[{Gorzalczany and Rudzi{\'n}ski(2016)}]{gorzalczany2016}
+Gorzalczany MB, Rudzi{\'n}ski F (2016) A multi-objective genetic optimization
+  for fast, fuzzy rule-based credit classification with balanced accuracy and
+  interpretability. Appl Soft Comput 40:206--220.
+  \doi{10.1016/j.asoc.2015.11.037}
+
+\bibitem[{Gou et~al.(2021)Gou, Yu, Maybank, and Tao}]{Gou2021}
+Gou J, Yu B, Maybank SJ, et~al (2021) Knowledge distillation: A survey. Int J
+  Comput Vis 129(6):1789--1819. \doi{10.1007/s11263-021-01453-z}
+
+\bibitem[{Gou et~al.(2023)Gou, Xiong, Yu, Du, Zhan, and Tao}]{Guo2023}
+Gou J, Xiong X, Yu B, et~al (2023) Multi-target knowledge distillation via
+  student self-reflection. Int J Comput Vis 131:1857--1874.
+  \doi{10.1007/s11263-023-01792-z}
+
+\bibitem[{Gunnarsson et~al.(2021)Gunnarsson, vanden Broucke, Baesens,
+  {\'O}skarsd{\'o}ttir, and Lemahieu}]{GUNNARSSON2021}
+Gunnarsson BR, vanden Broucke S, Baesens B, et~al (2021) Deep learning for
+  credit scoring: Do or don’t? Eur J Oper Res 295(1):292--305.
+  \doi{10.1016/j.ejor.2021.03.006}
+
+\bibitem[{Hassija et~al.(2024)Hassija, Chamola, Mahapatra et~al.}]{hassija2024}
+Hassija V, Chamola V, Mahapatra A, et~al (2024) Interpreting black-box models:
+  a review on explainable artificial intelligence. Cogn Comput 16(1):45--74.
+  \doi{10.1007/s12559-023-10179-8}
+
+\bibitem[{Hayashi(2016)}]{hayashi2016}
+Hayashi Y (2016) Application of a rule extraction algorithm family based on the
+  {Re-RX} algorithm to financial credit risk assessment from a {Pareto} optimal
+  perspective. Oper Res Perspect 3:32--42. \doi{10.1016/j.orp.2016.08.001}
+
+\bibitem[{He et~al.(2023)He, Wang, Jain, Jiang, and Yang}]{HE2023}
+He H, Wang Z, Jain HK, et~al (2023) A privacy-preserving decentralized credit
+  scoring method based on multi-party information. Decis Support Syst
+  166:113910. \doi{10.1016/j.dss.2022.113910}
+
+\bibitem[{Hinton et~al.(2015)Hinton, Vinyals, and Dean}]{hinton2015}
+Hinton G, Vinyals O, Dean J (2015) Distilling the knowledge in a neural
+  network. arXiv, \urlprefix\url{https://arxiv.org/abs/1503.02531},
+  {\href{https://arxiv.org/abs/1503.02531}{{arXiv:1503.02531}}}
+
+\bibitem[{Huang et~al.(2023)Huang, Dong, Wu, Li, and Shi}]{Huang2023}
+Huang T, Dong W, Wu F, et~al (2023) Uncertainty-driven knowledge distillation
+  for language model compression. IEEE/ACM Trans Audio Speech Lang Process
+  31:2850--2858. \doi{10.1109/TASLP.2023.3289303}
+
+\bibitem[{Lan et~al.(2025)Lan, Zeng, Wei, Zhang, Wang, Huang, and He}]{Lan2025}
+Lan X, Zeng Y, Wei X, et~al (2025) Counterclockwise block-by-block knowledge
+  distillation for neural network compression. Sci Rep 15:11369.
+  \doi{10.1038/s41598-025-91152-3}
+
+\bibitem[{Lei et~al.(2024)Lei, Lin, Xiao et~al.}]{lei2024}
+Lei X, Lin L, Xiao B, et~al (2024) Re-exploration of small and micro
+  enterprises' default characteristics based on machine learning models with
+  {SHAP}. Chin J Manag Sci 32(5):1--12.
+  \doi{10.16381/j.cnki.issn1003-207x.2021.0027}
+
+\bibitem[{Lin et~al.(2025)Lin, Zhao, Yin, Pan, Jing, Li, Wang, and
+  Shu}]{LinJS25}
+Lin X, Zhao X, Yin Z, et~al (2025) Knowledge-driven federated learning: A
+  systematic literature review on approaches, challenges, and prospects. J
+  Supercomput 81. \doi{10.1007/s11227-025-07516-z}
+
+\bibitem[{Lundberg and Lee(2017)}]{lundberg2017unified}
+Lundberg SM, Lee SI (2017) A unified approach to interpreting model
+  predictions. In: Adv Neural Inf Process Syst, pp 4765--4774
+
+\bibitem[{Luo et~al.(2017)Luo, Wu, and Wu}]{LUO2017}
+Luo C, Wu D, Wu D (2017) A deep learning approach for credit scoring using
+  credit default swaps. Eng Appl Artif Intell 65:465--470.
+  \doi{10.1016/j.engappai.2016.12.002}
+
+\bibitem[{Martens et~al.(2007)Martens, Baesens, Van~Gestel, and
+  Vanthienen}]{martens2007}
+Martens D, Baesens B, Van~Gestel T, et~al (2007) Comprehensible credit scoring
+  models using rule extraction from support vector machines. Eur J Oper Res
+  183(3):1466--1476. \doi{https://doi.org/10.1016/j.ejor.2006.04.051}
+
+\bibitem[{Rao et~al.(2023)Rao, Liu, and Goh}]{rao2023credit}
+Rao CJ, Liu Y, Goh M (2023) Credit risk assessment mechanism of personal auto
+  loan based on {PSO-XGBoost} model. Complex Intell Syst 9(2):1391--1414.
+  \doi{10.1007/s40747-022-00854-y}
+
+\bibitem[{Romero et~al.(2014)Romero, Ballas, Kahou, Chassang, Gatta, and
+  Bengio}]{romero2014fitnets}
+Romero A, Ballas N, Kahou SE, et~al (2014) Fitnets: Hints for thin deep nets.
+  arXiv, \urlprefix\url{https://arxiv.org/abs/1412.6550},
+  {\href{https://arxiv.org/abs/1412.6550}{{arXiv:1412.6550}}}
+
+\bibitem[{Sagi and Rokach(2020)}]{sagi2020}
+Sagi O, Rokach L (2020) Explainable decision forest: transforming a decision
+  forest into an interpretable tree. Inf Fusion 61:124--138.
+  \doi{10.1016/j.inffus.2020.03.013}
+
+\bibitem[{Samek et~al.(2021)Samek, Montavon, Lapuschkin, Anders, and
+  M{\"u}ller}]{samek2021}
+Samek W, Montavon G, Lapuschkin S, et~al (2021) Explaining deep neural networks
+  and beyond: A review of methods and applications. Proc IEEE 109(3):247--278.
+  \doi{10.1109/JPROC.2021.3060483}
+
+\bibitem[{Shen et~al.(2021)Shen, Zhao, Kou, and Alsaadi}]{SHEN2021}
+Shen F, Zhao X, Kou G, et~al (2021) A new deep learning ensemble credit risk
+  evaluation model with an improved synthetic minority oversampling technique.
+  Appl Soft Comput 98:106852. \doi{10.1016/j.asoc.2020.106852}
+
+\bibitem[{Shwartz-Ziv and Armon(2022)}]{SHWARTZZIV2022}
+Shwartz-Ziv R, Armon A (2022) Tabular data: Deep learning is not all you need.
+  Inf Fusion 81:84--90. \doi{10.1016/j.inffus.2021.11.011}
+
+\bibitem[{Sun et~al.(2024)Sun, Zhang, Tan, Peng, Qu, and Xie}]{SunZ2024}
+Sun T, Zhang Z, Tan X, et~al (2024) Uni-to-multi modal knowledge distillation
+  for bidirectional {LiDAR}-camera semantic segmentation. IEEE Trans Pattern
+  Anal Mach Intell 46(12):11059--11072. \doi{10.1109/TPAMI.2024.3451658}
+
+\bibitem[{Sun et~al.(2023)Sun, Zhang, Li, and Wang}]{sun2023i}
+Sun W, Zhang X, Li M, et~al (2023) Interpretable high-stakes decision support
+  system for credit default forecasting. Technol Forecast Soc Change
+  196:122825. \doi{10.1016/j.techfore.2023.122825}
+
+\bibitem[{Thomas et~al.(2002)Thomas, Edelman, and Crook}]{thomas2002credit}
+Thomas LC, Edelman DB, Crook JN (2002) Credit Scoring and Its Applications.
+  SIAM, \doi{10.1137/1.9780898718317}
+
+\bibitem[{Wang et~al.(2025)Wang, Yu, Ma, Chen, and Wu}]{wang2025two}
+Wang L, Yu Z, Ma J, et~al (2025) A two-stage interpretable model to explain
+  classifier in credit risk prediction. J Forecasting 44(7):2132--2150.
+  \doi{10.1002/for.3288}
+
+\bibitem[{Wang et~al.(2024)Wang, Wang, Ke, Wang, and Hong}]{wang2024}
+Wang X, Wang Y, Ke G, et~al (2024) Knowledge distillation-driven
+  semi-supervised multi-view classification. Inf Fusion 103:102098.
+  \doi{10.1016/j.inffus.2023.102098}
+
+\bibitem[{Wu et~al.(2025)Wu, Zhang, Zhang, Zhao, Liang, and
+  Yang}]{wu2025enhancing}
+Wu LT, Zhang S, Zhang CK, et~al (2025) Enhancing knowledge distillation for
+  semantic segmentation through text-assisted modular plugins. Pattern Recognit
+  161:111329. \doi{10.1016/j.patcog.2024.111329}
+
+\bibitem[{Xu and Yang(2025)}]{xu2025}
+Xu B, Yang G (2025) Interpretability research of deep learning: A literature
+  survey. Inf Fusion 115:102721. \doi{10.1016/j.inffus.2024.102721}
+
+\bibitem[{Zagoruyko and Komodakis(2017)}]{zagoruyko2017attention}
+Zagoruyko S, Komodakis N (2017) Paying more attention to attention: Improving
+  the performance of convolutional neural networks via attention transfer. In:
+  International Conference on Learning Representations (ICLR)
+
+\bibitem[{Zhang and Yu(2024)}]{ZHANGY2024}
+Zhang X, Yu L (2024) Consumer credit risk assessment: A review from the
+  state-of-the-art classification algorithms, data traits, and learning
+  methods. Expert Syst Appl 237:121484. \doi{10.1016/j.eswa.2023.121484}
+
+\bibitem[{Zhang et~al.(2025)Zhang, Yu, and Yin}]{zhang2025domain}
+Zhang XM, Yu L, Yin H (2025) Domain adaptation-based multistage ensemble
+  learning paradigm for credit risk evaluation. Financ Innov 11(1):27.
+  \doi{10.1186/s40854-024-00695-3}
+
+\bibitem[{Zhou et~al.(2024{\natexlab{a}})Zhou, Cai, Dong, Qiang, and
+  Qiu}]{ZHOU2024}
+Zhou W, Cai Y, Dong X, et~al (2024{\natexlab{a}}) {ADRNet-S*}: Asymmetric depth
+  registration network via contrastive knowledge distillation for {RGB-D}
+  mirror segmentation. Inf Fusion 108:102392.
+  \doi{10.1016/j.inffus.2024.102392}
+
+\bibitem[{Zhou et~al.(2024{\natexlab{b}})Zhou, Li, Huan, Liu, and
+  Jiang}]{ZhouL24}
+Zhou W, Li Y, Huan J, et~al (2024{\natexlab{b}}) {MSTNet-KD}: Multilevel
+  transfer networks using knowledge distillation for the dense prediction of
+  remote-sensing images. IEEE Trans Geosci Remote Sens 62:1--12.
+  \doi{10.1109/TGRS.2024.3384669}
+
+\bibitem[{Zhou et~al.(2025)Zhou, Zhang, and Guo}]{zhou2025}
+Zhou Y, Zhang Z, Guo Z (2025) Explainable-machine-learning-based online
+  transaction analysis of {China} property rights exchange capital market. Int
+  Rev Financ Anal 102:104098. \doi{10.1016/j.irfa.2025.104098}
+
+\bibitem[{Zhu et~al.(2025)Zhu, Wu, Yu, and Zhang}]{zhu2025}
+Zhu J, Wu X, Yu L, et~al (2025) A hybrid clustering and boosting tree feature
+  selection ({CBTFS}) method for credit risk assessment with
+  high-dimensionality. Technol Econ Dev Econ pp 1--33.
+  \doi{10.3846/tede.2025.23060}
+
+\end{thebibliography}

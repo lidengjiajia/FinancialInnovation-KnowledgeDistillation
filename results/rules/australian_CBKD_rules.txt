@@ -1,0 +1,166 @@
+Dataset: australian
+Method: CBKD
+Teacher: CreditNet
+Tree Depth: 6
+Number of Leaves: 39
+
+======================================================================
+CB-KD EXTRACTED DECISION RULES
+======================================================================
+Total rules: 39
+
+[R21] (Conf: 100.0%, Lift: 2.24, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 <= 0.0341 AND feature_4 <= -0.5035 AND feature_1 > 1.5771
+  THEN → Default
+
+[R22] (Conf: 100.0%, Lift: 2.24, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 <= 0.0341 AND feature_4 > -0.5035 AND feature_6 <= -0.2738
+  THEN → Default
+
+[R27]* (Conf: 100.0%, Lift: 2.24, Samples: 7)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 <= -0.1062 AND feature_12 <= -0.4647 AND feature_6 <= 1.1089
+  THEN → Default
+
+[R28] (Conf: 100.0%, Lift: 2.24, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 <= -0.1062 AND feature_12 <= -0.4647 AND feature_6 > 1.1089
+  THEN → Default
+
+[R31] (Conf: 100.0%, Lift: 2.24, Samples: 4)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 > -0.1062 AND feature_12 <= -0.2966
+  THEN → Default
+
+[R32] (Conf: 100.0%, Lift: 2.24, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 > -0.1062 AND feature_12 > -0.2966
+  THEN → Default
+
+[R36]* (Conf: 100.0%, Lift: 2.24, Samples: 35)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 <= 1.1634 AND feature_9 > 0.4125 AND feature_12 <= -0.2478
+  THEN → Default
+
+[R38]* (Conf: 100.0%, Lift: 2.24, Samples: 5)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 > 1.1634 AND feature_1 <= 0.2076
+  THEN → Default
+
+[R39]* (Conf: 100.0%, Lift: 2.24, Samples: 5)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 > 1.1634 AND feature_1 > 0.2076
+  THEN → Default
+
+[R37]* (Conf: 93.5%, Lift: 2.09, Samples: 31)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 <= 1.1634 AND feature_9 > 0.4125 AND feature_12 > -0.2478
+  THEN → Default
+
+[R35]* (Conf: 88.6%, Lift: 1.98, Samples: 35)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 <= 1.1634 AND feature_9 <= 0.4125 AND feature_4 > 0.2982
+  THEN → Default
+
+[R34]* (Conf: 87.0%, Lift: 1.95, Samples: 23)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 > -1.5726 AND feature_13 <= 1.1634 AND feature_9 <= 0.4125 AND feature_4 <= 0.2982
+  THEN → Default
+
+[R1]* (Conf: 100.0%, Lift: 1.81, Samples: 17)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 <= -0.1069 AND feature_5_3 <= 4.4669 AND feature_3_2 <= -0.6273
+  THEN → Non-default
+
+[R2]* (Conf: 100.0%, Lift: 1.81, Samples: 25)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 <= -0.1069 AND feature_5_3 <= 4.4669 AND feature_3_2 > -0.6273
+  THEN → Non-default
+
+[R3] (Conf: 100.0%, Lift: 1.81, Samples: 3)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 <= -0.1069 AND feature_5_3 > 4.4669
+  THEN → Non-default
+
+[R4] (Conf: 100.0%, Lift: 1.81, Samples: 3)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 > -0.1069 AND feature_3_2 <= -0.6273 AND feature_2 <= -0.8577
+  THEN → Non-default
+
+[R5] (Conf: 100.0%, Lift: 1.81, Samples: 6)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 > -0.1069 AND feature_3_2 <= -0.6273 AND feature_2 > -0.8577
+  THEN → Non-default
+
+[R6]* (Conf: 100.0%, Lift: 1.81, Samples: 11)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 > -0.1069 AND feature_3_2 > -0.6273 AND feature_0_1 <= -0.3139
+  THEN → Non-default
+
+[R8] (Conf: 100.0%, Lift: 1.81, Samples: 3)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 > 1.3200 AND feature_2 <= 0.2822 AND feature_1 <= 0.8595 AND feature_2 <= -0.5794
+  THEN → Non-default
+
+[R9] (Conf: 100.0%, Lift: 1.81, Samples: 6)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 > 1.3200 AND feature_2 <= 0.2822 AND feature_1 <= 0.8595 AND feature_2 > -0.5794
+  THEN → Non-default
+
+[R11] (Conf: 100.0%, Lift: 1.81, Samples: 3)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 > 1.3200 AND feature_2 > 0.2822
+  THEN → Non-default
+
+[R13]* (Conf: 100.0%, Lift: 1.81, Samples: 11)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 <= 1.1000 AND feature_3_2 <= -0.6273 AND feature_1 <= -0.4521
+  THEN → Non-default
+
+[R14]* (Conf: 100.0%, Lift: 1.81, Samples: 13)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 <= 1.1000 AND feature_3_2 <= -0.6273 AND feature_1 > -0.4521
+  THEN → Non-default
+
+[R17] (Conf: 100.0%, Lift: 1.81, Samples: 4)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 > 1.1000 AND feature_12 <= 0.4462 AND feature_1 <= -0.3003
+  THEN → Non-default
+
+[R18] (Conf: 100.0%, Lift: 1.81, Samples: 4)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 > 1.1000 AND feature_12 <= 0.4462 AND feature_1 > -0.3003
+  THEN → Non-default
+
+[R24] (Conf: 100.0%, Lift: 1.81, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 > 0.0341 AND feature_0_1 <= -0.3139
+  THEN → Non-default
+
+[R26] (Conf: 100.0%, Lift: 1.81, Samples: 6)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 > 0.0341 AND feature_0_1 > -0.3139 AND feature_6 > -0.6366
+  THEN → Non-default
+
+[R12] (Conf: 80.0%, Lift: 1.79, Samples: 5)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 <= -0.9668
+  THEN → Default
+
+[R16]* (Conf: 96.7%, Lift: 1.75, Samples: 30)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 <= 1.1000 AND feature_3_2 > -0.6273 AND feature_10_1 > 0.0629
+  THEN → Non-default
+
+[R7]* (Conf: 95.0%, Lift: 1.72, Samples: 20)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 <= 1.3200 AND feature_5_4 > -0.1069 AND feature_3_2 > -0.6273 AND feature_0_1 > -0.3139
+  THEN → Non-default
+
+[R15]* (Conf: 90.0%, Lift: 1.63, Samples: 30)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 <= 1.1000 AND feature_3_2 > -0.6273 AND feature_10_1 <= 0.0629
+  THEN → Non-default
+
+[R29] (Conf: 68.4%, Lift: 1.53, Samples: 19)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 <= -0.1062 AND feature_12 > -0.4647 AND feature_1 <= 0.4755
+  THEN → Default
+
+[R23] (Conf: 66.7%, Lift: 1.49, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 <= 0.0341 AND feature_4 > -0.5035 AND feature_6 > -0.2738
+  THEN → Default
+
+[R19] (Conf: 60.0%, Lift: 1.34, Samples: 5)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -0.2363 AND feature_2 > -0.9668 AND feature_4 > 1.1000 AND feature_12 > 0.4462
+  THEN → Default
+
+[R10] (Conf: 66.7%, Lift: 1.21, Samples: 3)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -0.2363 AND feature_5_5 > 1.3200 AND feature_2 <= 0.2822 AND feature_1 > 0.8595
+  THEN → Non-default
+
+[R25] (Conf: 66.7%, Lift: 1.21, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 > 0.0341 AND feature_0_1 > -0.3139 AND feature_6 <= -0.6366
+  THEN → Non-default
+
+[R30] (Conf: 66.7%, Lift: 1.21, Samples: 6)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 > 0.0310 AND feature_13 <= -0.1062 AND feature_12 > -0.4647 AND feature_1 > 0.4755
+  THEN → Non-default
+
+[R33] (Conf: 66.7%, Lift: 1.21, Samples: 3)
+  IF feature_7_1 > -0.0242 AND feature_9 > -0.3727 AND feature_4 <= -1.5726
+  THEN → Non-default
+
+[R20] (Conf: 58.3%, Lift: 1.05, Samples: 12)
+  IF feature_7_1 > -0.0242 AND feature_9 <= -0.3727 AND feature_4 <= 0.0310 AND feature_12 <= 0.0341 AND feature_4 <= -0.5035 AND feature_1 <= 1.5771
+  THEN → Non-default

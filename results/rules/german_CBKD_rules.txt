@@ -1,0 +1,198 @@
+Dataset: german
+Method: CBKD
+Teacher: XGBoost-Tuned
+Tree Depth: 6
+Number of Leaves: 47
+
+======================================================================
+CB-KD EXTRACTED DECISION RULES
+======================================================================
+Total rules: 47
+
+[R2] (Conf: 100.0%, Lift: 3.33, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 <= 1.9879 AND Installment_rate_4 <= 0.0334 AND Credit_amount > 2.5903
+  THEN → Non-default
+
+[R12] (Conf: 100.0%, Lift: 3.33, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration > -0.2942 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= -0.5293
+  THEN → Non-default
+
+[R23] (Conf: 100.0%, Lift: 3.33, Samples: 4)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount > 2.7146 AND Age <= -0.6428
+  THEN → Non-default
+
+[R24] (Conf: 75.0%, Lift: 2.50, Samples: 4)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount > 2.7146 AND Age > -0.6428
+  THEN → Non-default
+
+[R31] (Conf: 75.0%, Lift: 2.50, Samples: 4)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount > 0.1644 AND Savings_A65 <= 0.8478 AND Credit_amount > 1.4190
+  THEN → Non-default
+
+[R39] (Conf: 75.0%, Lift: 2.50, Samples: 4)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration > 0.6847 AND Existing_credits_2 > 0.3183
+  THEN → Non-default
+
+[R20]* (Conf: 71.4%, Lift: 2.38, Samples: 21)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount > 0.9686 AND Other_parties_A103 <= 1.9879 AND Savings_A65 <= 0.8478
+  THEN → Non-default
+
+[R16]* (Conf: 70.6%, Lift: 2.35, Samples: 17)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount <= 0.9686 AND Credit_history_A34 <= 0.4193 AND Age <= 0.0389
+  THEN → Non-default
+
+[R18] (Conf: 66.7%, Lift: 2.22, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount <= 0.9686 AND Credit_history_A34 > 0.4193 AND Personal_status_A93 <= -0.0668
+  THEN → Non-default
+
+[R22] (Conf: 66.7%, Lift: 2.22, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount > 0.9686 AND Other_parties_A103 > 1.9879
+  THEN → Non-default
+
+[R32] (Conf: 66.7%, Lift: 2.22, Samples: 3)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount > 0.1644 AND Savings_A65 > 0.8478 AND Credit_amount <= 1.8511
+  THEN → Non-default
+
+[R4]* (Conf: 58.5%, Lift: 1.95, Samples: 82)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 <= 1.9879 AND Installment_rate_4 > 0.0334 AND Duration > -0.7429
+  THEN → Non-default
+
+[R8] (Conf: 50.0%, Lift: 1.67, Samples: 6)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration <= -0.2942 AND Credit_amount <= -0.6872 AND Age <= 0.0844
+  THEN → Non-default
+
+[R15] (Conf: 50.0%, Lift: 1.67, Samples: 6)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration > -0.2942 AND Other_payment_plans_A143 > -0.8403 AND Credit_amount > 0.5739
+  THEN → Non-default
+
+[R17] (Conf: 50.0%, Lift: 1.67, Samples: 8)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount <= 0.9686 AND Credit_history_A34 <= 0.4193 AND Age > 0.0389
+  THEN → Non-default
+
+[R27] (Conf: 50.0%, Lift: 1.67, Samples: 10)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= 0.1644 AND Age <= 0.7207 AND Personal_status_A93 > -0.0668 AND Purpose_A43 <= 0.5086
+  THEN → Non-default
+
+[R5] (Conf: 100.0%, Lift: 1.43, Samples: 5)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 > 1.9879 AND Duration <= 0.5215 AND Duration <= -0.8652
+  THEN → Default
+
+[R6] (Conf: 100.0%, Lift: 1.43, Samples: 11)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 > 1.9879 AND Duration <= 0.5215 AND Duration > -0.8652
+  THEN → Default
+
+[R9] (Conf: 100.0%, Lift: 1.43, Samples: 10)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration <= -0.2942 AND Credit_amount <= -0.6872 AND Age > 0.0844
+  THEN → Default
+
+[R19] (Conf: 100.0%, Lift: 1.43, Samples: 4)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount <= 0.9686 AND Credit_history_A34 > 0.4193 AND Personal_status_A93 > -0.0668
+  THEN → Default
+
+[R26] (Conf: 100.0%, Lift: 1.43, Samples: 3)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= 0.1644 AND Age <= 0.7207 AND Personal_status_A93 <= -0.0668 AND Existing_credits_2 > 0.3183
+  THEN → Default
+
+[R29] (Conf: 100.0%, Lift: 1.43, Samples: 5)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= 0.1644 AND Age > 0.7207
+  THEN → Default
+
+[R33] (Conf: 100.0%, Lift: 1.43, Samples: 3)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount > 0.1644 AND Savings_A65 > 0.8478 AND Credit_amount > 1.8511
+  THEN → Default
+
+[R34] (Conf: 100.0%, Lift: 1.43, Samples: 8)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration <= 0.6847 AND Purpose_A41 <= 1.3649 AND Duration <= -1.0692
+  THEN → Default
+
+[R36] (Conf: 100.0%, Lift: 1.43, Samples: 6)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration <= 0.6847 AND Purpose_A41 > 1.3649 AND Age <= -0.6883
+  THEN → Default
+
+[R37] (Conf: 100.0%, Lift: 1.43, Samples: 3)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration <= 0.6847 AND Purpose_A41 > 1.3649 AND Age > -0.6883
+  THEN → Default
+
+[R42] (Conf: 100.0%, Lift: 1.43, Samples: 6)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 <= 0.4193 AND Purpose_A41 > 1.3649 AND Credit_amount <= 0.1284
+  THEN → Default
+
+[R43] (Conf: 100.0%, Lift: 1.43, Samples: 5)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 <= 0.4193 AND Purpose_A41 > 1.3649 AND Credit_amount > 0.1284
+  THEN → Default
+
+[R44] (Conf: 100.0%, Lift: 1.43, Samples: 3)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 > 0.4193 AND Personal_status_A92 <= 0.3777 AND Duration <= -1.0692
+  THEN → Default
+
+[R45]* (Conf: 100.0%, Lift: 1.43, Samples: 43)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 > 0.4193 AND Personal_status_A92 <= 0.3777 AND Duration > -1.0692
+  THEN → Default
+
+[R46] (Conf: 100.0%, Lift: 1.43, Samples: 10)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 > 0.4193 AND Personal_status_A92 > 0.3777 AND Purpose_A46 <= 1.9519
+  THEN → Default
+
+[R47] (Conf: 100.0%, Lift: 1.43, Samples: 4)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 > 0.4193 AND Personal_status_A92 > 0.3777 AND Purpose_A46 > 1.9519
+  THEN → Default
+
+[R40]* (Conf: 97.3%, Lift: 1.39, Samples: 37)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 <= 0.4193 AND Purpose_A41 <= 1.3649 AND Credit_amount <= 0.4452
+  THEN → Default
+
+[R10] (Conf: 93.3%, Lift: 1.33, Samples: 15)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration <= -0.2942 AND Credit_amount > -0.6872 AND Duration <= -0.7429
+  THEN → Default
+
+[R41] (Conf: 85.7%, Lift: 1.22, Samples: 7)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age > -0.4156 AND Credit_history_A34 <= 0.4193 AND Purpose_A41 <= 1.3649 AND Credit_amount > 0.4452
+  THEN → Default
+
+[R14] (Conf: 83.3%, Lift: 1.19, Samples: 18)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration > -0.2942 AND Other_payment_plans_A143 > -0.8403 AND Credit_amount <= 0.5739
+  THEN → Default
+
+[R11] (Conf: 81.8%, Lift: 1.17, Samples: 11)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration <= -0.2942 AND Credit_amount > -0.6872 AND Duration > -0.7429
+  THEN → Default
+
+[R35] (Conf: 80.8%, Lift: 1.15, Samples: 52)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration <= 0.6847 AND Purpose_A41 <= 1.3649 AND Duration > -1.0692
+  THEN → Default
+
+[R38] (Conf: 80.0%, Lift: 1.14, Samples: 5)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 > -0.8403 AND Age <= -0.4156 AND Duration > 0.6847 AND Existing_credits_2 <= 0.3183
+  THEN → Default
+
+[R13] (Conf: 75.0%, Lift: 1.07, Samples: 4)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 > 0.4193 AND Duration > -0.2942 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount > -0.5293
+  THEN → Default
+
+[R25] (Conf: 75.0%, Lift: 1.07, Samples: 4)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= 0.1644 AND Age <= 0.7207 AND Personal_status_A93 <= -0.0668 AND Existing_credits_2 <= 0.3183
+  THEN → Default
+
+[R28] (Conf: 75.0%, Lift: 1.07, Samples: 4)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount <= 0.1644 AND Age <= 0.7207 AND Personal_status_A93 > -0.0668 AND Purpose_A43 > 0.5086
+  THEN → Default
+
+[R3] (Conf: 70.6%, Lift: 1.01, Samples: 17)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 <= 1.9879 AND Installment_rate_4 > 0.0334 AND Duration <= -0.7429
+  THEN → Default
+
+[R1] (Conf: 67.6%, Lift: 0.97, Samples: 105)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 <= 1.9879 AND Installment_rate_4 <= 0.0334 AND Credit_amount <= 2.5903
+  THEN → Default
+
+[R7] (Conf: 66.7%, Lift: 0.95, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration <= 0.8886 AND Credit_history_A34 <= 0.4193 AND Other_parties_A103 > 1.9879 AND Duration > 0.5215
+  THEN → Default
+
+[R21] (Conf: 66.7%, Lift: 0.95, Samples: 3)
+  IF Status_A14 <= 0.2255 AND Duration > 0.8886 AND Credit_amount <= 2.7146 AND Credit_amount > 0.9686 AND Other_parties_A103 <= 1.9879 AND Savings_A65 > 0.8478
+  THEN → Default
+
+[R30] (Conf: 60.0%, Lift: 0.86, Samples: 5)
+  IF Status_A14 > 0.2255 AND Other_payment_plans_A143 <= -0.8403 AND Credit_amount > 0.1644 AND Savings_A65 <= 0.8478 AND Credit_amount <= 1.4190
+  THEN → Default

@@ -1,0 +1,72 @@
+{
+  "RF-Tuned": {
+    "path": "results\\teacher_cache\\german_teacher_RF_Tuned.pkl",
+    "auc": 0.7960714285714285,
+    "type": "ensemble"
+  },
+  "GBDT-Tuned": {
+    "path": "results\\teacher_cache\\german_teacher_GBDT_Tuned.pkl",
+    "auc": 0.8038095238095239,
+    "type": "ensemble"
+  },
+  "XGBoost-Tuned": {
+    "path": "results\\teacher_cache\\german_teacher_XGBoost_Tuned.pkl",
+    "auc": 0.808452380952381,
+    "type": "ensemble"
+  },
+  "LightGBM-Tuned": {
+    "path": "results\\teacher_cache\\german_teacher_LightGBM_Tuned.pkl",
+    "auc": 0.7492857142857143,
+    "type": "ensemble"
+  },
+  "CatBoost-Tuned": {
+    "path": "results\\teacher_cache\\german_teacher_CatBoost_Tuned.pkl",
+    "auc": 0.751904761904762,
+    "type": "ensemble"
+  },
+  "LR-Ridge": {
+    "path": "results\\teacher_cache\\german_teacher_LR_Ridge.pkl",
+    "auc": 0.7871428571428571,
+    "type": "ensemble"
+  },
+  "LR-Lasso": {
+    "path": "results\\teacher_cache\\german_teacher_LR_Lasso.pkl",
+    "auc": 0.7903571428571429,
+    "type": "ensemble"
+  },
+  "LR-ElasticNet": {
+    "path": "results\\teacher_cache\\german_teacher_LR_ElasticNet.pkl",
+    "auc": 0.7897619047619048,
+    "type": "ensemble"
+  },
+  "SVM-RBF": {
+    "path": "results\\teacher_cache\\german_teacher_SVM_RBF.pkl",
+    "auc": 0.7652380952380953,
+    "type": "ensemble"
+  },
+  "SVM-Linear": {
+    "path": "results\\teacher_cache\\german_teacher_SVM_Linear.pkl",
+    "auc": 0.7661904761904761,
+    "type": "ensemble"
+  },
+  "DT": {
+    "path": "results\\teacher_cache\\german_teacher_DT.pkl",
+    "auc": 0.6574404761904762,
+    "type": "ensemble"
+  },
+  "KNN": {
+    "path": "results\\teacher_cache\\german_teacher_KNN.pkl",
+    "auc": 0.6769642857142857,
+    "type": "ensemble"
+  },
+  "NB": {
+    "path": "results\\teacher_cache\\german_teacher_NB.pkl",
+    "auc": 0.7277380952380953,
+    "type": "ensemble"
+  },
+  "CreditNet": {
+    "path": "results\\teacher_cache\\german_teacher_CreditNet.pkl",
+    "auc": 0.7972619047619047,
+    "type": "neural"
+  }
+}

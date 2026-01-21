@@ -1,0 +1,19 @@
+{
+  "teacher_info": {
+    "name": "CreditNet",
+    "model_type": "neural",
+    "auc_val": 0.9327230146902279,
+    "auc_test": 0.9120715350223547,
+    "dataset_name": "australian",
+    "n_features": 22,
+    "hyperparams": {
+      "input_dim": 22,
+      "epochs": 100,
+      "batch_size": 103
+    },
+    "shap_computed": true
+  },
+  "model_path": "results\\teacher_cache\\australian_teacher_CreditNet.pkl",
+  "shap_values_path": "results\\teacher_cache\\australian_teacher_shap.npz",
+  "shap_plot_path": "results\\figures\\shap_australian_top10.png"
+}

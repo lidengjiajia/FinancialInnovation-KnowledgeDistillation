@@ -1,0 +1,266 @@
+Dataset: uci
+Method: CBKD
+Teacher: RF-Tuned
+Tree Depth: 6
+Number of Leaves: 64
+
+======================================================================
+CB-KD EXTRACTED DECISION RULES
+======================================================================
+Total rules: 64
+
+[R60]* (Conf: 94.3%, Lift: 4.26, Samples: 53)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 <= -0.5784 AND BILL_AMT3 > -0.6706 AND BILL_AMT3 > -0.6566
+  THEN → Default
+
+[R16]* (Conf: 81.8%, Lift: 3.70, Samples: 11)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 > 1.1192 AND PAY_2 > 0.9478 AND BILL_AMT6 > -0.5850
+  THEN → Default
+
+[R58]* (Conf: 80.0%, Lift: 3.62, Samples: 5)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 <= -0.5784 AND BILL_AMT3 <= -0.6706 AND PAY_AMT5 > -0.3151
+  THEN → Default
+
+[R47]* (Conf: 79.3%, Lift: 3.59, Samples: 29)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 > 1.1203 AND PAY_5 > 1.1192 AND BILL_AMT2 <= -0.5700
+  THEN → Default
+
+[R61]* (Conf: 79.2%, Lift: 3.58, Samples: 558)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 > -0.5784 AND PAY_2 <= 3.0367 AND PAY_AMT3 <= 0.1430
+  THEN → Default
+
+[R59]* (Conf: 79.2%, Lift: 3.58, Samples: 24)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 <= -0.5784 AND BILL_AMT3 > -0.6706 AND BILL_AMT3 <= -0.6566
+  THEN → Default
+
+[R35]* (Conf: 76.9%, Lift: 3.48, Samples: 26)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 <= -0.3013 AND AGE > 1.9668 AND PAY_6 <= -1.0539
+  THEN → Default
+
+[R54]* (Conf: 75.0%, Lift: 3.39, Samples: 192)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6690 AND BILL_AMT1 <= -0.3392 AND BILL_AMT5 > -0.4910
+  THEN → Default
+
+[R56]* (Conf: 70.0%, Lift: 3.17, Samples: 467)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6690 AND BILL_AMT1 > -0.3392 AND BILL_AMT6 > -0.1085
+  THEN → Default
+
+[R53]* (Conf: 68.9%, Lift: 3.12, Samples: 103)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6690 AND BILL_AMT1 <= -0.3392 AND BILL_AMT5 <= -0.4910
+  THEN → Default
+
+[R63]* (Conf: 68.4%, Lift: 3.09, Samples: 19)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 > -0.5784 AND PAY_2 > 3.0367 AND MARRIAGE <= -0.1154
+  THEN → Default
+
+[R51]* (Conf: 66.7%, Lift: 3.01, Samples: 36)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6690 AND PAY_3 > -0.2794 AND BILL_AMT1 <= -0.6731
+  THEN → Default
+
+[R55]* (Conf: 61.9%, Lift: 2.80, Samples: 270)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6690 AND BILL_AMT1 > -0.3392 AND BILL_AMT6 <= -0.1085
+  THEN → Default
+
+[R62]* (Conf: 61.7%, Lift: 2.79, Samples: 47)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 > -0.5784 AND PAY_2 <= 3.0367 AND PAY_AMT3 > 0.1430
+  THEN → Default
+
+[R45]* (Conf: 51.9%, Lift: 2.35, Samples: 52)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 > 1.1203 AND PAY_5 <= 1.1192 AND PAY_AMT2 <= -0.2156
+  THEN → Default
+
+[R48]* (Conf: 51.8%, Lift: 2.34, Samples: 247)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 > 1.1203 AND PAY_5 > 1.1192 AND BILL_AMT2 > -0.5700
+  THEN → Default
+
+[R14]* (Conf: 50.6%, Lift: 2.29, Samples: 83)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 > 1.1192 AND PAY_2 <= 0.9478 AND PAY_AMT3 > -0.2783
+  THEN → Default
+
+[R28] (Conf: 100.0%, Lift: 1.28, Samples: 9)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 <= -0.0444 AND PAY_5 > 1.1192 AND PAY_AMT4 > 0.0051
+  THEN → Non-default
+
+[R52] (Conf: 100.0%, Lift: 1.28, Samples: 3)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6690 AND PAY_3 > -0.2794 AND BILL_AMT1 > -0.6731
+  THEN → Non-default
+
+[R3]* (Conf: 96.6%, Lift: 1.24, Samples: 89)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 <= -0.6887 AND PAY_AMT3 > -0.2555 AND PAY_0 <= -1.3340
+  THEN → Non-default
+
+[R22]* (Conf: 95.4%, Lift: 1.22, Samples: 2781)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL > -0.2499 AND BILL_AMT1 <= 1.0821 AND BILL_AMT2 > -0.6419
+  THEN → Non-default
+
+[R40]* (Conf: 95.2%, Lift: 1.22, Samples: 63)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 > -0.3013 AND PAY_AMT4 > -0.2714 AND BILL_AMT1 > -0.6947
+  THEN → Non-default
+
+[R30]* (Conf: 95.0%, Lift: 1.22, Samples: 40)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 > -0.0444 AND PAY_5 <= 1.1192 AND PAY_AMT3 > -0.3012
+  THEN → Non-default
+
+[R20]* (Conf: 91.0%, Lift: 1.17, Samples: 970)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL <= -0.2499 AND LIMIT_BAL > -0.7130 AND PAY_AMT5 > -0.1883
+  THEN → Non-default
+
+[R8]* (Conf: 90.3%, Lift: 1.16, Samples: 943)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 > -0.6887 AND LIMIT_BAL > -0.7901 AND BILL_AMT4 > -0.6494
+  THEN → Non-default
+
+[R23]* (Conf: 90.1%, Lift: 1.16, Samples: 1041)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL > -0.2499 AND BILL_AMT1 > 1.0821 AND BILL_AMT1 <= 2.4222
+  THEN → Non-default
+
+[R21]* (Conf: 86.8%, Lift: 1.11, Samples: 817)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL > -0.2499 AND BILL_AMT1 <= 1.0821 AND BILL_AMT2 <= -0.6419
+  THEN → Non-default
+
+[R39]* (Conf: 86.3%, Lift: 1.11, Samples: 175)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 > -0.3013 AND PAY_AMT4 > -0.2714 AND BILL_AMT1 <= -0.6947
+  THEN → Non-default
+
+[R19]* (Conf: 86.0%, Lift: 1.10, Samples: 529)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL <= -0.2499 AND LIMIT_BAL > -0.7130 AND PAY_AMT5 <= -0.1883
+  THEN → Non-default
+
+[R7]* (Conf: 85.9%, Lift: 1.10, Samples: 942)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 > -0.6887 AND LIMIT_BAL > -0.7901 AND BILL_AMT4 <= -0.6494
+  THEN → Non-default
+
+[R17]* (Conf: 85.7%, Lift: 1.10, Samples: 1582)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL <= -0.2499 AND LIMIT_BAL <= -0.7130 AND PAY_5 <= 1.1192
+  THEN → Non-default
+
+[R24]* (Conf: 85.7%, Lift: 1.10, Samples: 531)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL > -0.2499 AND BILL_AMT1 > 1.0821 AND BILL_AMT1 > 2.4222
+  THEN → Non-default
+
+[R6]* (Conf: 83.9%, Lift: 1.08, Samples: 799)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 > -0.6887 AND LIMIT_BAL <= -0.7901 AND BILL_AMT1 > -0.4992
+  THEN → Non-default
+
+[R31] (Conf: 83.1%, Lift: 1.07, Samples: 65)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 > -0.0444 AND PAY_5 > 1.1192 AND BILL_AMT1 <= 1.1995
+  THEN → Non-default
+
+[R26] (Conf: 82.4%, Lift: 1.06, Samples: 68)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 <= -0.0444 AND PAY_5 <= 1.1192 AND LIMIT_BAL > -0.7901
+  THEN → Non-default
+
+[R29] (Conf: 81.9%, Lift: 1.05, Samples: 94)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 > -0.0444 AND PAY_5 <= 1.1192 AND PAY_AMT3 <= -0.3012
+  THEN → Non-default
+
+[R64] (Conf: 81.2%, Lift: 1.04, Samples: 16)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 > -0.5784 AND PAY_2 > 3.0367 AND MARRIAGE > -0.1154
+  THEN → Non-default
+
+[R12] (Conf: 80.5%, Lift: 1.03, Samples: 262)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 <= 1.1192 AND PAY_AMT1 > -0.1496 AND LIMIT_BAL > -1.0989
+  THEN → Non-default
+
+[R13] (Conf: 80.0%, Lift: 1.03, Samples: 25)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 > 1.1192 AND PAY_2 <= 0.9478 AND PAY_AMT3 <= -0.2783
+  THEN → Non-default
+
+[R37] (Conf: 79.8%, Lift: 1.02, Samples: 213)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 > -0.3013 AND PAY_AMT4 <= -0.2714 AND PAY_5 <= 1.1192
+  THEN → Non-default
+
+[R43] (Conf: 78.6%, Lift: 1.01, Samples: 103)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 <= 1.1203 AND LIMIT_BAL > -0.0183 AND PAY_3 <= 0.9737
+  THEN → Non-default
+
+[R18] (Conf: 78.3%, Lift: 1.01, Samples: 60)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 <= 1.0426 AND LIMIT_BAL <= -0.2499 AND LIMIT_BAL <= -0.7130 AND PAY_5 > 1.1192
+  THEN → Non-default
+
+[R50] (Conf: 77.8%, Lift: 1.00, Samples: 54)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6690 AND PAY_3 <= -0.2794 AND PAY_AMT1 > -0.3225
+  THEN → Non-default
+
+[R5] (Conf: 77.5%, Lift: 0.99, Samples: 515)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 > -0.6887 AND LIMIT_BAL <= -0.7901 AND BILL_AMT1 <= -0.4992
+  THEN → Non-default
+
+[R4] (Conf: 76.6%, Lift: 0.98, Samples: 154)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 <= -0.6887 AND PAY_AMT3 > -0.2555 AND PAY_0 > -1.3340
+  THEN → Non-default
+
+[R1] (Conf: 76.6%, Lift: 0.98, Samples: 864)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 <= -0.6887 AND PAY_AMT3 <= -0.2555 AND PAY_2 <= 0.9478
+  THEN → Non-default
+
+[R34] (Conf: 74.4%, Lift: 0.96, Samples: 133)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 <= -0.3013 AND AGE <= 1.9668 AND PAY_AMT4 > -0.3055
+  THEN → Non-default
+
+[R10] (Conf: 72.8%, Lift: 0.93, Samples: 169)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 <= 1.1192 AND PAY_AMT1 <= -0.1496 AND PAY_AMT6 > -0.2864
+  THEN → Non-default
+
+[R46] (Conf: 71.0%, Lift: 0.91, Samples: 31)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 > 1.1203 AND PAY_5 <= 1.1192 AND PAY_AMT2 > -0.2156
+  THEN → Non-default
+
+[R44] (Conf: 68.0%, Lift: 0.87, Samples: 50)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 <= 1.1203 AND LIMIT_BAL > -0.0183 AND PAY_3 > 0.9737
+  THEN → Non-default
+
+[R36] (Conf: 66.7%, Lift: 0.86, Samples: 12)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 <= -0.3013 AND AGE > 1.9668 AND PAY_6 > -1.0539
+  THEN → Non-default
+
+[R38] (Conf: 66.7%, Lift: 0.86, Samples: 27)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 > -0.3013 AND PAY_AMT4 <= -0.2714 AND PAY_5 > 1.1192
+  THEN → Non-default
+
+[R25] (Conf: 66.3%, Lift: 0.85, Samples: 101)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 <= -0.0444 AND PAY_5 <= 1.1192 AND LIMIT_BAL <= -0.7901
+  THEN → Non-default
+
+[R33] (Conf: 66.2%, Lift: 0.85, Samples: 518)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT3 <= -0.3013 AND AGE <= 1.9668 AND PAY_AMT4 <= -0.3055
+  THEN → Non-default
+
+[R41] (Conf: 62.9%, Lift: 0.81, Samples: 307)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 <= 1.1203 AND LIMIT_BAL <= -0.0183 AND PAY_3 <= 0.9737
+  THEN → Non-default
+
+[R11] (Conf: 62.1%, Lift: 0.80, Samples: 29)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 <= 1.1192 AND PAY_AMT1 > -0.1496 AND LIMIT_BAL <= -1.0989
+  THEN → Non-default
+
+[R27] (Conf: 61.5%, Lift: 0.79, Samples: 117)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 <= -0.0444 AND PAY_5 > 1.1192 AND PAY_AMT4 <= 0.0051
+  THEN → Non-default
+
+[R57] (Conf: 60.0%, Lift: 0.77, Samples: 20)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 > 1.1203 AND BILL_AMT5 <= -0.5784 AND BILL_AMT3 <= -0.6706 AND PAY_AMT5 <= -0.3151
+  THEN → Non-default
+
+[R15] (Conf: 58.3%, Lift: 0.75, Samples: 12)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 > 1.1192 AND PAY_2 > 0.9478 AND BILL_AMT6 <= -0.5850
+  THEN → Non-default
+
+[R2] (Conf: 56.0%, Lift: 0.72, Samples: 25)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 <= 0.9737 AND BILL_AMT1 <= -0.6887 AND PAY_AMT3 <= -0.2555 AND PAY_2 > 0.9478
+  THEN → Non-default
+
+[R9] (Conf: 55.0%, Lift: 0.71, Samples: 109)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 <= -0.2097 AND PAY_3 > 0.9737 AND PAY_5 <= 1.1192 AND PAY_AMT1 <= -0.1496 AND PAY_AMT6 <= -0.2864
+  THEN → Non-default
+
+[R42] (Conf: 54.4%, Lift: 0.70, Samples: 283)
+  IF PAY_0 > 0.4577 AND PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_6 <= 1.1203 AND LIMIT_BAL <= -0.0183 AND PAY_3 > 0.9737
+  THEN → Non-default
+
+[R32] (Conf: 50.0%, Lift: 0.64, Samples: 10)
+  IF PAY_0 <= 0.4577 AND PAY_AMT2 > -0.2097 AND PAY_4 > 1.0426 AND PAY_AMT2 > -0.0444 AND PAY_5 > 1.1192 AND BILL_AMT1 > 1.1995
+  THEN → Non-default
+
+[R49] (Conf: 50.0%, Lift: 0.64, Samples: 18)
+  IF PAY_0 > 0.4577 AND PAY_0 > 1.3535 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6690 AND PAY_3 <= -0.2794 AND PAY_AMT1 <= -0.3225
+  THEN → Non-default

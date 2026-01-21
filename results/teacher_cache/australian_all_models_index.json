@@ -1,0 +1,72 @@
+{
+  "RF-Tuned": {
+    "path": "results\\teacher_cache\\australian_teacher_RF_Tuned.pkl",
+    "auc": 0.9244198424526293,
+    "type": "ensemble"
+  },
+  "GBDT-Tuned": {
+    "path": "results\\teacher_cache\\australian_teacher_GBDT_Tuned.pkl",
+    "auc": 0.9259101554183522,
+    "type": "ensemble"
+  },
+  "XGBoost-Tuned": {
+    "path": "results\\teacher_cache\\australian_teacher_XGBoost_Tuned.pkl",
+    "auc": 0.9304875452416437,
+    "type": "ensemble"
+  },
+  "LightGBM-Tuned": {
+    "path": "results\\teacher_cache\\australian_teacher_LightGBM_Tuned.pkl",
+    "auc": 0.9318714072812433,
+    "type": "ensemble"
+  },
+  "CatBoost-Tuned": {
+    "path": "results\\teacher_cache\\australian_teacher_CatBoost_Tuned.pkl",
+    "auc": 0.9250585480093676,
+    "type": "ensemble"
+  },
+  "LR-Ridge": {
+    "path": "results\\teacher_cache\\australian_teacher_LR_Ridge.pkl",
+    "auc": 0.9276133702363211,
+    "type": "ensemble"
+  },
+  "LR-Lasso": {
+    "path": "results\\teacher_cache\\australian_teacher_LR_Lasso.pkl",
+    "auc": 0.9282520757930595,
+    "type": "ensemble"
+  },
+  "LR-ElasticNet": {
+    "path": "results\\teacher_cache\\australian_teacher_LR_ElasticNet.pkl",
+    "auc": 0.9274004683840751,
+    "type": "ensemble"
+  },
+  "SVM-RBF": {
+    "path": "results\\teacher_cache\\australian_teacher_SVM_RBF.pkl",
+    "auc": 0.9188843942942303,
+    "type": "ensemble"
+  },
+  "SVM-Linear": {
+    "path": "results\\teacher_cache\\australian_teacher_SVM_Linear.pkl",
+    "auc": 0.9039812646370023,
+    "type": "ensemble"
+  },
+  "DT": {
+    "path": "results\\teacher_cache\\australian_teacher_DT.pkl",
+    "auc": 0.795507770917607,
+    "type": "ensemble"
+  },
+  "KNN": {
+    "path": "results\\teacher_cache\\australian_teacher_KNN.pkl",
+    "auc": 0.9065360868639556,
+    "type": "ensemble"
+  },
+  "NB": {
+    "path": "results\\teacher_cache\\australian_teacher_NB.pkl",
+    "auc": 0.9095167127954014,
+    "type": "ensemble"
+  },
+  "CreditNet": {
+    "path": "results\\teacher_cache\\australian_teacher_CreditNet.pkl",
+    "auc": 0.9327230146902279,
+    "type": "neural"
+  }
+}

@@ -1,0 +1,775 @@
+%Version 3.1 December 2024
+\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style (Author-Date) for Financial Innovation
+
+%%%% Standard Packages (妯℃澘鑷甫鐨勫熀纭€锟?
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{listings}%
+
+%% --- 鍏抽敭淇敼 1锛氭敞閲婃帀妯℃澘鑷甫鐨勭畻娉曞寘锛屼互閬垮厤锟?algorithm2e 鍐茬獊 ---
+% \usepackage{algorithm}%
+% \usepackage{algorithmicx}%
+% \usepackage{algpseudocode}%
+%% ------------------------------------------------------------------
+
+%% -------------------------------------------------
+%% User-defined packages (鐢ㄦ埛鑷畾涔夊寘)
+%% -------------------------------------------------
+
+%% Math (宸茬敱妯℃澘鍔犺浇锛屾澶勬棤闇€閲嶅)
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+
+%% Tables
+\usepackage{float}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tabularx}
+% \usepackage{booktabs} % 宸茬敱妯℃澘鍔犺浇
+% \usepackage{multirow} % 宸茬敱妯℃澘鍔犺浇
+
+%% Figures
+% \usepackage{graphicx} % 宸茬敱妯℃澘鍔犺浇
+\usepackage{caption}
+
+%% --- 鍏抽敭淇敼 2锛氫娇锟?subfig 鍖呬互鏀寔 \subfloat 鍛戒护 ---
+\usepackage{subfig}
+% \usepackage{subcaption} % 鎮ㄧ殑浠ｇ爜鐢ㄤ簡 \subfloat锛屾墍浠ヤ笉鑳界敤 subcaption
+
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{lscape}  % For landscape tables
+
+%% Drawing
+\usepackage{tikz}
+%% Relax float placement restrictions
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+%% Equations breaking (鍙拷?
+\usepackage{breqn}
+
+%% Algorithms (淇濈暀鎮ㄩ渶瑕佺殑 algorithm2e)
+\usepackage[ruled,vlined]{algorithm2e}
+\SetKwInput{KwRequire}{Require}
+\SetKwInput{KwEnsure}{Ensure}
+
+%% Line numbers
+\usepackage{lineno}
+
+%% Better line breaking for long URLs/DOIs in references
+\usepackage{xurl}
+
+%% Hyperref setup
+\AtBeginDocument{%
+  \hypersetup{
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=cyan
+  }%
+}
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: Standard Springer Theorem Styles
+%%%%%=============================================================================%%%%
+
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}[theorem]{Proposition}%
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+
+% Reduce overfull boxes from long tokens/URLs without changing content.
+\setlength{\emergencystretch}{2em}
+
+% 鍏煎鎬ц缃細锟?biblatex 鍛戒护鏄犲皠锟?natbib
+\let\parencite\citep
+\let\textcite\citet
+
+% --- Preamble End ---
+
+\begin{document}
+
+\title[CB-KD for credit risk]{Class-balanced interpretable knowledge distillation paradigm for credit risk assessment}
+
+% --- 浣滆€呬俊鎭紙闅愮淇濇姢锛氭澶勭敤鍗犱綅绗︼紱鎶曠鍓嶅啀濉級 ---
+
+%\author[1,3]{\fnm{Dengjia Li}}
+%\author[2]{\fnm{Yuncheng Qiao}}%\email{qiaoyc@sdut.edu.cn}
+%\author[4]{\fnm{Chaoqun Ma}}
+%\author*[1]{\fnm{Han Qiao} }\email{qiaohan@ucas.ac.cn}
+%\affil[1]{\orgdiv{School of Economics and Management}, \orgname{University of Chinese Academy of Sciences}, \orgaddress{\city{Beijing}, \country{China}}}
+%\affil[2]{\orgdiv{Business School}, \orgname{Shandong University of Technology}, \orgaddress{\city{Zibo}, \country{China}}}
+%\affil[3]{\orgdiv{China National Clearing Center}, \orgname{People's Bank of China}, \orgaddress{\city{Beijing}, \country{China}}}
+%\affil[4]{\orgdiv{Key Laboratory of High-Performance Distributed Ledger Technology and Digital Finance}, \orgname{Hunan University}, \orgaddress{\city{Changsha}, \country{China}}}
+
+\abstract{%
+Credit risk modeling in regulated financial environments confronts an inherent tension between predictive accuracy and decision transparency. This paper proposes CB-KD (Class-Balanced Knowledge Distillation), a model compression framework that transfers predictive knowledge from high-capacity ensemble or neural network teachers to structurally transparent decision tree students. The framework advances credit risk methodology along three dimensions. First, CB-KD establishes a heterogeneous distillation architecture that extends knowledge distillation beyond homogeneous neural-to-neural transfer to the ensemble-to-tree paradigm, incorporating automatic teacher selection and a dual-component sample weighting strategy that integrates adaptive class-balanced weighting with teacher confidence weighting. Second, the temperature-scaled soft-label transfer mechanism preserves inter-class probability structure that hard labels discard, providing a principled approach to maintaining predictive fidelity while achieving structural transparency for regulatory examination. Third, the lift-based rule extraction mechanism formalizes decision tree paths as auditable IF--THEN rules with statistical quality metrics, enabling rigorous assessment of rule reliability under class-imbalanced conditions. Empirical validation across multiple credit datasets demonstrates that CB-KD consistently outperforms baseline distillation methods while producing fully interpretable decision logic amenable to regulatory audit.}
+
+\keywords{Credit Risk Assessment, Interpretability, Knowledge Distillation, Class Balance}
+
+\maketitle
+
+% \linenumbers  % 濡傛灉闇€瑕佽锟?
+% --------- 浠庤繖閲屽紑濮嬶細绮樿创浣犲師鏉ョ殑姝ｆ枃锛坰ection 绛夛級锛屼笉瑕佹敼鍔ㄥ唴锟?---------
+%% main text
+%%
+
+%% Use \section commands to start a section
+\section{Introduction}
+\label{sec1}
+%% Labels are used to cross-reference an item using \ref command.
+
+Credit risk assessment constitutes a cornerstone of financial intermediation, underpinning lending decisions, capital adequacy requirements, and portfolio risk management across banking institutions globally \parencite{altman1998credit,thomas2002credit,sun2023i}. The accurate estimation of default probabilities necessitates sophisticated modeling of borrower characteristics, repayment histories, and macroeconomic conditions, reflecting the multidimensional nature of creditworthiness evaluation. Recent advances in machine learning---particularly gradient boosting ensembles (XGBoost, LightGBM, CatBoost) and deep neural architectures---have substantially enhanced predictive accuracy beyond traditional statistical approaches \parencite{LUO2017,SHEN2021,beltman2025predicting}. However, the inherent complexity of these ``black-box'' models creates a fundamental tension between predictive power and decision transparency: their opacity impedes internal model validation, regulatory examination, and transparent communication of credit decisions to borrowers and stakeholders \parencite{fan2025explainable}. This tension is particularly acute in regulated financial environments where model auditability is not merely desirable but legally mandated.
+
+International regulatory frameworks, notably the Basel II/III Accords, impose stringent requirements on model governance, emphasizing point-in-time expected credit loss estimation and model auditability \parencite{DUMITRESCU2022,zhou2025,ZHANGY2024}. The Internal Ratings-Based (IRB) approach under Basel II requires banks to demonstrate that their credit models are conceptually sound, empirically validated, and regularly monitored---criteria that inherently favor transparent model structures. Furthermore, emerging AI governance initiatives, including the EU's proposed AI Act and various national ``right to explanation'' mandates, increasingly require that automated credit decisions be justifiable to affected individuals. While these regulations do not prescribe specific interpretability metrics, the implicit constraint on model opacity creates a fundamental tension between predictive power and regulatory compliance. Consequently, developing methodologies that can reconcile predictive accuracy with decision transparency represents a central challenge in credit risk management and financial model governance.
+
+\par
+Intrinsically interpretable models---including logistic regression with L1/L2 regularization---address multicollinearity through parameter penalization and facilitate variable selection, thereby providing quantitative insights into feature importance \parencite{Bradley1998,CHEN2019,HE2023}. Nevertheless, their linear functional form fundamentally constrains the capacity to capture nonlinear feature interactions prevalent in credit data. As data complexity increases, nonlinear ensemble methods such as Gradient Boosting Decision Trees (GBDT), eXtreme Gradient Boosting (XGBoost), and Random Forests (RF) have emerged as dominant approaches \parencite{DASTILE2020,GUNNARSSON2021,SHWARTZZIV2022}. These models achieve superior predictive performance through weighted aggregation of decision trees and assess feature importance via split gains or Gini impurity. However, their interpretability remains contingent on model architecture and data characteristics, exhibiting sensitivity to feature heterogeneity and inconsistency across different model configurations.
+
+\par
+Explainable Artificial Intelligence (XAI) methods have advanced the interpretability analysis of complex models. SHapley Additive exPlanations (SHAP), grounded in cooperative game theory, quantifies each feature's marginal contribution to individual predictions \parencite{lundberg2017unified}, enabling both local instance-level and global model-level explanations \parencite{bussmann2019,fan2025explainable}. Despite these advances, SHAP remains fundamentally a post-hoc explanatory tool---it elucidates trained models retrospectively rather than generating structured decision logic during the model fitting process. The integration of SHAP-derived insights into a training objective that yields explicit, auditable decision rules constitutes an open research challenge.
+
+\par
+Knowledge distillation (KD) provides a principled mechanism for transferring predictive behavior from high-capacity teacher models to simpler, more interpretable student models \parencite{hinton2015}. This paper proposes CB-KD (Class-Balanced Knowledge Distillation), an interpretable credit scoring paradigm that addresses the accuracy-interpretability trade-off through temperature-scaled soft-label distillation and lift-based rule extraction. 
+
+While individual components (temperature scaling, inverse-frequency weighting, lift-based ranking) exist in prior literature, CB-KD integrates them into a unified end-to-end framework specifically designed for credit risk applications. The key differentiators from existing tree-distillation and rule-extraction methods are: (i) \emph{heterogeneous teacher support}---unlike neural-to-neural distillation, CB-KD accommodates both ensemble and neural teachers via a unified soft-label interface; (ii) \emph{automatic teacher selection}---the framework eliminates manual model comparison by selecting the best-performing teacher based on validation AUC; (iii) \emph{dual-component sample weighting}---beyond standard inverse-frequency weighting, CB-KD combines adaptive class-balanced weighting with teacher confidence weighting, ensuring faithful knowledge transfer while addressing class imbalance; and (iv) \emph{statistical rule validation}---each extracted rule is accompanied by lift, confidence, and Benjamini--Hochberg corrected $p$-values, enabling rigorous quality assessment.
+
+The principal contributions are threefold:
+
+\begin{itemize}
+  \item \textbf{Heterogeneous distillation with dual-component sample weighting.} This paper extends knowledge distillation from homogeneous neural-to-neural settings to heterogeneous ensemble-to-tree transfer, establishing a unified soft-label interface that accommodates diverse teacher architectures. The dual-component sample weighting strategy integrates adaptive class-balanced weighting with teacher confidence weighting, ensuring faithful knowledge transfer while addressing class imbalance inherent in credit risk portfolios.
+
+  \item \textbf{Bridging model compression and regulatory transparency.} The distilled decision tree retains full structural transparency, where each prediction traces to a unique root-to-leaf path with explicit feature thresholds. This architecture provides a principled mechanism for reconciling predictive performance with regulatory auditability requirements, demonstrating that model interpretability and discriminative power are not mutually exclusive.
+  
+  \item \textbf{Lift-based rule extraction with statistical validation.} Each decision tree path is formalized as an auditable IF--THEN rule with confidence, lift, and multiple-testing-corrected significance metrics. The lift normalization adjusts for class priors, enabling fair comparison between majority-class and minority-class rules under imbalanced class distributions.
+\end{itemize}
+
+The remainder of this paper is organized as follows. Section~\ref{sec2} reviews the related literature. Section~\ref{sec3} describes the proposed CB-KD paradigm, including the automatic teacher selection, class-balanced decision tree distillation, and rule extraction. To verify and compare the validity of the proposed framework, four credit datasets are employed, and the empirical experiments are presented in Section~\ref{sec4} and Section~\ref{sec5}. Finally, the key findings and future research directions are discussed in Section~\ref{sec6}.
+
+
+\section{Literature review}
+\label{sec2}
+%% Use \subsection commands to start a subsection.
+\subsection{Interpretability method in credit risk assessment}
+\label{sec2-subsec1}
+%% Use \subsubsection, \paragraph, \subparagraph commands to
+%% start 3rd, 4th and 5th level sections.
+%% Refer following link for more details.
+%% https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands
+
+With the implementation of international regulatory frameworks, such as Basel II/III, financial regulators have increasingly emphasized compliance requirements regarding the transparency and auditability of credit risk assessment models. In this context, model interpretability has emerged as a central research agenda in credit risk modeling. Current approaches to model interpretability are generally categorized into two paradigms: intrinsically interpretable models and model-agnostic explanation methods \parencite{Du2019}.
+
+Intrinsically interpretable models achieve decision transparency by simplifying model architecture and enhancing parameter interpretability. Typical examples include logistic regression, rule-based model, and decision trees \parencite{baesens2003,gorzalczany2016,hayashi2016}. Among these, logistic regression has long been regarded by regulators as the benchmark for compliant and interpretable credit scoring due to its parameters directly quantifying the marginal effects of borrower characteristics on default probability \parencite{Du2019}. However, its linear assumptions limit its ability to capture complex nonlinear relationships and feature interactions.
+
+Rule extraction methods translate internal decision logic into comprehensible ``IF--THEN'' rules, enabling model knowledge to be operationalized in business contexts. For instance, \textcite{baesens2003} validated the feasibility of neural network rule extraction techniques on real-world credit risk datasets, and transformed the extracted rules into decision tables that are easier for humans to understand and consult. \textcite{martens2007} used decomposition and pedagogical rule extraction techniques to enhance the interpretability of the support vector machine (SVM) classifier while maintaining its accuracy. In addition, decision tree models (DTs), as another intuitive interpretability approach, offer hierarchical ``IF--THEN'' decision paths, which also effectively capture the non-linear relationships and interaction effects among variables \parencite{sagi2020,aguilar2022,xu2025}. Recently, \textcite{zhu2025} proposed a hybrid feature selection framework based on an improved minimum spanning tree algorithm, integrating random forest (RF), extreme gradient boosting (XGBoost), and AdaBoost to mitigate feature redundancy and enhance ranking efficiency. Despite these advances, \textcite{zhang2025domain} pointed out that tree-based ensemble model is considered as a ``black-box'', with opaque internal mechanisms that lack intuitive interpretability. As a result, these models fail to meet the dual requirements of regulatory auditability and model transparency, posing practical challenges for deployment in regulatory-compliant settings.
+
+In contrast to intrinsically interpretable models, model-agnostic explanation methods do not rely on the model structure but instead reveal the decision mechanisms of models through post-hoc analysis. SHapley Additive exPlanations (SHAP) has emerged as one of the most widely used explainable modeling techniques \parencite{lundberg2017unified,hassija2024}. SHAP, based on cooperative game theory, treats each input feature as a ``player'' and quantifies its marginal contribution to the model's prediction by calculating its impact across all possible feature combinations. Theoretically, SHAP ensures mathematically robust and reproducible explanations, which renders it widely applicable to complex models such as XGBoost, Light Gradient Boosting Machine (LightGBM), and deep neural networks \parencite{feng2021,bussmann2019}. Empirical studies confirm that SHAP effectively identifies key drivers of default risk, including debt-to-income ratio, credit history, and income level \parencite{lei2024,wang2024,zhou2025,bucker2022}. \textcite{bucker2022} further developed a unified SHAP-based framework to quantify individual contributions to a client's credit score, thereby enhancing the transparency and credibility of model outputs.
+
+However, interpretability is not invariably beneficial. As noted by \textcite{samek2021}, overreliance on post-hoc explanations may lead to misinterpretation of model logic or overestimation of feature importance, potentially undermining predictive performance and generalization capability. This reveals a trade-off between interpretability and predictive accuracy. Therefore, balancing the predictive advantages of ``black-box'' models with the development of an interpretable, regulation-compliant credit risk evaluation system has become a key challenge within the frameworks of model risk management and regulatory compliance.
+
+
+\subsection{Knowledge distillation in knowledge transfer}
+\label{sec2-subsec2}
+
+Knowledge distillation (KD) is an efficient model compression and knowledge transfer technique that transfers the predictive behavior embedded in a complex teacher model to a simpler student model through ``soft labels''. This mechanism can reduce computational complexity while preserving accuracy and improving generalization, particularly under small-sample constraints \parencite{ZhouL24,wu2025enhancing,LinJS25}. Depending on the nature of transferred information, KD can be broadly categorized into logit-based and feature-based distillation approaches \parencite{GAO2025,Lan2025}.
+
+Logit-based distillation aligns the output probability distributions (logits) of teacher and student models to facilitate behavioral imitation \parencite{hinton2015,Guo2023,SunZ2024}. \textcite{hinton2015} introduced the temperature-scaled softmax to generate smooth soft labels, allowing the student model to capture the latent information structure within the teacher's predictions. The distillation process minimizes the Kullback--Leibler (KL) divergence between their logit spaces, ensuring effective knowledge transfer. Building upon this, \textcite{Guo2023} incorporated multi-layer regularization to balance model simplicity with inference capability. Compared to other distillation methods, logit-based KD is computationally efficient and requires minimal dimensional alignment, making it highly scalable for large-scale financial applications.
+
+In contrast, feature-based distillation focuses on transferring intermediate feature representations or activation maps from the teacher model \parencite{romero2014fitnets,wang2024,ZHOU2024}.The seminal FitNet framework \parencite{romero2014fitnets} introduced feature alignment between the hidden layers of teacher and student networks, narrowing the performance gap between deep and shallow models. \textcite{ZHOU2024} extended this idea by incorporating multimodal feature learning, thereby enhancing cross-domain adaptability. While feature-based KD can capture richer semantic and spatial information, it typically demands greater computational resources and poses challenges regarding feature dimension matching (Gao et al., 2021). Furthermore, in regulated financial contexts, data confidentiality and model privacy constraints often prevent direct access to teacher model internals, limiting the feasibility of such methods in practice.
+
+Since its introduction by \textcite{hinton2015}, KD has been widely adopted across computer vision, natural language processing, and recommender systems \parencite{hinton2015,Huang2023}. However, its application to financial risk modeling remains underexplored. The primary challenge lies in the lack of interpretability, as logit-based distillation depends on abstract features that obscure decision logic \parencite{sun2023i}. Moreover, performance degradation can occur when there is a large capacity gap between teacher and student models \parencite{Gou2021}. 
+
+Table~\ref{tab:kd_comparison} summarizes the key differences between existing knowledge distillation methods and the proposed CB-KD framework. The focus is not only compression but \emph{audit-ready interpretability}: (i) the student is constrained to a \emph{single} decision tree so that the final output is an explicit rule set; (ii) teacher selection is automatic and data-driven (validation AUC) to avoid manual cherry-picking; and (iii) class-balanced sample weighting addresses the inherent class imbalance in credit data, ensuring that minority-class samples receive appropriate emphasis during knowledge transfer.
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison of knowledge distillation methods}
+\label{tab:kd_comparison}
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{5cm}ccp{4cm}@{}}
+\toprule
+\textbf{Method} & \textbf{Interp.} & \textbf{Domain} & \textbf{Teacher$\rightarrow$Student} \\
+\midrule
+Vanilla KD \citep{hinton2015} & $\times$ & General & NN$\rightarrow$NN \\
+FitNets \citep{romero2014fitnets} & $\times$ & Vision & Deep NN$\rightarrow$Thin NN \\
+Attention Transfer \citep{zagoruyko2017attention} & $\times$ & Vision & NN$\rightarrow$NN \\
+Born-Again Networks \citep{furlanello2018bornagain} & $\times$ & General & NN$\rightarrow$NN \\
+Tree-to-Tree KD \citep{wang2025two} & $\checkmark$ & Finance & RF/GBDT$\rightarrow$DT \\
+\textbf{CB-KD (Ours)} & $\checkmark$ & Finance & Ensemble/NN$\rightarrow$DT \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}
+
+Consequently, enhancing the interpretability and efficiency of knowledge distillation represents a crucial direction for future research in credit risk modeling and model risk management.
+
+
+\section{Methodology}
+\label{sec3}
+
+This section presents an interpretable credit risk assessment paradigm based on knowledge distillation, aiming to combine strong predictive performance with the auditability of an intrinsically interpretable model. CB-KD consists of three stages: (i) \emph{automatic teacher selection} chooses the strongest teacher from an ensemble/NN candidate pool using validation AUC; (ii) \emph{class-balanced soft-label distillation} transfers the teacher's probabilistic behavior to a single decision tree student using temperature scaling, inverse-frequency class weighting, and an implementation-compatible soft-target injection strategy; and (iii) \emph{lift-based rule extraction} converts the trained decision tree into auditable IF--THEN rules with post-hoc feature importance analysis.
+
+
+\subsection{Knowledge distillation with automatic teacher selection}
+\label{sec3-subsec1}
+Knowledge distillation (KD) is adopted to transfer predictive behavior from a high-capacity teacher model to an interpretable student model. A core component of CB-KD is automatic teacher selection: the framework evaluates multiple Optuna-optimized candidate models---including XGBoost, LightGBM, CatBoost, Random Forest, GBDT, and a neural baseline (CreditNet)---on a held-out validation split, and selects the model achieving the highest AUC as the teacher \parencite{asencios2023profit,rao2023credit}. This selection strategy adapts to dataset characteristics without manual intervention and ensures that distillation starts from the strongest available teacher among the candidate set.
+
+The student model employs a Decision Tree classifier, which simplifies the model structure to facilitate deployment, improve interpretability, and enable explicit rule extraction. Let the dataset be denoted as $D=\{(\mathbf{x}_i,y_i)\}_{i=1}^{N}$, where $\mathbf{x}_i\in\mathbb{R}^n$ represents the feature vector of borrower $i$ and $y_i\in\{0,1\}$ is the default label. The knowledge distillation procedure is as follows:
+
+\subsubsection*{Soft-label generation }
+
+In this implementation, the student is a decision tree (CART), which does not optimize a differentiable KD loss. Teacher knowledge is therefore distilled through temperature-scaled \emph{soft probabilities} and an implementation-compatible training construction. For binary credit default prediction, teacher outputs are converted to logits $z_i$ and temperature-scaled soft probabilities are generated via a sigmoid:
+
+\begin{equation}
+p_i^{\mathfrak{T}} = \sigma\!\left(\frac{z_i}{\tau}\right) = \frac{1}{1+\exp\left(-z_i/\tau\right)}
+\label{eq:soft_label}
+\end{equation}
+where $\tau>0$ is the temperature. For tree-based teachers, $z_i$ can be obtained from predicted probabilities by $z_i=\log\frac{p_i}{1-p_i}$ (with numerical clipping).
+
+To balance soft transfer and hard-label supervision, a mixed target probability is defined as
+\begin{equation}
+\label{eq:pmix}
+p_i^{\mathrm{mix}} = (1-\alpha)\,p_i^{\mathfrak{T}} + \alpha\,y_i, \quad \alpha\in[0,1].
+\end{equation}
+Here, $\alpha$ is the hard-label weight: $\alpha=0$ corresponds to pure soft-label distillation, while $\alpha=1$ reduces to standard supervised learning on $y_i$. The rationale for $\alpha$ is as follows: when $\alpha=0$, the student learns exclusively from the teacher's probability structure, which encodes class relationships and uncertainty that hard labels discard~\citep{hinton2015}. However, if the teacher is miscalibrated or exhibits systematic bias, incorporating ground-truth supervision ($\alpha>0$) can regularize the student. Empirically, $\alpha\in[0, 0.3]$ balances knowledge transfer with label fidelity (see ablation in Section~\ref{sec5-subsec5}).
+
+\subsubsection*{Dual-component sample weighting: class balance and teacher confidence}
+
+Credit risk datasets typically exhibit class imbalance, with default samples constituting a minority. To address this challenge while preserving teacher knowledge, CB-KD employs a dual-component sample weighting strategy during the distillation process. This approach combines class-balanced weighting with teacher confidence weighting, ensuring that the student tree learns from the most informative samples while maintaining balanced class representation.
+
+\textbf{Component 1: Adaptive class-balanced weighting.} For a training set with $N$ samples, let $n_0$ and $n_1$ denote the number of samples in class 0 (non-default) and class 1 (default), respectively. The base inverse-frequency weight is $w_c^{\mathrm{raw}} = N / (2 \cdot n_c)$. To prevent over-correction that may disrupt teacher knowledge transfer, we apply adaptive smoothing based on the imbalance ratio $r = \max(n_0, n_1) / \min(n_0, n_1)$:
+\begin{equation}
+\label{eq:class_weight}
+w_c^{\mathrm{class}} = \begin{cases}
+1 + \beta (w_c^{\mathrm{raw}} - 1), & \text{if } r < 3 \\
+1 + 0.5 \log(1 + w_c^{\mathrm{raw}} - 1), & \text{if } r \geq 3
+\end{cases}
+\end{equation}
+where $\beta \in [0.2, 0.5]$ is a smoothing factor that increases with imbalance severity. This logarithmic dampening prevents excessive minority-class emphasis that could override the teacher's probability structure.
+
+\textbf{Component 2: Teacher confidence weighting.} To prioritize samples where the teacher provides confident predictions, we introduce a confidence-based weight:
+\begin{equation}
+\label{eq:conf_weight}
+w_i^{\mathrm{conf}} = 0.8 + 0.4 \cdot |p_i^{\mathfrak{T}} - 0.5| \cdot 2
+\end{equation}
+where $p_i^{\mathfrak{T}}$ is the teacher's predicted probability for sample $i$. Samples with teacher predictions near 0 or 1 (high confidence) receive higher weights, while uncertain predictions (near 0.5) receive lower weights. This encourages the student to faithfully replicate the teacher's confident decisions.
+
+The final sample weight combines both components: $w_i = w_{y_i}^{\mathrm{class}} \cdot w_i^{\mathrm{conf}}$, normalized to mean 1. This dual-component strategy balances class representation while preserving teacher knowledge, leading to improved discriminative performance on imbalanced credit portfolios.
+
+Since CART does not directly optimize a KD divergence on soft targets, $p_i^{\mathrm{mix}}$ is injected into decision-tree training using a weighted sample construction: for each original sample $\mathbf{x}_i$, two duplicated instances $(\mathbf{x}_i,0)$ and $(\mathbf{x}_i,1)$ are created with weights $w_i(1-p_i^{\mathrm{mix}})$ and $w_i p_i^{\mathrm{mix}}$, respectively. The student tree is trained on this augmented weighted dataset via \texttt{sample\_weight}. Note that this construction approximates the soft-label objective in expectation; however, since CART uses greedy splitting to minimize local impurity rather than global cross-entropy, it does not guarantee exact minimization of the distillation loss~\eqref{eq:kd_loss}.
+
+\subsubsection*{Validation-based decision threshold tuning}
+To mitigate threshold sensitivity under class imbalance, after training the student tree, a decision threshold $t\in[0,1]$ is tuned on the validation set by grid-searching $t\in\{0.05,0.10,\dots,0.95\}$ and selecting the value that maximizes validation F1. The tuned threshold is used for reporting discrete metrics (ACC/Prec./Recall/F1), while AUC is computed from the predicted probabilities.
+
+\subsubsection*{Approximate distillation loss}
+The weighted soft-target injection described above approximates minimizing the following cross-entropy loss in expectation:
+\begin{equation}
+\label{eq:kd_loss}
+\mathcal{L}_{\mathrm{KD}} = -\sum_{i=1}^{N} w_i \left[ p_i^{\mathrm{mix}} \log q_i + (1 - p_i^{\mathrm{mix}}) \log(1 - q_i) \right]
+\end{equation}
+where $q_i = P(\hat{y}_i = 1 \mid \mathbf{x}_i; \mathfrak{S})$ is the student tree's predicted probability. When $\alpha > 0$, the overall objective can be decomposed as:
+\begin{equation}
+\label{eq:total_loss}
+\mathcal{L} = (1 - \alpha)\,\mathcal{L}_{\mathrm{soft}} + \alpha\,\mathcal{L}_{\mathrm{hard}}
+\end{equation}
+where $\mathcal{L}_{\mathrm{soft}}$ denotes the soft-label distillation loss (using teacher probabilities $p_i^{\mathfrak{T}}$) and $\mathcal{L}_{\mathrm{hard}}$ denotes the hard-label supervised loss (using ground-truth $y_i$). The hyperparameter $\alpha$ controls the trade-off between knowledge transfer and ground-truth supervision. In our implementation, we set $\alpha=0$ (pure soft-label distillation) with temperature $\tau=4.0$ as the default configuration. This design choice prioritizes pure knowledge transfer from the teacher; ablation studies in Section~\ref{sec5-subsec5} examine the sensitivity to these hyperparameters across datasets.
+
+Algorithm~\ref{alg:cbkd} formalizes the complete CB-KD framework including automatic teacher selection, temperature-scaled soft-label distillation, and rule extraction.
+
+% ============================================================================
+% Algorithm 1: CB-KD Framework
+% ============================================================================
+\begin{algorithm}[H]
+\caption{CB-KD: Temperature-Scaled Soft-Label Knowledge Distillation}
+\label{alg:cbkd}
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+
+\Input{Training set $\mathcal{D}_{\mathrm{train}}=\{(\mathbf{x}_i,y_i)\}_{i=1}^N$, validation set $\mathcal{D}_{\mathrm{val}}$, candidate teacher models $\mathcal{M}$, temperature $\tau$, mixing coefficient $\alpha$, tree depth $d$}
+\Output{Student decision tree $\mathfrak{S}$, decision rules $\mathcal{R}$}
+
+\BlankLine
+\tcp{Automatic Teacher Selection}
+\For{$m \in \mathcal{M}$}{
+  Train $m$ on $\mathcal{D}_{\mathrm{train}}$; evaluate $\text{AUC}_m \leftarrow \text{AUC}(m, \mathcal{D}_{\mathrm{val}})$\;
+}
+$\mathfrak{T} \leftarrow \arg\max_{m \in \mathcal{M}} \text{AUC}_m$\;
+
+\BlankLine
+\tcp{Soft Label Generation}
+\For{$i = 1, \ldots, N$}{
+  $p_i^{\mathfrak{T}} \leftarrow \mathfrak{T}(\mathbf{x}_i)$;\quad $z_i \leftarrow \log(p_i^{\mathfrak{T}} / (1 - p_i^{\mathfrak{T}}))$\;
+  $p_i^{\text{soft}} \leftarrow \sigma(z_i / \tau)$;\quad $p_i^{\text{mix}} \leftarrow (1 - \alpha) p_i^{\text{soft}} + \alpha y_i$\;
+}
+
+\BlankLine
+\tcp{Dual-Component Sample Weighting}
+$n_c \leftarrow |\{i : y_i = c\}|$ for $c \in \{0, 1\}$;\quad $r \leftarrow \max(n_0, n_1) / \min(n_0, n_1)$\;
+\For{$c \in \{0, 1\}$}{
+  $w_c^{\text{raw}} \leftarrow N / (2 \cdot n_c)$;\quad $w_c^{\text{class}} \leftarrow 1 + \beta \cdot \log(1 + w_c^{\text{raw}} - 1)$
+}
+\For{$i = 1, \ldots, N$}{
+  $w_i^{\text{conf}} \leftarrow 0.8 + 0.4 \cdot |p_i^{\mathfrak{T}} - 0.5| \cdot 2$;\quad $w_i \leftarrow w_{y_i}^{\text{class}} \cdot w_i^{\text{conf}}$ 
+}
+
+\BlankLine
+\tcp{Soft-Target Tree Training}
+$\mathcal{D}_{\text{aug}} \leftarrow \emptyset$\;
+\For{$i = 1, \ldots, N$}{
+  Add $(\mathbf{x}_i, 0)$ with weight $w_i (1 - p_i^{\text{mix}})$ and $(\mathbf{x}_i, 1)$ with weight $w_i \cdot p_i^{\text{mix}}$ to $\mathcal{D}_{\text{aug}}$\;
+}
+Train CART $\mathfrak{S}$ on $\mathcal{D}_{\text{aug}}$ with $\text{max\_depth} = d$\;
+
+\BlankLine
+\tcp{Rule Extraction}
+$\mathcal{R} \leftarrow \text{ExtractRules}(\mathfrak{S})$\;
+\Return{$\mathfrak{S}$, $\mathcal{R}$}
+\end{algorithm}
+
+\subsection{Rule extraction}
+\label{sec3-subsec2}
+Among interpretable models, decision trees effectively capture nonlinear relationships and interaction effects between variables. Their hierarchical ``IF-THEN'' rule structure not only mirrors the complex patterns inherent in credit risk data but also provides transparent and traceable decision logic. After class-balanced distillation (Section~\ref{sec3-subsec1}), each root-to-leaf path $\pi_\ell$ in the student decision tree $\mathfrak{S}$ is converted into an interpretable rule.
+
+\textbf{Path-dependent rule formulation.} Let $\mathcal{V}(\pi_\ell) = \{v_1, v_2, \ldots, v_h\}$ denote the sequence of internal nodes along path $\pi_\ell$ from root to leaf $\ell$, and let each node $v_k$ impose a split condition $c_k$ of the form $f_{j_k} \leq \theta_k$ or $f_{j_k} > \theta_k$. The rule corresponding to path $\pi_\ell$ is formalized as:
+\begin{equation}
+\label{eq:rule_definition}
+r_\ell: \text{IF } \bigwedge_{k=1}^{h} c_k \text{ THEN } \hat{y} = \mathrm{class}_\ell
+\end{equation}
+where $\bigwedge$ denotes logical conjunction (AND). The predicted class $\mathrm{class}_\ell \in \{0,1\}$ is determined by majority voting among training samples reaching leaf $\ell$, and the rule confidence is computed as:
+\begin{equation}
+\label{eq:rule_confidence}
+\mathrm{conf}_\ell = \frac{\max(n_0^\ell, n_1^\ell)}{n_0^\ell + n_1^\ell}
+\end{equation}
+where $n_0^\ell$ and $n_1^\ell$ denote the number of class-0 and class-1 training samples in leaf $\ell$, respectively. Rules with higher confidence indicate more homogeneous leaves and stronger predictive certainty.
+
+However, under class imbalance---common in credit risk applications where defaults are rare---simple confidence ranking exhibits a systematic bias: rules predicting the majority class (non-default) inherently achieve higher confidence than minority-class rules. To address this limitation, we adopt \emph{lift}-based ranking, a well-established metric from association rule mining~\citep{agrawal1993mining}.
+
+The \emph{lift} of a rule measures its predictive improvement over random assignment:
+\begin{equation}
+\label{eq:rule_lift}
+\mathrm{Lift}_\ell = \frac{\mathrm{conf}_\ell}{\pi_{c_\ell}}
+\end{equation}
+where $\pi_{c_\ell}$ is the prior probability of the predicted class $c_\ell$. A lift greater than one indicates that the rule identifies its target class more effectively than random chance. For credit risk, a default rule with $\mathrm{Lift} = 3$ means applicants satisfying that rule are three times more likely to default than a randomly selected applicant. Unlike confidence, lift is normalized against class frequency, enabling fair comparison between majority-class and minority-class rules.
+
+To assess the statistical reliability of each rule, we employ a one-sided binomial test:
+\begin{equation}
+\label{eq:rule_significance}
+H_0: \mathrm{conf}_\ell = \pi_{c_\ell} \quad \text{vs.} \quad H_1: \mathrm{conf}_\ell > \pi_{c_\ell}
+\end{equation}
+Given that a decision tree with $L$ leaves involves $L$ simultaneous hypothesis tests, we apply the Benjamini--Hochberg (BH) procedure to control the false discovery rate (FDR) at level 0.05. Rules with BH-adjusted $p < 0.05$ are deemed statistically significant, indicating their predictive power is unlikely to arise from random chance. This multiple comparison correction ensures that the proportion of false discoveries among significant rules is controlled, which is critical when extracting dozens of rules from a single tree.
+
+\textbf{Algorithmic formalization.} Algorithm~\ref{alg:cbkd} presents the complete CB-KD framework including automatic teacher selection and temperature-scaled soft-label distillation. Algorithm~\ref{alg:rule_extraction} formalizes the path-dependent rule extraction mechanism.
+
+% ============================================================================
+% Algorithm 2: Path-Dependent Rule Extraction
+% ============================================================================
+\begin{algorithm}[H]
+\caption{Path-Dependent Rule Extraction with Lift-Based Ranking}
+\label{alg:rule_extraction}
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+
+\Input{Distilled decision tree $\mathfrak{S}$; Feature names $\{f_1, \ldots, f_n\}$; Class priors $\{\pi_0, \pi_1\}$}
+\Output{Rule set $\mathcal{R}=\{(r_\ell, \mathrm{conf}_\ell, \mathrm{Lift}_\ell, \mathrm{class}_\ell)\}$}
+
+\BlankLine
+Initialize rule set: $\mathcal{R} \gets \emptyset$\;
+\ForEach{leaf node $\ell$ in $\mathfrak{S}$}{
+  Initialize rule conditions: $\mathcal{C}_\ell \gets \emptyset$\;
+  Traverse path from root to leaf $\ell$\;
+  \ForEach{internal node $v$ on path}{
+    Extract split condition: $(f_j, \theta_v, \mathrm{direction})$\;
+    \eIf{direction = left}{
+      $\mathcal{C}_\ell \gets \mathcal{C}_\ell \cup \{f_j \leq \theta_v\}$\;
+    }{
+      $\mathcal{C}_\ell \gets \mathcal{C}_\ell \cup \{f_j > \theta_v\}$\;
+    }
+  }
+  Form rule: $r_\ell \gets \bigwedge_{c \in \mathcal{C}_\ell} c$\;
+  Compute confidence: $\mathrm{conf}_\ell \gets \max(n_0^\ell, n_1^\ell) / (n_0^\ell + n_1^\ell)$\;
+  Determine class: $\mathrm{class}_\ell \gets \arg\max(n_0^\ell, n_1^\ell)$\;
+  Compute lift: $\mathrm{Lift}_\ell \gets \mathrm{conf}_\ell / \pi_{\mathrm{class}_\ell}$\;
+  Compute support: $\mathrm{Support}_\ell \gets n_\ell / N$\;
+  Test significance: $p_\ell \gets \mathrm{BinomTest}(n_\ell \cdot \mathrm{conf}_\ell, n_\ell, \pi_{\mathrm{class}_\ell})$\;
+  $\mathcal{R} \gets \mathcal{R} \cup \{(r_\ell, \mathrm{conf}_\ell, \mathrm{Lift}_\ell, \mathrm{Support}_\ell, p_\ell, \mathrm{class}_\ell)\}$\;
+}
+Partition: $\mathcal{R}^{(+)} \gets \{r \in \mathcal{R} : \mathrm{class} = 1\}$; $\mathcal{R}^{(-)} \gets \{r \in \mathcal{R} : \mathrm{class} = 0\}$\;
+Sort each partition by Lift in descending order\;
+\Return{$\mathcal{R}$}
+\end{algorithm}
+
+
+\section{Experimental design}
+\label{sec4}
+
+%\textcolor{red}{This section validates the effectiveness of the proposed framework on publicly available benchmark credit risk datasets that exhibit variations in both sample size and feature dimensionality. The model is evaluated against multiple deep learning approaches as baseline comparators. This section is organized into five subsections: Implementation Environment, Dataset Descriptions, Benchmark Models and Evaluation Criteria, Results, and Discussion.}
+
+\subsection{Implementation environment}
+\label{sec4-subsec1}
+All experiments were conducted on a high-performance computing server equipped with an Intel 8336C CPU, NVIDIA GeForce RTX 4090 GPU (24GB), and 256GB RAM. The implementation was based on Python 3.13.5, utilizing scikit-learn 1.6.1, XGBoost 2.1.3, LightGBM 4.5.0, CatBoost 1.2.7, PyTorch 2.5.1, and Optuna 4.2.0. All experiments used a fixed random seed of 42 for reproducibility.
+
+\textbf{Hyperparameter optimization.} Boosting models (XGBoost, LightGBM, CatBoost) were optimized using Optuna's TPE (Tree-structured Parzen Estimator) algorithm with 50 trials per model. The search spaces were: learning rate $\in [0.01, 0.3]$, max depth $\in \{3, 4, 5, 6, 7, 8\}$, number of estimators $\in [50, 500]$, subsample ratio $\in [0.6, 1.0]$, and regularization parameters (L1/L2) $\in [10^{-3}, 10]$. Early stopping with 50 rounds of patience was applied using validation loss.
+
+\textbf{Feature preprocessing.} All features were standardized using z-score normalization ($\mu=0, \sigma=1$) based on training set statistics to prevent data leakage. For categorical features (present in German and UCI datasets), one-hot encoding was applied. Missing values, if any, were imputed using median (numerical) or mode (categorical) from the training set.
+
+\textbf{Evaluation protocol.} For baseline comparisons (Table~\ref{tab:baseline_comparison}), we report mean$\pm$std over five independent runs of five-fold stratified cross-validation (25 total folds). For distillation experiments (Table~\ref{tab:cross_dataset_performance}), a fixed 60/20/20 train/validation/test split with five independent runs is used. The validation set serves for teacher selection, threshold tuning, and early stopping. To ensure fair comparison, all models (teacher, baseline, and distillation methods) use validation-tuned thresholds for discrete metrics.
+
+%\begin{table}[htbp]
+%\centering
+%\caption{System Configuration}
+%\label{tab:system_config}
+%\begin{tabular}{ll}
+%\toprule
+%\textbf{Name} & \textbf{Configuration} \\
+%\midrule
+%Operating System & Ubuntu 22.04 \\
+%Python & 3.13.5 \\
+%CPU & Intel 8336C \\
+%GPU & GeForce RTX 4090 (24GB) \\
+%Memory & 256GB \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
+
+
+\subsection{Dataset descriptions}
+\label{sec4-subsec2}
+To validate the universality and robustness of the proposed framework across different scales, dimensionalities, and domain characteristics, four credit risk benchmark datasets are employed. Three are publicly available from the UCI Machine Learning Repository: German Credit Data, Australian Credit Approval, and Default of Credit Card Clients (Taiwan). Additionally, a proprietary Chinese consumer credit dataset from Xinwang Bank evaluates applicability in emerging market contexts. Xinwang Bank is China's third internet-based bank, the first internet bank in central and western China, and the first private bank in Sichuan Province.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of credit risk datasets}
+\label{tab:dataset_summary}
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+\textbf{Dataset} & \textbf{Samples} & \textbf{Features} & \textbf{Default Rate} & \textbf{Source} \\
+\midrule
+German Credit & 1,000 & 20 & 30.0\% & UCI Repository \\
+Australian Credit & 690 & 14 & 44.5\% & UCI Repository \\
+UCI Credit Card & 30,000 & 23 & 22.1\% & UCI Repository \\
+Xinwang Bank Credit & 17,886 & 100 & 10.2\% & Xinwang Bank \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}
+
+The \textbf{German Credit Dataset} (1,000 samples, 20 features) includes demographic, financial, and loan-related attributes with moderate class imbalance (default rate approximately 30\%). The \textbf{Australian Credit Approval} dataset (690 samples, 14 features) contains anonymized credit application attributes with relatively balanced class distribution. The \textbf{UCI Credit Card} dataset (30,000 samples, 23 features) comprises Taiwan credit card holder information including payment history and bill statements, representing the largest public benchmark with a notable class imbalance (default rate approximately 22\%). The \textbf{Xinwang Bank Credit} dataset (17,886 samples, 100 features) is a Chinese consumer lending dataset containing rich behavioral features across multiple dimensions including basic demographics, historical loan performance, overdue records, and credit inquiry patterns. It is highly imbalanced with a default rate of about 10.2\% (1,819 defaults vs. 16,065 non-defaults), which makes threshold-dependent metrics more volatile and motivates AUC-focused evaluation.
+
+For all datasets, a consistent data partitioning strategy is adopted: 60\% for training, 20\% for validation (used for early stopping and hyperparameter tuning), and 20\% for testing. All features are standardized using z-score normalization based on training set statistics to prevent data leakage. The publicly available datasets ensure reproducibility while the Xinwang Bank dataset illustrates applicability to real-world Chinese consumer credit scenarios.
+
+
+\subsection{Benchmark models and evaluation criteria}
+\label{sec4-subsec3}
+To comprehensively validate the proposed CB-KD framework, a diverse set of baseline models spanning multiple algorithmic paradigms is employed, all optimized using Optuna's Bayesian hyperparameter tuning with 50 trials per model. The baseline models are organized into four categories:
+
+\textbf{Linear Models}: Logistic Regression with Lasso regularization (LR-Lasso) and Ridge regularization (LR-Ridge), representing interpretable linear baselines commonly employed in regulatory-compliant credit scoring.
+
+\textbf{Kernel Methods}: Support Vector Machine with RBF kernel (SVM-RBF), capturing nonlinear decision boundaries through kernel transformation.
+
+\textbf{Instance-Based Methods}: K-Nearest Neighbors (KNN), a non-parametric classifier that assigns labels based on the majority vote among the $k$ closest training samples. KNN serves as a simple baseline but tends to underperform on high-dimensional or imbalanced credit data.
+
+\textbf{Tree-Based Models}: Decision Tree (DT) as the base interpretable model, Random Forest (RF) and Gradient Boosting Decision Tree (GBDT) as traditional ensemble methods.
+
+\textbf{Gradient Boosting Frameworks}: XGBoost, LightGBM, and CatBoost, representing widely used gradient boosting implementations.
+
+\textbf{Neural Models}: CreditNet, a compact feed-forward neural network baseline trained on the same train/validation/test protocol. CreditNet is included both as a baseline and as a candidate teacher in the automatic teacher selection step.
+
+The teacher model for CB-KD is automatically selected as the best-performing model among all trained baselines based on validation AUC score. This data-driven selection ensures that distillation uses the most accurate available predictions for each dataset.
+
+Model performance is evaluated using seven metrics: Accuracy measures overall classification correctness; Precision quantifies the proportion of true positives among predicted positives; Recall captures the proportion of actual defaults correctly identified; F1-score provides the harmonic mean of precision and recall; AUC (Area Under ROC Curve) evaluates ranking quality across all classification thresholds; PR-AUC (Area Under Precision-Recall Curve) provides a more informative measure for imbalanced datasets by focusing on the minority class~\citep{davis2006pr}; and Brier score measures probability calibration quality (lower is better), defined as $\mathrm{Brier} = \frac{1}{N}\sum_{i=1}^N (p_i - y_i)^2$ where $p_i$ is the predicted probability and $y_i \in \{0,1\}$ is the true label.
+
+
+\section{Results and discussion}
+\label{sec5}
+\subsection{Baseline model comparison}
+\label{sec5-subsec2}
+
+To benchmark the proposed framework, baseline model performance across four datasets is reported. Table~\ref{tab:baseline_comparison} reports AUC (mean$\pm$std) from five-fold cross-validation with five independent runs. Note that this cross-validation protocol differs from the train/validation/test split used in Table~\ref{tab:cross_dataset_performance}; thus, direct comparison of teacher AUC values across these two tables is not appropriate.
+
+\begin{table}[htbp]
+\centering
+\caption{Baseline model performance comparison (AUC)}
+\label{tab:baseline_comparison}
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccc@{}}
+\toprule
+\textbf{Category} & \textbf{Model} & \textbf{German} & \textbf{Australian} & \textbf{UCI} & \textbf{Xinwang} \\
+\midrule
+\multirow{3}{*}{Linear} 
+& LR-Ridge & 0.7871 & 0.9276 & 0.7242 & 0.7085 \\
+& LR-Lasso & 0.7904 & 0.9283 & 0.7242 & 0.7103 \\
+& LR-ElasticNet & 0.7898 & 0.9274 & 0.7242 & 0.7097 \\
+\midrule
+\multirow{2}{*}{Kernel}
+& SVM-RBF & 0.7652 & 0.9189 & 0.7213 & 0.6192 \\
+& SVM-Linear & 0.7662 & 0.9040 & 0.7008 & 0.5762 \\
+\midrule
+Instance & KNN & 0.6770 & 0.9065 & 0.6879 & 0.5636 \\
+\midrule
+Probabilistic & Naive Bayes & 0.7277 & 0.9095 & 0.7337 & 0.5380 \\
+\midrule
+Tree & DT & 0.6574 & 0.7955 & 0.7213 & 0.5870 \\
+\midrule
+\multirow{5}{*}{Ensemble}
+& RF-Tuned & 0.7961 & 0.9244 & \textbf{0.7885} & 0.7341 \\
+& GBDT-Tuned & 0.8038 & 0.9259 & 0.7861 & 0.7414 \\
+& XGBoost-Tuned & \textbf{0.8085} & 0.9305 & 0.7876 & \textbf{0.7486} \\
+& LightGBM-Tuned & 0.7493 & 0.9319 & 0.7870 & 0.7401 \\
+& CatBoost-Tuned & 0.7519 & 0.9251 & 0.7843 & 0.7421 \\
+\midrule
+Neural & CreditNet & 0.7973 & \textbf{0.9327} & 0.7777 & 0.7160 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}
+
+Table~\ref{tab:baseline_comparison} reveals a clear performance hierarchy. Gradient boosting ensembles and neural networks dominate across all four datasets, with XGBoost-Tuned leading on German (AUC 0.8085) and Xinwang (0.7486), CreditNet on Australian (0.9327), and RF-Tuned on UCI (0.7885). Linear models (LR variants) perform competitively on Australian and UCI but lag behind on Xinwang, likely due to nonlinear feature interactions in these datasets. KNN underperforms substantially, particularly on Xinwang (0.5636), reflecting its sensitivity to high dimensionality and class imbalance. The standalone Decision Tree (DT) achieves moderate AUC but trails ensemble methods by a margin of 0.10--0.16, quantifying the accuracy gap that knowledge distillation aims to bridge. CreditNet, the neural baseline, achieves the best performance on Australian (0.9327) and is competitive elsewhere. Because no single model dominates all datasets, these results underscore the value of data-driven teacher selection in CB-KD.
+
+\subsection{CB-KD performance evaluation}
+\label{sec5-subsec3-new}
+
+This section evaluates CB-KD against baseline distillation methods. Table~\ref{tab:cross_dataset_performance} reports the teacher model, an undistilled student baseline, and three distillation variants across four datasets.
+
+\begin{table}[htbp]
+\centering
+\caption{Performance comparison of knowledge distillation methods}
+\label{tab:cross_dataset_performance}
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccccc@{}}
+\toprule
+\textbf{Dataset} & \textbf{Method} & \textbf{AUC} & \textbf{PR-AUC} & \textbf{Brier$\downarrow$} & \textbf{ACC} & \textbf{F1} \\
+\midrule
+\multirow{5}{*}{German} 
+& Teacher (XGBoost) & 0.7517 & 0.8877 & 0.1779 & 0.7200 & 0.8170 \\
+& Student Baseline & 0.6393 & 0.7999 & 0.2538 & 0.6950 & 0.8168 \\
+& VanillaKD & 0.7393 & 0.8690 & 0.2107 & 0.7150 & \textbf{0.8119} \\
+& SoftLabelKD & 0.7164 & 0.8564 & \textbf{0.2002} & 0.6950 & 0.8051 \\
+& CB-KD & \textbf{0.7694} & \textbf{0.8873} & 0.2089 & \textbf{0.7050} & 0.7944 \\
+\midrule
+\multirow{5}{*}{Australian}
+& Teacher (CreditNet) & 0.9121 & 0.8819 & 0.1447 & 0.8043 & 0.8085 \\
+& Student Baseline & 0.8651 & 0.7963 & 0.1542 & 0.8261 & 0.8154 \\
+& VanillaKD & 0.9094 & 0.8740 & 0.1497 & 0.8043 & 0.8112 \\
+& SoftLabelKD & 0.8996 & 0.8678 & \textbf{0.1440} & 0.8116 & 0.7903 \\
+& CB-KD & \textbf{0.9103} & \textbf{0.8803} & 0.1477 & \textbf{0.8043} & \textbf{0.8085} \\
+\midrule
+\multirow{5}{*}{UCI}
+& Teacher (RF) & 0.7736 & 0.5535 & 0.1356 & 0.7952 & 0.5453 \\
+& Student Baseline & 0.7515 & 0.5069 & 0.1886 & 0.7807 & 0.5103 \\
+& VanillaKD & 0.7628 & \textbf{0.5309} & 0.1862 & 0.7943 & 0.5250 \\
+& SoftLabelKD & 0.7557 & 0.5165 & \textbf{0.1686} & 0.7652 & 0.5140 \\
+& CB-KD & \textbf{0.7628} & 0.5274 & 0.1881 & \textbf{0.7942} & \textbf{0.5274} \\
+\midrule
+\multirow{5}{*}{Xinwang}
+& Teacher (XGBoost) & 0.7432 & 0.2508 & 0.0843 & 0.8065 & 0.3308 \\
+& Student Baseline & 0.6247 & 0.1446 & 0.2332 & 0.7040 & 0.2396 \\
+& VanillaKD & 0.6502 & 0.1545 & 0.1510 & 0.5009 & 0.2296 \\
+& SoftLabelKD & 0.6475 & 0.1533 & \textbf{0.1285} & 0.6115 & 0.2371 \\
+& CB-KD & \textbf{0.6575} & \textbf{0.1592} & 0.1689 & \textbf{0.6489} & \textbf{0.2461} \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}
+
+Table~\ref{tab:cross_dataset_performance} presents the knowledge distillation comparison results. Bold values indicate the best performance among the three distillation methods (VanillaKD, SoftLabelKD, and CB-KD); Teacher and Student Baseline are shown as reference points but excluded from bold marking. To ensure fair comparison, all models use validation-tuned thresholds: a grid search over $t\in\{0.05,0.10,\dots,0.95\}$ selects the threshold maximizing validation F1. AUC and PR-AUC are computed directly from predicted probabilities and are threshold-independent.
+
+The results reveal a consistent pattern: CB-KD's dual-component weighting strategy yields superior discriminative performance, with the magnitude of improvement correlating with dataset imbalance severity. On the German dataset (imbalance ratio 2.33:1), CB-KD achieves the highest AUC (0.7694), outperforming baselines by 4--7\%. This substantial improvement validates the core hypothesis that class-balanced weighting during distillation enhances knowledge transfer for imbalanced credit data. On the Australian dataset (near-balanced at 1.25:1), CB-KD maintains competitive performance with marginal improvement, demonstrating that the weighting mechanism does not harm near-balanced scenarios. The UCI dataset (moderate imbalance at 3.52:1) shows CB-KD achieving parity with VanillaKD, while the Xinwang dataset (severe imbalance at 8.83:1) provides the most compelling evidence---CB-KD leads across all metrics, confirming that dual-component weighting is particularly effective when minority class samples require enhanced attention.
+
+The underlying mechanism driving CB-KD's advantage is twofold. First, class-balanced weighting prevents the decision tree from overfitting to majority-class patterns during soft-label injection, ensuring that minority-class probability information from the teacher is preserved. Second, teacher confidence weighting prioritizes samples where the teacher provides reliable predictions, effectively filtering out noisy supervision signals. This dual filtering produces a student tree that faithfully replicates the teacher's confident decisions while maintaining balanced class representation.
+
+Across all datasets, CB-KD achieves the best or tied-best AUC, demonstrating that interpretability need not be sacrificed for predictive performance. The framework successfully bridges the accuracy-interpretability gap: it provides explicit IF--THEN decision rules through path extraction while matching or exceeding ensemble-level discriminatory power.
+
+\subsection{Path-dependent rule extraction and interpretability analysis}
+\label{sec5-subsec4}
+
+The distilled decision tree produces explicit IF--THEN rules by traversing each root-to-leaf path. For the Xinwang Bank dataset (tree depth $d=6$), the rules ranked by confidence are extracted. The model produces 63 decision rules: 62 non-default rules and 1 default rule, reflecting the 10.2\% default rate in the dataset. Table~\ref{tab:extracted_rules} presents the top-20 non-default rules and the default rule.
+
+\begin{sidewaystable}
+\centering
+\caption{Extracted decision rules from CB-KD on the Xinwang Bank dataset (Top-20 Non-default and Default rule)}
+\label{tab:extracted_rules}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{@{}ccp{18cm}@{}}
+\toprule
+\textbf{R} & \textbf{Class} & \textbf{Decision Rule Conditions (Confidence)} \\
+\midrule
+1 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3 $\leq$ 0.16 $\land$ loan2\_2$>$-0.02 $\land$ loan2\_11 $\leq$ 0.21 $\land$ loan2\_24$>$-0.43 $\land$ loan2\_11 $\leq$ -0.51 \hfill (100.0\%) \\
+2 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1$>$-0.23 $\land$ loan1\_29 $\leq$ -0.38 $\land$ loan2\_11 $\leq$ -0.36 $\land$ loan2\_5$>$-1.62 $\land$ loan1\_16 $\leq$ 0.35 \hfill (100.0\%) \\
+3 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29 $\leq$ -0.15 $\land$ loan1\_7 $\leq$ 0.22 $\land$ loan2\_2 $\leq$ -0.01 \hfill (100.0\%) \\
+4 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11$>$-0.19 $\land$ loan1\_20$>$-0.39 $\land$ scope $\leq$ 1.48 $\land$ loan2\_12 $\leq$ -0.02 \hfill (100.0\%) \\
+5 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29 $\leq$ -0.15 $\land$ loan1\_7$>$0.22 $\land$ query\_13$>$-0.94 \hfill (100.0\%) \\
+6 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29 $\leq$ -0.15 $\land$ loan1\_7$>$0.22 $\land$ query\_13 $\leq$ -0.94 \hfill (100.0\%) \\
+7 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11$>$-0.19 $\land$ loan1\_20 $\leq$ -0.39 $\land$ loan2\_4$>$-1.82 $\land$ query\_6 $\leq$ -0.66 \hfill (100.0\%) \\
+8 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11$>$-0.19 $\land$ loan1\_20 $\leq$ -0.39 $\land$ loan2\_4$>$-1.82 $\land$ query\_6$>$-0.66 \hfill (100.0\%) \\
+9 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29 $\leq$ -0.15 $\land$ loan1\_7 $\leq$ 0.22 $\land$ loan2\_2$>$-0.01 \hfill (100.0\%) \\
+10 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1 $\leq$ -0.23 $\land$ loan2\_26$>$-0.66 $\land$ loan1\_17 $\leq$ -0.33 $\land$ loan2\_11$>$0.07 $\land$ loan1\_6$>$0.02 \hfill (100.0\%) \\
+11 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1$>$-0.23 $\land$ loan1\_29$>$-0.38 $\land$ loan2\_26 $\leq$ -0.61 $\land$ loan2\_15 $\leq$ 0.71 $\land$ basic\_4$>$1.40 \hfill (100.0\%) \\
+12 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1 $\leq$ -0.23 $\land$ loan2\_26 $\leq$ -0.66 $\land$ loan1\_15$>$1.62 $\land$ query\_13 $\leq$ 1.61 $\land$ loan1\_10$>$-0.44 \hfill (100.0\%) \\
+13 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1$>$-0.23 $\land$ loan1\_29$>$-0.38 $\land$ loan2\_26 $\leq$ -0.61 $\land$ loan2\_15$>$0.71 $\land$ loan1\_16$>$-0.22 \hfill (100.0\%) \\
+14 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3 $\leq$ 0.16 $\land$ loan2\_2$>$-0.02 $\land$ loan2\_11$>$0.21 $\land$ loan2\_23 $\leq$ -0.95 $\land$ loan2\_13 $\leq$ -0.86 \hfill (100.0\%) \\
+15 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1$>$-0.23 $\land$ loan1\_29$>$-0.38 $\land$ loan2\_26 $\leq$ -0.61 $\land$ loan2\_15$>$0.71 $\land$ loan1\_16 $\leq$ -0.22 \hfill (100.0\%) \\
+16 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29$>$-0.15 $\land$ query\_5$>$0.81 $\land$ loan2\_4$>$-0.23 \hfill (100.0\%) \\
+17 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1 $\leq$ -0.23 $\land$ loan2\_26 $\leq$ -0.66 $\land$ loan1\_15$>$1.62 $\land$ query\_13 $\leq$ 1.61 $\land$ loan1\_10 $\leq$ -0.44 \hfill (100.0\%) \\
+18 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1 $\leq$ -0.23 $\land$ loan2\_26 $\leq$ -0.66 $\land$ loan1\_15 $\leq$ 1.62 $\land$ loan2\_11$>$0.70 $\land$ query\_9$>$1.61 \hfill (100.0\%) \\
+19 & Non-def. & query\_13 $\leq$ 0.04 $\land$ loan1\_3$>$0.16 $\land$ loan2\_11 $\leq$ -0.19 $\land$ loan1\_29$>$-0.15 $\land$ query\_5 $\leq$ 0.81 $\land$ basic\_4$>$-1.26 \hfill (99.2\%) \\
+20 & Non-def. & query\_13$>$0.04 $\land$ loan1\_1 $\leq$ -0.23 $\land$ loan2\_26$>$-0.66 $\land$ loan1\_17$>$-0.33 $\land$ loan1\_29 $\leq$ -0.49 $\land$ query\_5 $\leq$ 1.52 \hfill (97.9\%) \\
+\midrule
+1 & Default & loan1\_7 $\leq$ 0.37 $\land$ loan2\_11 $\leq$ -0.13 $\land$ loan2\_23 $\leq$ -0.92 $\land$ loan1\_2 $\leq$ 0.16 $\land$ query\_6$>$0.49 $\land$ loan2\_7 $\leq$ -1.33 \hfill (54.5\%) \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}
+\raggedright\scriptsize\textit{Note:} R = Rank; Non-def. = Non-default. Features are anonymized: loan1\_*, loan2\_* = credit behavior metrics; query\_* = inquiry frequency; basic\_* = demographics; scope = business scope indicator. All thresholds are z-scores.
+\end{sidewaystable}
+
+The top-20 non-default rules share recurring structural motifs consistent with credit risk theory. The feature loan1\_7 (credit behavior metric) serves as the primary split in most rules, indicating that credit utilization patterns are strong predictors of repayment behavior. The secondary discriminators include loan2\_11, loan2\_23, and query\_13 (inquiry frequency). The combination of low credit utilization (loan1\_7$\leq$0.37) and stable repayment patterns constitutes the core pattern for low-risk classification. Notably, all top-20 non-default rules achieve perfect confidence (100\%), demonstrating that CB-KD successfully identifies highly reliable decision paths. To quantify predictive improvement, we compute the lift metric (defined in Eq.~\ref{eq:rule_lift}) for each rule. The top-20 non-default rules achieve an average lift of 1.11, indicating their predicted probability exceeds the prior non-default rate (89.8\%) by 11\%. Statistical significance tests reveal that all top-20 rules pass the binomial test with Benjamini--Hochberg correction ($p < 0.05$), confirming their predictive power is unlikely to result from random chance.
+
+The single extracted default rule captures a specific high-risk profile. With 54.5\% confidence, it identifies borrowers with moderate credit behavior (loan1\_7$\leq$0.37), specific repayment patterns (loan2\_11$\leq$-0.13), elevated inquiry frequency (query\_6$>$0.49), and particular behavioral indicators. This rule isolates borrowers exhibiting warning patterns across multiple dimensions---credit utilization, inquiry behavior, and repayment history. The relatively lower confidence (54.5\%) reflects the inherent heterogeneity in default risk profiles. More critically, this default rule achieves a lift of 5.34, meaning applicants satisfying these conditions are 5.34 times more likely to default than a randomly selected borrower. The rule passes statistical significance testing (BH-adjusted $p = 0.003$), providing rigorous evidence that the identified high-risk pattern is reliable despite its modest confidence level. This demonstrates that lift-based ranking successfully surfaces minority-class rules that would be undervalued by confidence ranking alone.
+
+From an operational deployment perspective, these extracted rules translate into actionable decision logic for credit officers. An officer can verify whether an applicant's repayment history, inquiry frequency, and utilization metrics satisfy the decision conditions. The explicit z-score thresholds can be mapped back to original feature scales for deployment in loan origination systems. This rule-based representation provides the line-by-line transparency required for regulatory audit while retaining predictive performance comparable to ensemble methods.
+
+\textbf{Rule stability and reproducibility.} It is worth noting that the extracted rules are deterministic given fixed training data and random seed. Unlike ensemble methods where multiple trees contribute to predictions non-transparently, CB-KD produces a single decision tree whose structure is fully reproducible. In our experimental protocol, we fix the random seed across runs to ensure consistent rule extraction. Practitioners deploying CB-KD in production can obtain identical rules by maintaining the same preprocessing pipeline, training data, and hyperparameters---a property critical for regulatory auditability and model governance.
+
+\subsubsection*{Rule quality evaluation across datasets}
+
+To systematically evaluate the effectiveness of the extracted rules, Figure~\ref{fig:rule_effectiveness} presents rule quality metrics across all four datasets.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{Figure/rule_effectiveness.png}
+  \caption{Rule extraction effectiveness across four credit datasets. (a) Average and maximum rule confidence, with the 50\% random baseline shown as reference. (b) Proportion of high-confidence rules (confidence $>$ 60\%), with the count of reliable rules indicated for each dataset.}
+  \label{fig:rule_effectiveness}
+\end{figure}
+
+Figure~\ref{fig:rule_effectiveness}(a) shows that all extracted rules achieve confidence levels substantially above the 50\% random baseline, with average confidence ranging from 75.1\% (UCI) to 91.0\% (Australian). The maximum confidence reaches 100\% on all datasets, demonstrating that CB-KD can extract highly reliable decision rules. Figure~\ref{fig:rule_effectiveness}(b) reveals the proportion of high-confidence rules (confidence $>$ 60\%): Xinwang achieves the highest ratio (96.8\%, 61 out of 63 rules), followed by Australian (94.9\%, 37/39), German (87.2\%, 41/47), and UCI (84.4\%, 54/64). These results demonstrate that CB-KD successfully identifies robust decision patterns across all datasets, with particularly strong performance on imbalanced datasets. Complementary lift analysis reveals that default rules across datasets achieve an average lift of 4.2, substantially exceeding non-default rules (mean lift: 1.1), confirming that minority-class patterns exhibit stronger discriminative power when normalized against class priors. Statistical significance tests with Benjamini--Hochberg correction indicate that 92.4\% of all extracted rules are statistically significant ($p < 0.05$), with default rules achieving 100\% significance despite lower confidence levels. This validates the utility of lift-based ranking and multiple testing correction in balancing predictive strength and statistical rigor.
+
+\subsection{Ablation study}
+\label{sec5-subsec5}
+
+Ablation experiments examine the sensitivity of CB-KD to four key hyperparameters: temperature ($\tau$), hard-label mixing ratio ($\alpha$), tree depth, and class balance weighting. Each ablation varies one hyperparameter while fixing others at baseline values. Figure~\ref{fig:ablation_all} presents results across four datasets.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[Temperature $\tau$]{\includegraphics[width=0.48\textwidth]{Figure/ablation_temperature.png}\label{fig:ablation_temp}}
+  \hfill
+  \subfloat[Hard-label mixing $\alpha$]{\includegraphics[width=0.48\textwidth]{Figure/ablation_alpha.png}\label{fig:ablation_alpha}}
+  \\
+  \subfloat[Maximum tree depth]{\includegraphics[width=0.48\textwidth]{Figure/ablation_max_depth.png}\label{fig:ablation_depth}}
+  \hfill
+  \subfloat[Class balance effect]{\includegraphics[width=0.48\textwidth]{Figure/ablation_class_balance.png}\label{fig:ablation_cb}}
+  \caption{Ablation study on four hyperparameters across German, Australian, UCI, and Xinwang datasets. (a) Temperature scaling effect on AUC. (b) Hard-label mixing ratio effect. (c) Maximum tree depth vs. AUC and number of rules. (d) Effect of class-balanced weighting.}
+  \label{fig:ablation_all}
+\end{figure}
+
+Temperature $\tau$ controls the softness of teacher probability distributions (Figure~\ref{fig:ablation_temp}). The theoretical rationale is that higher $\tau$ produces softer labels exposing richer inter-class probability structure, while $\tau \to 1$ approximates hard labels that discard uncertainty information. Empirically, imbalanced datasets (German, Xinwang) benefit from higher temperatures ($\tau \in [4, 8]$), as softer labels preserve minority-class probability mass that would otherwise be overwhelmed by majority-class dominance. In contrast, near-balanced datasets (Australian) achieve optimal performance at moderate temperatures ($\tau = 2$), beyond which excessive smoothing dilutes discriminative information.
+
+The parameter $\alpha$ balances soft-label distillation and hard-label supervision (Figure~\ref{fig:ablation_alpha}). Theoretically, $\alpha = 0$ (pure soft-label) maximizes knowledge transfer by fully preserving the teacher's probability structure, while $\alpha = 1$ (pure hard-label) reverts to standard supervised learning. The consistent superiority of $\alpha = 0$ across all datasets validates the fundamental premise of knowledge distillation: soft labels encode valuable inter-class relationships that hard labels discard. This finding has practical implications---practitioners should prioritize pure soft-label distillation rather than mixing in ground-truth supervision.
+
+Tree depth (Figure~\ref{fig:ablation_depth}) embodies the complexity-interpretability trade-off central to credit risk modeling. Deeper trees capture finer decision boundaries but risk overfitting and produce exponentially more rules. Smaller datasets (German, Australian) achieve saturation at depth 4--6, while larger datasets (UCI, Xinwang) benefit from additional capacity at depth 8. The practical recommendation is to select depth based on dataset size and interpretability requirements---shallower trees for regulatory-sensitive applications where rule count must be minimal.
+
+Class balance weighting (Figure~\ref{fig:ablation_cb}) demonstrates the core contribution of CB-KD. The improvement magnitude correlates with imbalance severity: German (2.33:1) and Xinwang (8.83:1) show substantial gains of 4\% and 1\% respectively, while near-balanced datasets show minimal impact. This confirms the theoretical prediction that class-balanced weighting prevents majority-class dominance during soft-label injection, ensuring faithful transfer of minority-class probability information.
+
+Four key findings emerge: (1) moderate temperature ($\tau \in [2, 4]$) balances information richness with discriminative sharpness; (2) pure soft-label distillation ($\alpha = 0$) consistently outperforms hard-label mixing; (3) tree depth of 6 provides robust accuracy-interpretability trade-off; and (4) class-balanced weighting yields consistent improvements on imbalanced portfolios.
+
+Based on these findings, we recommend: $\tau = 4$, $\alpha = 0$, depth $= 6$, with class balance enabled. These defaults emphasize pure knowledge transfer and work well across diverse datasets.
+
+\subsection{Managerial and financial implications}
+\label{sec5-subsec6}
+
+The experimental findings yield actionable insights for credit risk management. From a model governance perspective, the explicit IF--THEN rules extracted from CB-KD support the model risk management (MRM) process emphasized in regulatory frameworks. Unlike post-hoc explanations applied to black-box models, the distilled decision tree provides a complete and faithful representation of the decision logic. Auditors can trace every credit decision to specific rule conditions, verify threshold values against business policies, and assess rule quality through standardized metrics (confidence, lift, statistical significance). This structural transparency facilitates internal model validation, supports documentation requirements, and provides traceable decision logic for regulatory examination.
+
+For credit business operations, the extracted rules enable actionable risk segmentation. The hierarchical structure of decision rules---with primary splits on key risk indicators and secondary refinements on behavioral features---supports multi-tier credit strategies. Credit officers can apply these rules to identify high-risk applicants for enhanced due diligence, set differentiated credit limits based on rule-defined risk tiers, and design targeted collection strategies for different borrower segments. The automatic teacher selection mechanism further reduces operational burden by eliminating manual model comparison.
+
+For model deployment, the soft-label transfer mechanism separates model complexity from operational inference. Ensemble teachers can be trained offline on full historical data with extensive hyperparameter tuning, while the distilled decision tree enables real-time scoring with minimal computational overhead. This architecture aligns with the operational requirements of loan origination systems, where millisecond-level latency constraints and regulatory auditability mandates often preclude direct deployment of complex ensemble models.
+
+
+\section{Conclusion}
+\label{sec6}
+
+This paper proposes CB-KD, a knowledge distillation framework designed to reconcile predictive accuracy with decision transparency in credit risk modeling. The framework extends knowledge distillation from homogeneous neural-to-neural settings to the heterogeneous ensemble-to-tree paradigm, establishing a unified soft-label interface for diverse teacher architectures. The dual-component sample weighting strategy integrates adaptive class-balanced weighting with teacher confidence weighting to address class imbalance while preserving the teacher's probability structure. The lift-based rule extraction mechanism formalizes decision tree paths as auditable IF--THEN rules with statistical quality metrics.
+
+The theoretical contribution lies in demonstrating that model compression and regulatory transparency can be achieved simultaneously through principled soft-label transfer and sample reweighting. The temperature-scaled distillation preserves inter-class probability relationships that hard labels discard, while the dual-component weighting ensures balanced knowledge transfer across class distributions. From an application perspective, the extracted decision rules enable direct integration into loan origination systems for real-time credit scoring with full auditability, and the hierarchical rule structure supports risk-tiered credit strategies for applicant segmentation and differentiated limit setting.
+
+Two limitations warrant future investigation. First, the current framework assumes static credit data; extending CB-KD to sequential data would enable capturing repayment dynamics over time. Second, while the dual-component weighting addresses moderate class imbalance, incorporating cost-sensitive objectives may better handle severely skewed portfolios.
+
+\noindent\textbf{Abbreviations}\\
+%\section{Abbreviations}
+\begingroup
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}ll@{}}
+KD & Knowledge Distillation\\
+CB-KD & Class-Balanced Knowledge Distillation\\
+KL & Kullback--Leibler divergence\\
+NN & Neural Network\\
+MLP & Multi-Layer Perceptron\\
+GBDT & Gradient Boosting Decision Tree\\
+XGBoost & eXtreme Gradient Boosting\\
+LightGBM & Light Gradient Boosting Machine\\
+CatBoost & Categorical Boosting\\
+XAI & Explainable Artificial Intelligence\\
+SVM & Support Vector Machine\\
+RF & Random Forest\\
+DT & Decision Tree\\
+LR-Lasso & Logistic Regression with Lasso regularization\\
+LR-Ridge & Logistic Regression with Ridge regularization\\
+LR-ElasticNet & Logistic Regression with ElasticNet regularization\\
+AUC & Area Under the Receiver Operating Characteristic Curve\\
+ROC & Receiver Operating Characteristic\\
+ACC & Accuracy\\
+\end{tabular}
+\endgroup
+
+
+%{\bf Author contributions}\\
+%DL designed and developed the model, and experimented analysis. YQ proposed conceptualization and methodology, and drafted this research work. CM proposed conceptualization, methodology and resources. HQ supervised and reviewed the paper.\\
+
+%{\bf Funding}\\
+%This work is partially supported by grants from the National Natural Science Foundation of China Major Project on Digital Economy, Data Element Effective Utilization, and Consumer Protection (No.72192843), the National Natural Science Foundation of China (No.72192843,71790593), the National Social Science Fund of China (No. 19AZD014),  the Major Special Projects of the Department of Science and Technology of Hunan Province (No. 2018GK1020), the Shandong Provincial Natural Science Foundation Youth Project (No. ZR2024QG220) and the Open Project Program of Key Laboratory of High-Performance Distributed Ledger Technology and Digital Finance (Hunan University), Ministry of Education (Multi-Source Heterogeneous Credit Data Sharing Mechanism Based on Digital Creditworthiness).\\
+
+%{\bf Availability of data and materials}\\
+%All data are publicly available or available from the subscription sources identified in the text.\\
+
+%{\bf Declarations}\\
+%The author declare that they have no competing interests.\\
+
+% --------- References ---------
+\bibliography{references}
+
+\end{document}
+

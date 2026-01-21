@@ -1,0 +1,262 @@
+Dataset: xinwang
+Method: CBKD
+Teacher: XGBoost-Tuned
+Tree Depth: 6
+Number of Leaves: 63
+
+======================================================================
+CB-KD EXTRACTED DECISION RULES
+======================================================================
+Total rules: 63
+
+[R3]* (Conf: 54.5%, Lift: 5.36, Samples: 22)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 <= 0.1587 AND query_6 > 0.4855 AND loan2_7 <= -1.3300
+  THEN → Default
+
+[R5] (Conf: 100.0%, Lift: 1.11, Samples: 16)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 > 0.1587 AND query_5 <= 0.8139 AND loan1_20 <= -0.3551
+  THEN → Non-default
+
+[R6] (Conf: 100.0%, Lift: 1.11, Samples: 23)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 > 0.1587 AND query_5 <= 0.8139 AND loan1_20 > -0.3551
+  THEN → Non-default
+
+[R26] (Conf: 100.0%, Lift: 1.11, Samples: 11)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 <= -0.2313 AND loan2_26 <= -0.6630 AND query_3 > 2.2358
+  THEN → Non-default
+
+[R33] (Conf: 100.0%, Lift: 1.11, Samples: 3)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 <= -1.0296 AND loan1_12 <= 0.1925
+  THEN → Non-default
+
+[R34] (Conf: 100.0%, Lift: 1.11, Samples: 7)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 <= -1.0296 AND loan1_12 > 0.1925 AND loan2_4 <= -0.5028
+  THEN → Non-default
+
+[R35] (Conf: 100.0%, Lift: 1.11, Samples: 4)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 <= -1.0296 AND loan1_12 > 0.1925 AND loan2_4 > -0.5028
+  THEN → Non-default
+
+[R36] (Conf: 100.0%, Lift: 1.11, Samples: 35)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 > -1.0296 AND query_13 <= -0.7414 AND loan1_12 <= 0.5218
+  THEN → Non-default
+
+[R37]* (Conf: 100.0%, Lift: 1.11, Samples: 66)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 > -1.0296 AND query_13 <= -0.7414 AND loan1_12 > 0.5218
+  THEN → Non-default
+
+[R38] (Conf: 100.0%, Lift: 1.11, Samples: 23)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 > -1.0296 AND query_13 > -0.7414 AND loan1_2 <= 0.5161
+  THEN → Non-default
+
+[R39] (Conf: 100.0%, Lift: 1.11, Samples: 39)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 <= -0.2994 AND loan2_23 > -1.0296 AND query_13 > -0.7414 AND loan1_2 > 0.5161
+  THEN → Non-default
+
+[R41] (Conf: 100.0%, Lift: 1.11, Samples: 27)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 <= 0.0415 AND basic_3 <= -1.1993 AND loan1_14 > 0.1619
+  THEN → Non-default
+
+[R42]* (Conf: 100.0%, Lift: 1.11, Samples: 71)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 <= 0.0415 AND basic_3 > -1.1993 AND loan2_19 <= -0.0963
+  THEN → Non-default
+
+[R43] (Conf: 100.0%, Lift: 1.11, Samples: 20)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 <= 0.0415 AND basic_3 > -1.1993 AND loan2_19 > -0.0963
+  THEN → Non-default
+
+[R46] (Conf: 100.0%, Lift: 1.11, Samples: 5)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 > 0.0415 AND loan1_1 > -0.0842 AND loan2_10 <= 0.0707
+  THEN → Non-default
+
+[R47] (Conf: 100.0%, Lift: 1.11, Samples: 5)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 > 0.0415 AND loan1_1 > -0.0842 AND loan2_10 > 0.0707
+  THEN → Non-default
+
+[R52] (Conf: 100.0%, Lift: 1.11, Samples: 31)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 > 0.1391 AND loan1_29 <= -0.1403 AND loan2_11 <= -0.3347
+  THEN → Non-default
+
+[R53] (Conf: 100.0%, Lift: 1.11, Samples: 27)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 > 0.1391 AND loan1_29 <= -0.1403 AND loan2_11 > -0.3347
+  THEN → Non-default
+
+[R54]* (Conf: 100.0%, Lift: 1.11, Samples: 62)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 > 0.1391 AND loan1_29 > -0.1403 AND query_10 <= -0.5630
+  THEN → Non-default
+
+[R57] (Conf: 100.0%, Lift: 1.11, Samples: 38)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 <= -0.2313 AND loan1_20 <= -0.3139 AND loan2_23 > -0.6907
+  THEN → Non-default
+
+[R60] (Conf: 100.0%, Lift: 1.11, Samples: 6)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 > -0.2313 AND loan2_23 <= -0.7881 AND loan1_15 <= -0.5877
+  THEN → Non-default
+
+[R62]* (Conf: 100.0%, Lift: 1.11, Samples: 73)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 > -0.2313 AND loan2_23 > -0.7881 AND loan2_20 <= -0.3234
+  THEN → Non-default
+
+[R12]* (Conf: 99.2%, Lift: 1.10, Samples: 392)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 <= -0.3499 AND loan2_2 > 0.0114 AND loan2_23 > -0.6174
+  THEN → Non-default
+
+[R10]* (Conf: 99.1%, Lift: 1.10, Samples: 219)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 <= -0.3499 AND loan2_2 <= 0.0114 AND loan1_14 > -0.0041
+  THEN → Non-default
+
+[R22]* (Conf: 99.0%, Lift: 1.10, Samples: 100)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 > 0.1555 AND query_13 <= -0.7414 AND loan1_12 > 0.4302
+  THEN → Non-default
+
+[R50]* (Conf: 97.4%, Lift: 1.08, Samples: 78)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 <= 0.1391 AND loan2_11 > -0.1262 AND loan2_12 <= -0.0182
+  THEN → Non-default
+
+[R49]* (Conf: 96.8%, Lift: 1.08, Samples: 219)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 <= 0.1391 AND loan2_11 <= -0.1262 AND loan2_24 > -0.6027
+  THEN → Non-default
+
+[R24]* (Conf: 96.1%, Lift: 1.07, Samples: 127)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 > 0.1555 AND query_13 > -0.7414 AND loan1_1 > -0.2068
+  THEN → Non-default
+
+[R45] (Conf: 96.0%, Lift: 1.07, Samples: 25)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 > 0.0415 AND loan1_1 <= -0.0842 AND query_10 > -0.0204
+  THEN → Non-default
+
+[R14]* (Conf: 96.0%, Lift: 1.07, Samples: 447)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 > -0.3499 AND loan1_29 <= -0.0847 AND loan2_2 > -0.0094
+  THEN → Non-default
+
+[R63] (Conf: 94.6%, Lift: 1.05, Samples: 130)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 > -0.2313 AND loan2_23 > -0.7881 AND loan2_20 > -0.3234
+  THEN → Non-default
+
+[R11] (Conf: 94.5%, Lift: 1.05, Samples: 110)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 <= -0.3499 AND loan2_2 > 0.0114 AND loan2_23 <= -0.6174
+  THEN → Non-default
+
+[R30]* (Conf: 94.0%, Lift: 1.05, Samples: 447)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 > -0.2313 AND loan1_29 <= -0.3860 AND loan2_26 > -0.6824
+  THEN → Non-default
+
+[R21] (Conf: 93.9%, Lift: 1.05, Samples: 33)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 > 0.1555 AND query_13 <= -0.7414 AND loan1_12 <= 0.4302
+  THEN → Non-default
+
+[R9]* (Conf: 93.0%, Lift: 1.03, Samples: 837)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 <= -0.3499 AND loan2_2 <= 0.0114 AND loan1_14 <= -0.0041
+  THEN → Non-default
+
+[R20]* (Conf: 92.7%, Lift: 1.03, Samples: 763)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 <= 0.1555 AND loan2_2 > -0.0394 AND loan2_24 > -0.6584
+  THEN → Non-default
+
+[R48] (Conf: 92.2%, Lift: 1.03, Samples: 77)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 <= 0.1391 AND loan2_11 <= -0.1262 AND loan2_24 <= -0.6027
+  THEN → Non-default
+
+[R51] (Conf: 91.5%, Lift: 1.02, Samples: 153)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 <= 0.1391 AND loan2_11 > -0.1262 AND loan2_12 > -0.0182
+  THEN → Non-default
+
+[R13] (Conf: 91.4%, Lift: 1.02, Samples: 814)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 > -0.3499 AND loan1_29 <= -0.0847 AND loan2_2 <= -0.0094
+  THEN → Non-default
+
+[R16] (Conf: 91.3%, Lift: 1.02, Samples: 392)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 > -0.3499 AND loan1_29 > -0.0847 AND loan1_1 > -0.1333
+  THEN → Non-default
+
+[R58] (Conf: 90.8%, Lift: 1.01, Samples: 130)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 <= -0.2313 AND loan1_20 > -0.3139 AND query_13 <= 0.6287
+  THEN → Non-default
+
+[R55] (Conf: 90.5%, Lift: 1.01, Samples: 42)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 <= -0.0860 AND loan1_3 > 0.1391 AND loan1_29 > -0.1403 AND query_10 > -0.5630
+  THEN → Non-default
+
+[R23] (Conf: 90.3%, Lift: 1.01, Samples: 186)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 > 0.1555 AND query_13 > -0.7414 AND loan1_1 <= -0.2068
+  THEN → Non-default
+
+[R18] (Conf: 89.6%, Lift: 1.00, Samples: 541)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 <= 0.1555 AND loan2_2 <= -0.0394 AND loan2_13 > -0.2763
+  THEN → Non-default
+
+[R2] (Conf: 88.6%, Lift: 0.99, Samples: 201)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 <= 0.1587 AND query_6 <= 0.4855 AND loan2_25 > -0.6137
+  THEN → Non-default
+
+[R27] (Conf: 88.0%, Lift: 0.98, Samples: 158)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 <= -0.2313 AND loan2_26 > -0.6630 AND loan1_29 <= -0.4258
+  THEN → Non-default
+
+[R19] (Conf: 87.5%, Lift: 0.97, Samples: 240)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 <= 0.1555 AND loan2_2 > -0.0394 AND loan2_24 <= -0.6584
+  THEN → Non-default
+
+[R56] (Conf: 86.7%, Lift: 0.96, Samples: 15)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 <= -0.2313 AND loan1_20 <= -0.3139 AND loan2_23 <= -0.6907
+  THEN → Non-default
+
+[R32] (Conf: 86.6%, Lift: 0.96, Samples: 916)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 > -0.2313 AND loan1_29 > -0.3860 AND loan2_26 > -0.6115
+  THEN → Non-default
+
+[R15] (Conf: 84.1%, Lift: 0.94, Samples: 604)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 > -0.9222 AND query_13 > -0.3499 AND loan1_29 > -0.0847 AND loan1_1 <= -0.1333
+  THEN → Non-default
+
+[R4] (Conf: 83.3%, Lift: 0.93, Samples: 48)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 <= 0.1587 AND query_6 > 0.4855 AND loan2_7 > -1.3300
+  THEN → Non-default
+
+[R29] (Conf: 81.2%, Lift: 0.90, Samples: 32)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 > -0.2313 AND loan1_29 <= -0.3860 AND loan2_26 <= -0.6824
+  THEN → Non-default
+
+[R17] (Conf: 80.4%, Lift: 0.89, Samples: 550)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 <= 0.0415 AND loan1_3 <= 0.1555 AND loan2_2 <= -0.0394 AND loan2_13 <= -0.2763
+  THEN → Non-default
+
+[R59] (Conf: 79.7%, Lift: 0.89, Samples: 59)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 <= -0.2313 AND loan1_20 > -0.3139 AND query_13 > 0.6287
+  THEN → Non-default
+
+[R28] (Conf: 79.5%, Lift: 0.88, Samples: 580)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 <= -0.2313 AND loan2_26 > -0.6630 AND loan1_29 > -0.4258
+  THEN → Non-default
+
+[R1] (Conf: 79.3%, Lift: 0.88, Samples: 188)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 <= 0.1587 AND query_6 <= 0.4855 AND loan2_25 <= -0.6137
+  THEN → Non-default
+
+[R31] (Conf: 76.7%, Lift: 0.85, Samples: 120)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 > -0.2313 AND loan1_29 > -0.3860 AND loan2_26 <= -0.6115
+  THEN → Non-default
+
+[R7] (Conf: 66.7%, Lift: 0.74, Samples: 3)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 > 0.1587 AND query_5 > 0.8139 AND industry <= -0.6315
+  THEN → Non-default
+
+[R8] (Conf: 66.7%, Lift: 0.74, Samples: 3)
+  IF loan1_7 <= 0.3693 AND loan2_11 <= -0.1308 AND loan2_23 <= -0.9222 AND loan1_2 > 0.1587 AND query_5 > 0.8139 AND industry > -0.6315
+  THEN → Non-default
+
+[R40] (Conf: 66.7%, Lift: 0.74, Samples: 3)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 <= 0.0415 AND basic_3 <= -1.1993 AND loan1_14 <= 0.1619
+  THEN → Non-default
+
+[R44] (Conf: 66.7%, Lift: 0.74, Samples: 6)
+  IF loan1_7 > 0.3693 AND loan1_4 <= -0.2557 AND loan2_11 > -0.2994 AND query_13 > 0.0415 AND loan1_1 <= -0.0842 AND query_10 <= -0.0204
+  THEN → Non-default
+
+[R61] (Conf: 66.7%, Lift: 0.74, Samples: 9)
+  IF loan1_7 > 0.3693 AND loan1_4 > -0.2557 AND query_6 > -0.0860 AND loan1_1 > -0.2313 AND loan2_23 <= -0.7881 AND loan1_15 > -0.5877
+  THEN → Non-default
+
+[R25] (Conf: 58.8%, Lift: 0.65, Samples: 119)
+  IF loan1_7 <= 0.3693 AND loan2_11 > -0.1308 AND query_13 > 0.0415 AND loan1_1 <= -0.2313 AND loan2_26 <= -0.6630 AND query_3 <= 2.2358
+  THEN → Non-default

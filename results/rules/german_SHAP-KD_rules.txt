@@ -1,0 +1,134 @@
+Dataset: german
+Method: SHAP-KD
+Teacher: XGBoost-Tuned
+Tree Depth: 6
+Number of Leaves: 31
+
+============================================================
+DECISION RULES EXTRACTED FROM SHAP-KD MODEL
+============================================================
+Total rules: 31
+
+[R1] (Samples: 0, Confidence: 64.22%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 <= 1.9879 AND Personal_status_A92 <= 0.3777 AND Purpose_A42 <= 0.7902
+  THEN credit_risk = Default
+
+[R2] (Samples: 1, Confidence: 53.91%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 <= 1.9879 AND Personal_status_A92 <= 0.3777 AND Purpose_A42 > 0.7902
+  THEN credit_risk = Non-default
+
+[R3] (Samples: 0, Confidence: 57.69%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 <= 1.9879 AND Personal_status_A92 > 0.3777 AND Age <= -0.0065
+  THEN credit_risk = Non-default
+
+[R4] (Samples: 1, Confidence: 62.42%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 <= 1.9879 AND Personal_status_A92 > 0.3777 AND Age > -0.0065
+  THEN credit_risk = Default
+
+[R5] (Samples: 1, Confidence: 73.16%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 > 1.9879 AND Purpose_A42 <= 0.7902 AND Employment_A75 <= 0.5982
+  THEN credit_risk = Default
+
+[R6] (Samples: 1, Confidence: 69.29%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 > 1.9879 AND Purpose_A42 <= 0.7902 AND Employment_A75 > 0.5982
+  THEN credit_risk = Default
+
+[R7] (Samples: 1, Confidence: 70.06%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 > 1.9879 AND Purpose_A42 > 0.7902 AND Credit_amount <= -0.1365
+  THEN credit_risk = Default
+
+[R8] (Samples: 1, Confidence: 67.53%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration <= 2.1122 AND Other_parties_A103 > 1.9879 AND Purpose_A42 > 0.7902 AND Credit_amount > -0.1365
+  THEN credit_risk = Default
+
+[R9] (Samples: 1, Confidence: 68.58%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 <= 0.8112 AND Credit_amount <= 1.4374 AND Installment_rate_3 <= 0.9533
+  THEN credit_risk = Non-default
+
+[R10] (Samples: 0, Confidence: 67.42%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 <= 0.8112 AND Credit_amount <= 1.4374 AND Installment_rate_3 > 0.9533
+  THEN credit_risk = Non-default
+
+[R11] (Samples: 1, Confidence: 57.85%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 <= 0.8112 AND Credit_amount > 1.4374
+  THEN credit_risk = Non-default
+
+[R12] (Samples: 0, Confidence: 63.55%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 > 0.8112 AND Residence_since_4 <= 0.1865 AND Age <= 0.0389
+  THEN credit_risk = Default
+
+[R13] (Samples: 1, Confidence: 67.68%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 > 0.8112 AND Residence_since_4 <= 0.1865 AND Age > 0.0389
+  THEN credit_risk = Default
+
+[R14] (Samples: 1, Confidence: 66.40%)
+  IF Credit_amount <= 2.2672 AND Status_A14 <= 0.2255 AND Duration > 2.1122 AND Employment_A74 > 0.8112 AND Residence_since_4 > 0.1865
+  THEN credit_risk = Non-default
+
+[R15] (Samples: 1, Confidence: 60.45%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age <= -1.1428 AND Installment_rate_2 <= 0.6472 AND Other_parties_A102 <= 2.2429
+  THEN credit_risk = Non-default
+
+[R16] (Samples: 1, Confidence: 61.77%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age <= -1.1428 AND Installment_rate_2 <= 0.6472 AND Other_parties_A102 > 2.2429
+  THEN credit_risk = Non-default
+
+[R17] (Samples: 1, Confidence: 72.03%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age <= -1.1428 AND Installment_rate_2 > 0.6472
+  THEN credit_risk = Default
+
+[R18] (Samples: 0, Confidence: 69.06%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 <= -0.8403 AND Duration <= 0.9294 AND Residence_since_2 <= 0.4278
+  THEN credit_risk = Default
+
+[R19] (Samples: 1, Confidence: 56.83%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 <= -0.8403 AND Duration <= 0.9294 AND Residence_since_2 > 0.4278
+  THEN credit_risk = Default
+
+[R20] (Samples: 0, Confidence: 55.05%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 <= -0.8403 AND Duration > 0.9294 AND Own_telephone_A192 <= 0.2077
+  THEN credit_risk = Non-default
+
+[R21] (Samples: 1, Confidence: 67.72%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 <= -0.8403 AND Duration > 0.9294 AND Own_telephone_A192 > 0.2077
+  THEN credit_risk = Non-default
+
+[R22] (Samples: 1, Confidence: 72.04%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 > -0.8403 AND Credit_history_A34 <= 0.4193 AND Savings_A63 <= 1.9175
+  THEN credit_risk = Default
+
+[R23] (Samples: 0, Confidence: 50.15%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 > -0.8403 AND Credit_history_A34 <= 0.4193 AND Savings_A63 > 1.9175
+  THEN credit_risk = Default
+
+[R24] (Samples: 0, Confidence: 74.06%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 > -0.8403 AND Credit_history_A34 > 0.4193 AND Personal_status_A93 <= -0.0668
+  THEN credit_risk = Default
+
+[R25] (Samples: 0, Confidence: 76.48%)
+  IF Credit_amount <= 2.2672 AND Status_A14 > 0.2255 AND Age > -1.1428 AND Other_payment_plans_A143 > -0.8403 AND Credit_history_A34 > 0.4193 AND Personal_status_A93 > -0.0668
+  THEN credit_risk = Default
+
+[R26] (Samples: 0, Confidence: 67.27%)
+  IF Credit_amount > 2.2672 AND Age <= 0.4935 AND Status_A12 <= 0.5774 AND Credit_amount <= 2.9093 AND Age <= -0.7337
+  THEN credit_risk = Non-default
+
+[R27] (Samples: 1, Confidence: 65.96%)
+  IF Credit_amount > 2.2672 AND Age <= 0.4935 AND Status_A12 <= 0.5774 AND Credit_amount <= 2.9093 AND Age > -0.7337
+  THEN credit_risk = Non-default
+
+[R28] (Samples: 1, Confidence: 69.12%)
+  IF Credit_amount > 2.2672 AND Age <= 0.4935 AND Status_A12 <= 0.5774 AND Credit_amount > 2.9093
+  THEN credit_risk = Non-default
+
+[R29] (Samples: 1, Confidence: 72.37%)
+  IF Credit_amount > 2.2672 AND Age <= 0.4935 AND Status_A12 > 0.5774
+  THEN credit_risk = Non-default
+
+[R30] (Samples: 0, Confidence: 66.71%)
+  IF Credit_amount > 2.2672 AND Age > 0.4935 AND Duration <= 2.7240
+  THEN credit_risk = Non-default
+
+[R31] (Samples: 1, Confidence: 69.02%)
+  IF Credit_amount > 2.2672 AND Age > 0.4935 AND Duration > 2.7240
+  THEN credit_risk = Default

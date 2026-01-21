@@ -1,0 +1,25 @@
+{
+  "teacher_info": {
+    "name": "XGBoost-Tuned",
+    "model_type": "ensemble",
+    "auc_val": 0.748630221319297,
+    "auc_test": 0.7432177999404891,
+    "dataset_name": "xinwang",
+    "n_features": 100,
+    "hyperparams": {
+      "n_estimators": 225,
+      "max_depth": 4,
+      "learning_rate": 0.034389838484775455,
+      "subsample": 0.7448798581966227,
+      "colsample_bytree": 0.7104378094917954,
+      "min_child_weight": 9,
+      "gamma": 1.0637590734219189,
+      "reg_alpha": 5.8001409198528566e-05,
+      "reg_lambda": 0.0007879343771787091
+    },
+    "shap_computed": true
+  },
+  "model_path": "results\\teacher_cache\\xinwang_teacher_XGBoost_Tuned.pkl",
+  "shap_values_path": "results\\teacher_cache\\xinwang_teacher_shap.npz",
+  "shap_plot_path": "results\\figures\\shap_xinwang_top10.png"
+}

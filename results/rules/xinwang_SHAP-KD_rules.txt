@@ -1,0 +1,250 @@
+Dataset: xinwang
+Method: SHAP-KD
+Teacher: XGBoost-Tuned
+Tree Depth: 6
+Number of Leaves: 60
+
+============================================================
+DECISION RULES EXTRACTED FROM SHAP-KD MODEL
+============================================================
+Total rules: 60
+
+[R1] (Samples: 0, Confidence: 70.66%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 <= -0.6025 AND province <= -0.7255 AND basic_10 <= 0.1177
+  THEN credit_risk = Non-default
+
+[R2] (Samples: 1, Confidence: 51.49%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 <= -0.6025 AND province <= -0.7255 AND basic_10 > 0.1177
+  THEN credit_risk = Default
+
+[R3] (Samples: 1, Confidence: 52.27%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 <= -0.6025 AND province > -0.7255 AND loan1_7 <= -0.1473
+  THEN credit_risk = Default
+
+[R4] (Samples: 1, Confidence: 62.92%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 <= -0.6025 AND province > -0.7255 AND loan1_7 > -0.1473
+  THEN credit_risk = Non-default
+
+[R5] (Samples: 0, Confidence: 74.54%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 > -0.6025 AND basic_2 <= -0.3786 AND loan2_22 <= -0.0003
+  THEN credit_risk = Non-default
+
+[R6] (Samples: 1, Confidence: 53.50%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 > -0.6025 AND basic_2 <= -0.3786 AND loan2_22 > -0.0003
+  THEN credit_risk = Default
+
+[R7] (Samples: 0, Confidence: 56.51%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 > -0.6025 AND basic_2 > -0.3786 AND loan1_6 <= -0.1190
+  THEN credit_risk = Non-default
+
+[R8] (Samples: 1, Confidence: 75.68%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 <= -0.8530 AND loan2_25 > -0.6025 AND basic_2 > -0.3786 AND loan1_6 > -0.1190
+  THEN credit_risk = Non-default
+
+[R9] (Samples: 0, Confidence: 73.39%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 <= -0.0147 AND loan1_14 <= -0.0041 AND loan2_11 <= -0.6872
+  THEN credit_risk = Non-default
+
+[R10] (Samples: 0, Confidence: 63.45%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 <= -0.0147 AND loan1_14 <= -0.0041 AND loan2_11 > -0.6872
+  THEN credit_risk = Non-default
+
+[R11] (Samples: 1, Confidence: 78.27%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 <= -0.0147 AND loan1_14 > -0.0041 AND query_5 <= 0.8139
+  THEN credit_risk = Non-default
+
+[R12] (Samples: 0, Confidence: 66.62%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 <= -0.0147 AND loan1_14 > -0.0041 AND query_5 > 0.8139
+  THEN credit_risk = Non-default
+
+[R13] (Samples: 1, Confidence: 50.68%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 > -0.0147 AND loan2_13 <= -0.8259 AND loan2_12 <= -0.0258
+  THEN credit_risk = Default
+
+[R14] (Samples: 1, Confidence: 77.23%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 > -0.0147 AND loan2_13 <= -0.8259 AND loan2_12 > -0.0258
+  THEN credit_risk = Non-default
+
+[R15] (Samples: 1, Confidence: 57.58%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 > -0.0147 AND loan2_13 > -0.8259 AND basic_4 <= -1.2793
+  THEN credit_risk = Default
+
+[R16] (Samples: 1, Confidence: 77.75%)
+  IF loan1_7 <= 0.2263 AND loan2_11 <= -0.3432 AND loan2_23 > -0.8530 AND loan2_2 > -0.0147 AND loan2_13 > -0.8259 AND basic_4 > -1.2793
+  THEN credit_risk = Non-default
+
+[R17] (Samples: 1, Confidence: 63.63%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 <= 0.1429 AND loan2_26 <= -0.6805 AND loan2_26 <= -0.7279
+  THEN credit_risk = Non-default
+
+[R18] (Samples: 0, Confidence: 51.77%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 <= 0.1429 AND loan2_26 <= -0.6805 AND loan2_26 > -0.7279
+  THEN credit_risk = Non-default
+
+[R19] (Samples: 0, Confidence: 65.31%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 <= 0.1429 AND loan2_26 > -0.6805 AND loan2_2 <= 0.0804
+  THEN credit_risk = Non-default
+
+[R20] (Samples: 1, Confidence: 77.72%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 <= 0.1429 AND loan2_26 > -0.6805 AND loan2_2 > 0.0804
+  THEN credit_risk = Non-default
+
+[R21] (Samples: 1, Confidence: 75.70%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 > 0.1429 AND basic_2 <= -1.7692 AND loan1_12 <= 0.7656
+  THEN credit_risk = Non-default
+
+[R22] (Samples: 1, Confidence: 57.69%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 > 0.1429 AND basic_2 <= -1.7692 AND loan1_12 > 0.7656
+  THEN credit_risk = Default
+
+[R23] (Samples: 1, Confidence: 77.92%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 > 0.1429 AND basic_2 > -1.7692 AND loan1_19 <= 0.1771
+  THEN credit_risk = Non-default
+
+[R24] (Samples: 1, Confidence: 56.71%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 <= -0.4047 AND loan1_14 > 0.1429 AND basic_2 > -1.7692 AND loan1_19 > 0.1771
+  THEN credit_risk = Non-default
+
+[R25] (Samples: 0, Confidence: 65.70%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 <= -0.0257 AND loan2_11 <= 0.6191 AND loan2_13 <= -0.0311
+  THEN credit_risk = Non-default
+
+[R26] (Samples: 1, Confidence: 75.85%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 <= -0.0257 AND loan2_11 <= 0.6191 AND loan2_13 > -0.0311
+  THEN credit_risk = Non-default
+
+[R27] (Samples: 0, Confidence: 66.09%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 <= -0.0257 AND loan2_11 > 0.6191 AND loan2_4 <= 0.4274
+  THEN credit_risk = Non-default
+
+[R28] (Samples: 0, Confidence: 52.83%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 <= -0.0257 AND loan2_11 > 0.6191 AND loan2_4 > 0.4274
+  THEN credit_risk = Non-default
+
+[R29] (Samples: 0, Confidence: 68.28%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 > -0.0257 AND query_13 <= 0.4329 AND loan2_12 <= -0.0184
+  THEN credit_risk = Non-default
+
+[R30] (Samples: 1, Confidence: 59.04%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 > -0.0257 AND query_13 <= 0.4329 AND loan2_12 > -0.0184
+  THEN credit_risk = Non-default
+
+[R31] (Samples: 0, Confidence: 55.72%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 > -0.0257 AND query_13 > 0.4329 AND query_3 <= 2.7881
+  THEN credit_risk = Non-default
+
+[R32] (Samples: 1, Confidence: 75.38%)
+  IF loan1_7 <= 0.2263 AND loan2_11 > -0.3432 AND loan1_29 > -0.4047 AND loan2_22 > -0.0257 AND query_13 > 0.4329 AND query_3 > 2.7881
+  THEN credit_risk = Non-default
+
+[R33] (Samples: 1, Confidence: 77.57%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 <= 1.8104 AND loan2_23 <= 3.4852 AND loan2_19 <= 8.1960
+  THEN credit_risk = Non-default
+
+[R34] (Samples: 1, Confidence: 51.13%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 <= 1.8104 AND loan2_23 <= 3.4852 AND loan2_19 > 8.1960
+  THEN credit_risk = Non-default
+
+[R35] (Samples: 1, Confidence: 53.53%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 <= 1.8104 AND loan2_23 > 3.4852
+  THEN credit_risk = Non-default
+
+[R36] (Samples: 1, Confidence: 60.01%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 > 1.8104 AND loan1_15 <= -0.6131
+  THEN credit_risk = Default
+
+[R37] (Samples: 0, Confidence: 74.92%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 > 1.8104 AND loan1_15 > -0.6131 AND loan2_23 <= 1.1723
+  THEN credit_risk = Non-default
+
+[R38] (Samples: 1, Confidence: 81.55%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 <= -0.0190 AND query_7 > 1.8104 AND loan1_15 > -0.6131 AND loan2_23 > 1.1723
+  THEN credit_risk = Non-default
+
+[R39] (Samples: 1, Confidence: 60.90%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 <= -0.4872 AND loan1_6 <= -0.2039
+  THEN credit_risk = Non-default
+
+[R40] (Samples: 1, Confidence: 80.13%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 <= -0.4872 AND loan1_6 > -0.2039 AND loan1_17 <= -0.2482
+  THEN credit_risk = Non-default
+
+[R41] (Samples: 1, Confidence: 76.99%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 <= -0.4872 AND loan1_6 > -0.2039 AND loan1_17 > -0.2482
+  THEN credit_risk = Non-default
+
+[R42] (Samples: 0, Confidence: 61.12%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 > -0.4872 AND loan2_2 <= 0.0465 AND loan2_13 <= 0.4411
+  THEN credit_risk = Non-default
+
+[R43] (Samples: 1, Confidence: 70.77%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 > -0.4872 AND loan2_2 <= 0.0465 AND loan2_13 > 0.4411
+  THEN credit_risk = Non-default
+
+[R44] (Samples: 0, Confidence: 54.77%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 > -0.4872 AND loan2_2 > 0.0465 AND loan2_25 <= -0.6315
+  THEN credit_risk = Default
+
+[R45] (Samples: 0, Confidence: 77.46%)
+  IF loan1_7 > 0.2263 AND loan1_12 <= 0.1086 AND loan2_12 > -0.0190 AND loan2_11 > -0.4872 AND loan2_2 > 0.0465 AND loan2_25 > -0.6315
+  THEN credit_risk = Non-default
+
+[R46] (Samples: 1, Confidence: 77.38%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 <= -0.1323 AND loan2_16 <= -0.8211 AND query_8 <= 0.1235
+  THEN credit_risk = Non-default
+
+[R47] (Samples: 0, Confidence: 73.29%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 <= -0.1323 AND loan2_16 <= -0.8211 AND query_8 > 0.1235
+  THEN credit_risk = Non-default
+
+[R48] (Samples: 1, Confidence: 83.86%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 <= -0.1323 AND loan2_16 > -0.8211 AND query_13 <= 0.0415
+  THEN credit_risk = Non-default
+
+[R49] (Samples: 1, Confidence: 80.63%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 <= -0.1323 AND loan2_16 > -0.8211 AND query_13 > 0.0415
+  THEN credit_risk = Non-default
+
+[R50] (Samples: 0, Confidence: 78.56%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 > -0.1323 AND query_7 <= 1.8104 AND loan2_13 <= 0.0556
+  THEN credit_risk = Non-default
+
+[R51] (Samples: 1, Confidence: 80.75%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 > -0.1323 AND query_7 <= 1.8104 AND loan2_13 > 0.0556
+  THEN credit_risk = Non-default
+
+[R52] (Samples: 1, Confidence: 56.92%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 > -0.1323 AND query_7 > 1.8104 AND province <= 0.4100
+  THEN credit_risk = Non-default
+
+[R53] (Samples: 1, Confidence: 78.42%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 <= -0.1751 AND loan2_11 > -0.1323 AND query_7 > 1.8104 AND province > 0.4100
+  THEN credit_risk = Non-default
+
+[R54] (Samples: 1, Confidence: 78.08%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope <= 1.3545 AND query_6 <= 1.9143 AND loan1_7 <= 2.5418
+  THEN credit_risk = Non-default
+
+[R55] (Samples: 1, Confidence: 57.46%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope <= 1.3545 AND query_6 <= 1.9143 AND loan1_7 > 2.5418
+  THEN credit_risk = Non-default
+
+[R56] (Samples: 1, Confidence: 60.50%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope <= 1.3545 AND query_6 > 1.9143
+  THEN credit_risk = Default
+
+[R57] (Samples: 1, Confidence: 79.29%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope > 1.3545 AND loan1_15 <= 1.3283 AND loan1_30 <= -0.2821
+  THEN credit_risk = Non-default
+
+[R58] (Samples: 1, Confidence: 75.36%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope > 1.3545 AND loan1_15 <= 1.3283 AND loan1_30 > -0.2821
+  THEN credit_risk = Non-default
+
+[R59] (Samples: 1, Confidence: 60.60%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope > 1.3545 AND loan1_15 > 1.3283 AND loan2_19 <= -0.0267
+  THEN credit_risk = Default
+
+[R60] (Samples: 1, Confidence: 56.07%)
+  IF loan1_7 > 0.2263 AND loan1_12 > 0.1086 AND loan1_20 > -0.1751 AND scope > 1.3545 AND loan1_15 > 1.3283 AND loan2_19 > -0.0267
+  THEN credit_risk = Non-default

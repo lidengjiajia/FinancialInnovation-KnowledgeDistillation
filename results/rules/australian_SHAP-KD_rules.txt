@@ -1,0 +1,154 @@
+Dataset: australian
+Method: SHAP-KD
+Teacher: CreditNet
+Tree Depth: 6
+Number of Leaves: 36
+
+============================================================
+DECISION RULES EXTRACTED FROM SHAP-KD MODEL
+============================================================
+Total rules: 36
+
+[R1] (Samples: 1, Confidence: 90.37%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 <= -0.1069 AND feature_1 <= 0.0915 AND feature_12 <= 0.1426 AND feature_13 <= -0.2203
+  THEN credit_risk = Non-default
+
+[R2] (Samples: 0, Confidence: 88.49%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 <= -0.1069 AND feature_1 <= 0.0915 AND feature_12 <= 0.1426 AND feature_13 > -0.2203
+  THEN credit_risk = Non-default
+
+[R3] (Samples: 0, Confidence: 87.61%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 <= -0.1069 AND feature_1 <= 0.0915 AND feature_12 > 0.1426
+  THEN credit_risk = Non-default
+
+[R4] (Samples: 1, Confidence: 82.75%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 <= -0.1069 AND feature_1 > 0.0915 AND feature_1 <= 1.7401
+  THEN credit_risk = Non-default
+
+[R5] (Samples: 1, Confidence: 87.40%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 <= -0.1069 AND feature_1 > 0.0915 AND feature_1 > 1.7401
+  THEN credit_risk = Non-default
+
+[R6] (Samples: 0, Confidence: 78.26%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 > -0.1069 AND feature_12 <= -0.8008
+  THEN credit_risk = Non-default
+
+[R7] (Samples: 0, Confidence: 84.58%)
+  IF feature_7_1 <= -0.0242 AND feature_4 <= -1.3053 AND feature_5_4 > -0.1069 AND feature_12 > -0.8008
+  THEN credit_risk = Non-default
+
+[R8] (Samples: 1, Confidence: 58.92%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 <= -0.9532
+  THEN credit_risk = Non-default
+
+[R9] (Samples: 0, Confidence: 80.82%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 <= 0.1820 AND feature_6 <= -0.3550 AND feature_6 <= -0.5555
+  THEN credit_risk = Non-default
+
+[R10] (Samples: 1, Confidence: 77.05%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 <= 0.1820 AND feature_6 <= -0.3550 AND feature_6 > -0.5555
+  THEN credit_risk = Non-default
+
+[R11] (Samples: 0, Confidence: 75.23%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 <= 0.1820 AND feature_6 > -0.3550 AND feature_10_1 <= 0.0629
+  THEN credit_risk = Non-default
+
+[R12] (Samples: 1, Confidence: 83.94%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 <= 0.1820 AND feature_6 > -0.3550 AND feature_10_1 > 0.0629
+  THEN credit_risk = Non-default
+
+[R13] (Samples: 1, Confidence: 50.59%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 > 0.1820 AND feature_6 <= -0.6614 AND feature_4 <= 0.5655
+  THEN credit_risk = Default
+
+[R14] (Samples: 1, Confidence: 75.17%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 > 0.1820 AND feature_6 <= -0.6614 AND feature_4 > 0.5655
+  THEN credit_risk = Non-default
+
+[R15] (Samples: 1, Confidence: 66.77%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 > 0.1820 AND feature_6 > -0.6614 AND feature_2 <= -0.8796
+  THEN credit_risk = Non-default
+
+[R16] (Samples: 0, Confidence: 79.36%)
+  IF feature_7_1 <= -0.0242 AND feature_4 > -1.3053 AND feature_2 > -0.9532 AND feature_1 > 0.1820 AND feature_6 > -0.6614 AND feature_2 > -0.8796
+  THEN credit_risk = Non-default
+
+[R17] (Samples: 0, Confidence: 73.04%)
+  IF feature_7_1 > -0.0242 AND feature_4 <= -1.3053 AND feature_9 <= 0.6088 AND feature_10_1 <= 0.0629 AND feature_12 <= 0.3378
+  THEN credit_risk = Non-default
+
+[R18] (Samples: 0, Confidence: 80.44%)
+  IF feature_7_1 > -0.0242 AND feature_4 <= -1.3053 AND feature_9 <= 0.6088 AND feature_10_1 <= 0.0629 AND feature_12 > 0.3378
+  THEN credit_risk = Non-default
+
+[R19] (Samples: 1, Confidence: 71.46%)
+  IF feature_7_1 > -0.0242 AND feature_4 <= -1.3053 AND feature_9 <= 0.6088 AND feature_10_1 > 0.0629 AND feature_2 <= 0.1386
+  THEN credit_risk = Non-default
+
+[R20] (Samples: 1, Confidence: 51.55%)
+  IF feature_7_1 > -0.0242 AND feature_4 <= -1.3053 AND feature_9 <= 0.6088 AND feature_10_1 > 0.0629 AND feature_2 > 0.1386
+  THEN credit_risk = Non-default
+
+[R21] (Samples: 1, Confidence: 77.08%)
+  IF feature_7_1 > -0.0242 AND feature_4 <= -1.3053 AND feature_9 > 0.6088
+  THEN credit_risk = Default
+
+[R22] (Samples: 0, Confidence: 66.19%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 <= 0.5655 AND feature_2 <= -0.4749 AND feature_5_5 <= 1.3200
+  THEN credit_risk = Non-default
+
+[R23] (Samples: 1, Confidence: 52.59%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 <= 0.5655 AND feature_2 <= -0.4749 AND feature_5_5 > 1.3200
+  THEN credit_risk = Default
+
+[R24] (Samples: 1, Confidence: 60.35%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 <= 0.5655 AND feature_2 > -0.4749 AND feature_3_2 <= -0.6273
+  THEN credit_risk = Non-default
+
+[R25] (Samples: 1, Confidence: 71.07%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 <= 0.5655 AND feature_2 > -0.4749 AND feature_3_2 > -0.6273
+  THEN credit_risk = Default
+
+[R26] (Samples: 1, Confidence: 78.14%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 > 0.5655 AND feature_0_1 <= -0.3139 AND feature_1 <= -0.0937
+  THEN credit_risk = Default
+
+[R27] (Samples: 0, Confidence: 79.91%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 > 0.5655 AND feature_0_1 <= -0.3139 AND feature_1 > -0.0937
+  THEN credit_risk = Default
+
+[R28] (Samples: 1, Confidence: 75.30%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 > 0.5655 AND feature_0_1 > -0.3139 AND feature_1 <= 0.7364
+  THEN credit_risk = Default
+
+[R29] (Samples: 1, Confidence: 73.41%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 <= -0.3727 AND feature_4 > 0.5655 AND feature_0_1 > -0.3139 AND feature_1 > 0.7364
+  THEN credit_risk = Default
+
+[R30] (Samples: 1, Confidence: 66.63%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 <= 0.8618 AND feature_9 <= 0.4125 AND feature_4 <= -0.6372
+  THEN credit_risk = Default
+
+[R31] (Samples: 0, Confidence: 75.36%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 <= 0.8618 AND feature_9 <= 0.4125 AND feature_4 > -0.6372
+  THEN credit_risk = Default
+
+[R32] (Samples: 0, Confidence: 75.69%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 <= 0.8618 AND feature_9 > 0.4125 AND feature_6 <= -0.4992
+  THEN credit_risk = Default
+
+[R33] (Samples: 1, Confidence: 80.43%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 <= 0.8618 AND feature_9 > 0.4125 AND feature_6 > -0.4992
+  THEN credit_risk = Default
+
+[R34] (Samples: 1, Confidence: 85.74%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 > 0.8618 AND feature_13 <= 7.1271 AND feature_0_1 <= -0.3139
+  THEN credit_risk = Default
+
+[R35] (Samples: 1, Confidence: 81.00%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 > 0.8618 AND feature_13 <= 7.1271 AND feature_0_1 > -0.3139
+  THEN credit_risk = Default
+
+[R36] (Samples: 1, Confidence: 89.51%)
+  IF feature_7_1 > -0.0242 AND feature_4 > -1.3053 AND feature_9 > -0.3727 AND feature_13 > 0.8618 AND feature_13 > 7.1271
+  THEN credit_risk = Default

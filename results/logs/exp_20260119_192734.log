@@ -1,0 +1,2858 @@
+19:27:34 | INFO | 数据集: ['german', 'australian', 'uci', 'xinwang']
+19:27:34 | INFO | 运行阶段: all
+19:27:34 | INFO | 重复次数: 5
+19:27:34 | INFO | Optuna试验: 50
+19:27:34 | INFO | 强制重训: False
+19:27:34 | INFO | 
+[1/4] 处理数据集: GERMAN
+19:27:34 | INFO | 
+######################################################################
+19:27:34 | INFO | # 完整流水线: GERMAN
+19:27:34 | INFO | ######################################################################
+19:27:34 | INFO | 
+============================================================
+19:27:34 | INFO | STAGE 1: 教师模型准备 - GERMAN
+19:27:34 | INFO | ============================================================
+19:27:35 | INFO | [german] 缓存有效: XGBoost-Tuned (AUC=0.8085)
+19:27:35 | INFO | [OK] 使用缓存的教师: XGBoost-Tuned
+19:27:35 | INFO |   验证集AUC: 0.8085
+19:27:35 | INFO |   测试集AUC: 0.7517
+19:27:35 | INFO | 
+============================================================
+19:27:35 | INFO | STAGE 2: 知识蒸馏实验 - GERMAN
+19:27:35 | INFO | ============================================================
+19:27:35 | INFO | [german] 缓存有效: XGBoost-Tuned (AUC=0.8085)
+19:27:35 | INFO | 使用教师: XGBoost-Tuned (AUC=0.8085)
+19:27:35 | INFO | [german] 缓存有效: XGBoost-Tuned (AUC=0.8085)
+19:27:35 | INFO | [german] 缓存有效: XGBoost-Tuned (AUC=0.8085)
+19:27:35 | INFO | 已加载SHAP值: shape=(600, 54)
+19:27:35 | INFO | ExperimentRunner using GPU-0: NVIDIA GeForce RTX 5060 Ti
+19:27:35 | INFO | 
+运行蒸馏实验...
+19:27:35 | INFO |   Running distillation experiments (Student=DecisionTree)...
+19:27:35 | INFO |     [Best Teacher] XGBoost-Tuned (AUC: 0.8085) [cached]
+19:27:35 | INFO |     Teacher...
+19:27:35 | INFO |       AUC: 0.7517±0.0000
+19:27:35 | INFO |     StudentBaseline...
+19:27:35 | INFO |       AUC: 0.6393±0.0008
+19:27:35 | INFO |     VanillaKD...
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:35 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:35 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:35 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:35 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:35 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:35 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:35 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:35 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:35 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:35 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:35 | INFO |       AUC: 0.7393±0.0000
+19:27:35 | INFO |     SoftLabelKD...
+19:27:35 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:35 | INFO |   Mixed targets (α=0.2): mean=0.5924
+19:27:36 | INFO |   Threshold tuned: 0.45 (F1=0.8339)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.8993, threshold=0.45
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Mixed targets (α=0.2): mean=0.5924
+19:27:36 | INFO |   Threshold tuned: 0.45 (F1=0.8339)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.8993, threshold=0.45
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Mixed targets (α=0.2): mean=0.5924
+19:27:36 | INFO |   Threshold tuned: 0.45 (F1=0.8339)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.8993, threshold=0.45
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Mixed targets (α=0.2): mean=0.5924
+19:27:36 | INFO |   Threshold tuned: 0.45 (F1=0.8339)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.8993, threshold=0.45
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Mixed targets (α=0.2): mean=0.5924
+19:27:36 | INFO |   Threshold tuned: 0.45 (F1=0.8339)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.8993, threshold=0.45
+19:27:36 | INFO |       AUC: 0.7164±0.0000
+19:27:36 | INFO |     CBKD...
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |       AUC: 0.7705±0.0000
+19:27:36 | INFO |     [Rules] Saved to results\rules\german_CBKD_rules.txt
+19:27:36 | INFO | 
+运行消融实验...
+19:27:36 | INFO |   Running ablation experiments (Student=DecisionTree)...
+19:27:36 | INFO |     [Best Teacher] XGBoost-Tuned (AUC: 0.8085) [cached]
+19:27:36 | INFO |     Ablation 1: Temperature (τ)
+19:27:36 | INFO |   Soft labels: mean=0.7012, std=0.2021
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.7012
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8243)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9107, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.7012, std=0.2021
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.7012
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8243)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9107, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.7012, std=0.2021
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.7012
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9107, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.7012, std=0.2021
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.7012
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8243)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9107, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.7012, std=0.2021
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.7012
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9107, threshold=0.50
+19:27:36 | INFO |       T=1.0: AUC=0.7331±0.0012, KT=0.9107
+19:27:36 | INFO |   Soft labels: mean=0.6226, std=0.1261
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.6226
+19:27:36 | INFO |   Threshold tuned: 0.55 (F1=0.8322)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=49, KT_score=0.9272, threshold=0.55
+19:27:36 | INFO |   Soft labels: mean=0.6226, std=0.1261
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.6226
+19:27:36 | INFO |   Threshold tuned: 0.55 (F1=0.8322)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=49, KT_score=0.9272, threshold=0.55
+19:27:36 | INFO |   Soft labels: mean=0.6226, std=0.1261
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.6226
+19:27:36 | INFO |   Threshold tuned: 0.55 (F1=0.8322)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=49, KT_score=0.9272, threshold=0.55
+19:27:36 | INFO |   Soft labels: mean=0.6226, std=0.1261
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.6226
+19:27:36 | INFO |   Threshold tuned: 0.55 (F1=0.8322)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=49, KT_score=0.9272, threshold=0.55
+19:27:36 | INFO |   Soft labels: mean=0.6226, std=0.1261
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.6226
+19:27:36 | INFO |   Threshold tuned: 0.55 (F1=0.8322)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=49, KT_score=0.9272, threshold=0.55
+19:27:36 | INFO |       T=2.0: AUC=0.7670±0.0000, KT=0.9272
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:36 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:36 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:36 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:36 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:36 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |       T=4.0: AUC=0.7705±0.0000, KT=0.9290
+19:27:37 | INFO |   Soft labels: mean=0.5334, std=0.0350
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5334
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9293, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5334, std=0.0350
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5334
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9293, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5334, std=0.0350
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5334
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9293, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5334, std=0.0350
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5334
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9293, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5334, std=0.0350
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5334
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9293, threshold=0.50
+19:27:37 | INFO |       T=8.0: AUC=0.7741±0.0000, KT=0.9293
+19:27:37 | INFO |     Ablation 2: Alpha (hard-label weight)
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:37 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:37 | INFO |       alpha=0.0 (SoftOnly): AUC=0.7705±0.0000
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.3): mean=0.6059
+19:27:37 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8674, threshold=0.05
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.3): mean=0.6059
+19:27:37 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8674, threshold=0.05
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.3): mean=0.6059
+19:27:37 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8674, threshold=0.05
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.3): mean=0.6059
+19:27:37 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8674, threshold=0.05
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.3): mean=0.6059
+19:27:37 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8674, threshold=0.05
+19:27:37 | INFO |       alpha=0.3 (Mixed): AUC=0.7225±0.0000
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.5): mean=0.6328
+19:27:37 | INFO |   Threshold tuned: 0.20 (F1=0.8260)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8427, threshold=0.20
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.5): mean=0.6328
+19:27:37 | INFO |   Threshold tuned: 0.20 (F1=0.8260)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8427, threshold=0.20
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.5): mean=0.6328
+19:27:37 | INFO |   Threshold tuned: 0.20 (F1=0.8260)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8427, threshold=0.20
+19:27:37 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:37 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:37 | INFO |   Mixed targets (α=0.5): mean=0.6328
+19:27:37 | INFO |   Threshold tuned: 0.20 (F1=0.8260)
+19:27:37 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8427, threshold=0.20
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.5): mean=0.6328
+19:27:38 | INFO |   Threshold tuned: 0.20 (F1=0.8260)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.8427, threshold=0.20
+19:27:38 | INFO |       alpha=0.5 (Mixed): AUC=0.7156±0.0001
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.7): mean=0.6597
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.8026, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.7): mean=0.6597
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.8026, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.7): mean=0.6597
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.8026, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.7): mean=0.6597
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.8026, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.7): mean=0.6597
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.8026, threshold=0.05
+19:27:38 | INFO |       alpha=0.7 (Mixed): AUC=0.6882±0.0020
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=1.0): mean=0.7000
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8253)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=43, KT_score=0.5575, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=1.0): mean=0.7000
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8110)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=42, KT_score=0.5631, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=1.0): mean=0.7000
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8110)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=42, KT_score=0.5620, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=1.0): mean=0.7000
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8253)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=43, KT_score=0.5617, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=1.0): mean=0.7000
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8253)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=43, KT_score=0.5569, threshold=0.05
+19:27:38 | INFO |       alpha=1.0 (HardOnly): AUC=0.6778±0.0058
+19:27:38 | INFO |     Ablation 3: Max Depth
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8464, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8464, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8464, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8464, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8464, threshold=0.05
+19:27:38 | INFO |       max_depth=3: AUC=0.7384±0.0000, leaves=8
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8791, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8791, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8791, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8791, threshold=0.05
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.05 (F1=0.8235)
+19:27:38 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8791, threshold=0.05
+19:27:38 | INFO |       max_depth=4: AUC=0.7528±0.0000, leaves=16
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:38 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:38 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:38 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:38 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:38 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |       max_depth=6: AUC=0.7705±0.0000, leaves=47
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:39 | INFO |   CB-KD trained: depth=8, leaves=89, KT_score=0.9537, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:39 | INFO |   CB-KD trained: depth=8, leaves=89, KT_score=0.9537, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:39 | INFO |   CB-KD trained: depth=8, leaves=89, KT_score=0.9537, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:39 | INFO |   CB-KD trained: depth=8, leaves=89, KT_score=0.9537, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8280)
+19:27:39 | INFO |   CB-KD trained: depth=8, leaves=89, KT_score=0.9537, threshold=0.50
+19:27:39 | INFO |       max_depth=8: AUC=0.7547±0.0005, leaves=89
+19:27:39 | INFO |     Ablation 4: Class Balance Effect
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8444)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9273, threshold=0.50
+19:27:39 | INFO |       class_balance=False: AUC=0.7393±0.0000, KT=0.9273
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |       class_balance=True: AUC=0.7705±0.0000, KT=0.9290
+19:27:39 | INFO |     Ablation 5: Split Criterion
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:39 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:39 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:39 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:39 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:39 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |       criterion=gini: AUC=0.7705±0.0000, leaves=47
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |       criterion=entropy: AUC=0.7741±0.0000, leaves=48
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=48, KT_score=0.9288, threshold=0.50
+19:27:40 | INFO |       criterion=log_loss: AUC=0.7741±0.0000, leaves=48
+19:27:40 | INFO |     Ablation 6: Cost Ratio (minority class weight multiplier)
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=0.714
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8276)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=47, KT_score=0.9290, threshold=0.50
+19:27:40 | INFO |       cost_ratio=1.0: AUC=0.7705±0.0000, default_rules=31.0/47
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=1.429
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8446)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9213, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=1.429
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8446)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9213, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=1.429
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8446)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9213, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=1.429
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8446)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9213, threshold=0.50
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=1.429
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8446)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9213, threshold=0.50
+19:27:40 | INFO |       cost_ratio=2.0: AUC=0.7677±0.0000, default_rules=31.0/45
+19:27:40 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:40 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=2.143
+19:27:40 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:40 | INFO |   Threshold tuned: 0.50 (F1=0.8418)
+19:27:40 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9289, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=2.143
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8418)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9289, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=2.143
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8418)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9289, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=2.143
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8418)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9289, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=2.143
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8418)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=45, KT_score=0.9289, threshold=0.50
+19:27:41 | INFO |       cost_ratio=3.0: AUC=0.7381±0.0002, default_rules=34.0/45
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=3.571
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8239)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9127, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=3.571
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8239)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9127, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=3.571
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8239)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9127, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=3.571
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8239)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9127, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=3.571
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8239)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9127, threshold=0.50
+19:27:41 | INFO |       cost_ratio=5.0: AUC=0.7397±0.0000, default_rules=36.0/46
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=5.714
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8288)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9097, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=5.714
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8288)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9097, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=5.714
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8288)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9097, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=5.714
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8288)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9097, threshold=0.50
+19:27:41 | INFO |   Soft labels: mean=0.5655, std=0.0684
+19:27:41 | INFO |   Class balance: n0=180, n1=420, ratio=2.33, beta=1.00, w0=1.667, w1=5.714
+19:27:41 | INFO |   Mixed targets (α=0.0): mean=0.5655
+19:27:41 | INFO |   Threshold tuned: 0.50 (F1=0.8288)
+19:27:41 | INFO |   CB-KD trained: depth=6, leaves=46, KT_score=0.9097, threshold=0.50
+19:27:41 | INFO |       cost_ratio=8.0: AUC=0.7449±0.0000, default_rules=34.0/46
+19:27:41 | INFO | 
+✓ 蒸馏实验完成 (0.1 分钟)
+19:27:41 | INFO | 
+✓ GERMAN 完整流水线完成
+19:27:41 | INFO | 
+[2/4] 处理数据集: AUSTRALIAN
+19:27:41 | INFO | 
+######################################################################
+19:27:41 | INFO | # 完整流水线: AUSTRALIAN
+19:27:41 | INFO | ######################################################################
+19:27:41 | INFO | 
+============================================================
+19:27:41 | INFO | STAGE 1: 教师模型准备 - AUSTRALIAN
+19:27:41 | INFO | ============================================================
+19:27:41 | INFO | [australian] 缓存有效: CreditNet (AUC=0.9327)
+19:27:41 | INFO | [OK] 使用缓存的教师: CreditNet
+19:27:41 | INFO |   验证集AUC: 0.9327
+19:27:41 | INFO |   测试集AUC: 0.9121
+19:27:41 | INFO | 
+============================================================
+19:27:41 | INFO | STAGE 2: 知识蒸馏实验 - AUSTRALIAN
+19:27:41 | INFO | ============================================================
+19:27:41 | INFO | [australian] 缓存有效: CreditNet (AUC=0.9327)
+19:27:41 | INFO | 使用教师: CreditNet (AUC=0.9327)
+19:27:41 | INFO | [australian] 缓存有效: CreditNet (AUC=0.9327)
+19:27:41 | INFO | [australian] 缓存有效: CreditNet (AUC=0.9327)
+19:27:41 | INFO | 已加载SHAP值: shape=(414, 22)
+19:27:41 | INFO | 
+运行蒸馏实验...
+19:27:41 | INFO |   Running distillation experiments (Student=DecisionTree)...
+19:27:41 | INFO |     [Best Teacher] CreditNet (AUC: 0.9327) [cached]
+19:27:41 | INFO |     Teacher...
+19:27:41 | INFO |       AUC: 0.9121±0.0000
+19:27:41 | INFO |     StudentBaseline...
+19:27:42 | INFO |       AUC: 0.8651±0.0029
+19:27:42 | INFO |     VanillaKD...
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:42 | INFO |       AUC: 0.9094±0.0000
+19:27:42 | INFO |     SoftLabelKD...
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.2): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.65 (F1=0.8142)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.9650, threshold=0.65
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.2): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.65 (F1=0.8142)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.9650, threshold=0.65
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.2): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.65 (F1=0.8142)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.9650, threshold=0.65
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.2): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.65 (F1=0.8142)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.9650, threshold=0.65
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Mixed targets (α=0.2): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.65 (F1=0.8142)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.9650, threshold=0.65
+19:27:42 | INFO |       AUC: 0.8996±0.0000
+19:27:42 | INFO |     CBKD...
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |       AUC: 0.9062±0.0000
+19:27:42 | INFO |     [Rules] Saved to results\rules\australian_CBKD_rules.txt
+19:27:42 | INFO | 
+运行消融实验...
+19:27:42 | INFO |   Running ablation experiments (Student=DecisionTree)...
+19:27:42 | INFO |     [Best Teacher] CreditNet (AUC: 0.9327) [cached]
+19:27:42 | INFO |     Ablation 1: Temperature (τ)
+19:27:42 | INFO |   Soft labels: mean=0.4655, std=0.4366
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.20 (F1=0.8421)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=30, KT_score=0.9635, threshold=0.20
+19:27:42 | INFO |   Soft labels: mean=0.4655, std=0.4366
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.20 (F1=0.8421)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=30, KT_score=0.9635, threshold=0.20
+19:27:42 | INFO |   Soft labels: mean=0.4655, std=0.4366
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.20 (F1=0.8421)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=30, KT_score=0.9635, threshold=0.20
+19:27:42 | INFO |   Soft labels: mean=0.4655, std=0.4366
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.20 (F1=0.8421)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=30, KT_score=0.9635, threshold=0.20
+19:27:42 | INFO |   Soft labels: mean=0.4655, std=0.4366
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4655
+19:27:42 | INFO |   Threshold tuned: 0.20 (F1=0.8421)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=30, KT_score=0.9635, threshold=0.20
+19:27:42 | INFO |       T=1.0: AUC=0.9124±0.0000, KT=0.9635
+19:27:42 | INFO |   Soft labels: mean=0.4618, std=0.3340
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4618
+19:27:42 | INFO |   Threshold tuned: 0.30 (F1=0.8636)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9710, threshold=0.30
+19:27:42 | INFO |   Soft labels: mean=0.4618, std=0.3340
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4618
+19:27:42 | INFO |   Threshold tuned: 0.30 (F1=0.8636)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9710, threshold=0.30
+19:27:42 | INFO |   Soft labels: mean=0.4618, std=0.3340
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4618
+19:27:42 | INFO |   Threshold tuned: 0.30 (F1=0.8636)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9710, threshold=0.30
+19:27:42 | INFO |   Soft labels: mean=0.4618, std=0.3340
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4618
+19:27:42 | INFO |   Threshold tuned: 0.30 (F1=0.8636)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9710, threshold=0.30
+19:27:42 | INFO |   Soft labels: mean=0.4618, std=0.3340
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4618
+19:27:42 | INFO |   Threshold tuned: 0.30 (F1=0.8636)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9710, threshold=0.30
+19:27:42 | INFO |       T=2.0: AUC=0.9292±0.0000, KT=0.9710
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |       T=4.0: AUC=0.9062±0.0000, KT=0.9731
+19:27:42 | INFO |   Soft labels: mean=0.4825, std=0.1123
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4825
+19:27:42 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.45
+19:27:42 | INFO |   Soft labels: mean=0.4825, std=0.1123
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4825
+19:27:42 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.45
+19:27:42 | INFO |   Soft labels: mean=0.4825, std=0.1123
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4825
+19:27:42 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.45
+19:27:42 | INFO |   Soft labels: mean=0.4825, std=0.1123
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4825
+19:27:42 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.45
+19:27:42 | INFO |   Soft labels: mean=0.4825, std=0.1123
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4825
+19:27:42 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.45
+19:27:42 | INFO |       T=8.0: AUC=0.9097±0.0000, KT=0.9703
+19:27:42 | INFO |     Ablation 2: Alpha (hard-label weight)
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:42 | INFO |       alpha=0.0 (SoftOnly): AUC=0.9062±0.0000
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.3): mean=0.4632
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8361)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9587, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.3): mean=0.4632
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8361)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9587, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.3): mean=0.4632
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8361)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9587, threshold=0.40
+19:27:42 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:42 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:42 | INFO |   Mixed targets (α=0.3): mean=0.4632
+19:27:42 | INFO |   Threshold tuned: 0.40 (F1=0.8361)
+19:27:42 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9587, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.3): mean=0.4632
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8361)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9587, threshold=0.40
+19:27:43 | INFO |       alpha=0.3 (Mixed): AUC=0.8962±0.0000
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.5): mean=0.4585
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8160)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9406, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.5): mean=0.4585
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8160)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9406, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.5): mean=0.4585
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8160)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9406, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.5): mean=0.4585
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8160)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9406, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.5): mean=0.4585
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8160)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9406, threshold=0.35
+19:27:43 | INFO |       alpha=0.5 (Mixed): AUC=0.8710±0.0000
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.7): mean=0.4539
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7812)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9038, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.7): mean=0.4539
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7812)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9038, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.7): mean=0.4539
+19:27:43 | INFO |   Threshold tuned: 0.30 (F1=0.7840)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9038, threshold=0.30
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.7): mean=0.4539
+19:27:43 | INFO |   Threshold tuned: 0.30 (F1=0.7840)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9038, threshold=0.30
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.7): mean=0.4539
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7812)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=34, KT_score=0.9038, threshold=0.15
+19:27:43 | INFO |       alpha=0.7 (Mixed): AUC=0.8958±0.0003
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=1.0): mean=0.4469
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7840)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.6638, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=1.0): mean=0.4469
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7840)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.6645, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=1.0): mean=0.4469
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7778)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.6642, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=1.0): mean=0.4469
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7778)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.6636, threshold=0.15
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=1.0): mean=0.4469
+19:27:43 | INFO |   Threshold tuned: 0.15 (F1=0.7874)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=38, KT_score=0.6634, threshold=0.15
+19:27:43 | INFO |       alpha=1.0 (HardOnly): AUC=0.8489±0.0031
+19:27:43 | INFO |     Ablation 3: Max Depth
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8485)
+19:27:43 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.9426, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8485)
+19:27:43 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.9426, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8485)
+19:27:43 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.9426, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8485)
+19:27:43 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.9426, threshold=0.35
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.35 (F1=0.8485)
+19:27:43 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.9426, threshold=0.35
+19:27:43 | INFO |       max_depth=3: AUC=0.8938±0.0000, leaves=8
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8321)
+19:27:43 | INFO |   CB-KD trained: depth=4, leaves=14, KT_score=0.9585, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8321)
+19:27:43 | INFO |   CB-KD trained: depth=4, leaves=14, KT_score=0.9585, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8321)
+19:27:43 | INFO |   CB-KD trained: depth=4, leaves=14, KT_score=0.9585, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8321)
+19:27:43 | INFO |   CB-KD trained: depth=4, leaves=14, KT_score=0.9585, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8321)
+19:27:43 | INFO |   CB-KD trained: depth=4, leaves=14, KT_score=0.9585, threshold=0.40
+19:27:43 | INFO |       max_depth=4: AUC=0.9081±0.0000, leaves=14
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |       max_depth=6: AUC=0.9062±0.0000, leaves=41
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8235)
+19:27:43 | INFO |   CB-KD trained: depth=8, leaves=84, KT_score=0.9854, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8235)
+19:27:43 | INFO |   CB-KD trained: depth=8, leaves=84, KT_score=0.9854, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8235)
+19:27:43 | INFO |   CB-KD trained: depth=8, leaves=84, KT_score=0.9854, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8235)
+19:27:43 | INFO |   CB-KD trained: depth=8, leaves=84, KT_score=0.9854, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8235)
+19:27:43 | INFO |   CB-KD trained: depth=8, leaves=84, KT_score=0.9854, threshold=0.40
+19:27:43 | INFO |       max_depth=8: AUC=0.9065±0.0006, leaves=84
+19:27:43 | INFO |     Ablation 4: Class Balance Effect
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=40, KT_score=0.9717, threshold=0.40
+19:27:43 | INFO |       class_balance=False: AUC=0.9094±0.0000, KT=0.9717
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |       class_balance=True: AUC=0.9062±0.0000, KT=0.9731
+19:27:43 | INFO |     Ablation 5: Split Criterion
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:43 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:43 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:43 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:43 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:43 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |       criterion=gini: AUC=0.9062±0.0000, leaves=41
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |       criterion=entropy: AUC=0.9094±0.0000, leaves=37
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=37, KT_score=0.9703, threshold=0.40
+19:27:44 | INFO |       criterion=log_loss: AUC=0.9094±0.0000, leaves=37
+19:27:44 | INFO |     Ablation 6: Cost Ratio (minority class weight multiplier)
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=1.036
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.40 (F1=0.8397)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=41, KT_score=0.9731, threshold=0.40
+19:27:44 | INFO |       cost_ratio=1.0: AUC=0.9062±0.0000, default_rules=17.0/41
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=2.071
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9693, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=2.071
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9693, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=2.071
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9693, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=2.071
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9693, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=2.071
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8527)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=36, KT_score=0.9693, threshold=0.45
+19:27:44 | INFO |       cost_ratio=2.0: AUC=0.8939±0.0002, default_rules=17.0/36
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=3.107
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8485)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9707, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=3.107
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8485)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9707, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=3.107
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8485)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9707, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=3.107
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8485)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9707, threshold=0.45
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=3.107
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.45 (F1=0.8485)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=35, KT_score=0.9707, threshold=0.45
+19:27:44 | INFO |       cost_ratio=3.0: AUC=0.9176±0.0008, default_rules=17.0/35
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=5.178
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9727, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=5.178
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9727, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=5.178
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9727, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=5.178
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9727, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=5.178
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9727, threshold=0.50
+19:27:44 | INFO |       cost_ratio=5.0: AUC=0.9042±0.0000, default_rules=20.0/44
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=8.285
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9718, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=8.285
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9718, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=8.285
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9718, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=8.285
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9718, threshold=0.50
+19:27:44 | INFO |   Soft labels: mean=0.4702, std=0.2075
+19:27:44 | INFO |   Class balance: n0=229, n1=185, ratio=1.24, beta=0.30, w0=0.971, w1=8.285
+19:27:44 | INFO |   Mixed targets (α=0.0): mean=0.4702
+19:27:44 | INFO |   Threshold tuned: 0.50 (F1=0.8217)
+19:27:44 | INFO |   CB-KD trained: depth=6, leaves=44, KT_score=0.9718, threshold=0.50
+19:27:44 | INFO |       cost_ratio=8.0: AUC=0.9040±0.0000, default_rules=20.0/44
+19:27:44 | INFO | 
+✓ 蒸馏实验完成 (0.1 分钟)
+19:27:44 | INFO | 
+✓ AUSTRALIAN 完整流水线完成
+19:27:44 | INFO | 
+[3/4] 处理数据集: UCI
+19:27:44 | INFO | 
+######################################################################
+19:27:44 | INFO | # 完整流水线: UCI
+19:27:44 | INFO | ######################################################################
+19:27:44 | INFO | 
+============================================================
+19:27:44 | INFO | STAGE 1: 教师模型准备 - UCI
+19:27:44 | INFO | ============================================================
+19:27:44 | INFO | [uci] 缓存有效: RF-Tuned (AUC=0.7885)
+19:27:44 | INFO | [OK] 使用缓存的教师: RF-Tuned
+19:27:44 | INFO |   验证集AUC: 0.7885
+19:27:44 | INFO |   测试集AUC: 0.7736
+19:27:44 | INFO | 
+============================================================
+19:27:44 | INFO | STAGE 2: 知识蒸馏实验 - UCI
+19:27:44 | INFO | ============================================================
+19:27:44 | INFO | [uci] 缓存有效: RF-Tuned (AUC=0.7885)
+19:27:44 | INFO | 使用教师: RF-Tuned (AUC=0.7885)
+19:27:44 | INFO | [uci] 缓存有效: RF-Tuned (AUC=0.7885)
+19:27:44 | INFO | [uci] 缓存有效: RF-Tuned (AUC=0.7885)
+19:27:44 | INFO | 已加载SHAP值: shape=(18000, 23)
+19:27:44 | INFO | 
+运行蒸馏实验...
+19:27:44 | INFO |   Running distillation experiments (Student=DecisionTree)...
+19:27:45 | INFO |     [Best Teacher] RF-Tuned (AUC: 0.7885) [cached]
+19:27:45 | INFO |     Teacher...
+19:27:46 | INFO |       AUC: 0.7736±0.0000
+19:27:46 | INFO |     StudentBaseline...
+19:27:46 | INFO |       AUC: 0.7515±0.0002
+19:27:46 | INFO |     VanillaKD...
+19:27:47 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:47 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:47 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:27:47 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:27:47 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:47 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:47 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:27:47 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:27:47 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:47 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:47 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:27:47 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:27:47 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:47 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:48 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:27:48 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:27:48 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:48 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:48 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:27:48 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:27:48 | INFO |       AUC: 0.7628±0.0000
+19:27:48 | INFO |     SoftLabelKD...
+19:27:48 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:48 | INFO |   Mixed targets (α=0.2): mean=0.3684
+19:27:48 | INFO |   Threshold tuned: 0.40 (F1=0.5232)
+19:27:48 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9141, threshold=0.40
+19:27:48 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:48 | INFO |   Mixed targets (α=0.2): mean=0.3684
+19:27:48 | INFO |   Threshold tuned: 0.40 (F1=0.5232)
+19:27:48 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9141, threshold=0.40
+19:27:48 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:48 | INFO |   Mixed targets (α=0.2): mean=0.3684
+19:27:49 | INFO |   Threshold tuned: 0.40 (F1=0.5232)
+19:27:49 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9141, threshold=0.40
+19:27:49 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:49 | INFO |   Mixed targets (α=0.2): mean=0.3684
+19:27:49 | INFO |   Threshold tuned: 0.40 (F1=0.5232)
+19:27:49 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9141, threshold=0.40
+19:27:49 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:49 | INFO |   Mixed targets (α=0.2): mean=0.3684
+19:27:49 | INFO |   Threshold tuned: 0.40 (F1=0.5232)
+19:27:49 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9141, threshold=0.40
+19:27:49 | INFO |       AUC: 0.7557±0.0001
+19:27:49 | INFO |     CBKD...
+19:27:49 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:49 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:49 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:49 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:49 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:50 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:50 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:50 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:50 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:50 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:50 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:50 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:50 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:50 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:50 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:50 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:50 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:50 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:50 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:50 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:50 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:50 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:50 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:51 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:51 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:51 | INFO |       AUC: 0.7645±0.0000
+19:27:51 | INFO |     [Rules] Saved to results\rules\uci_CBKD_rules.txt
+19:27:51 | INFO | 
+运行消融实验...
+19:27:51 | INFO |   Running ablation experiments (Student=DecisionTree)...
+19:27:51 | INFO |     [Best Teacher] RF-Tuned (AUC: 0.7885) [cached]
+19:27:51 | INFO |     Ablation 1: Temperature (τ)
+19:27:51 | INFO |   Soft labels: mean=0.2223, std=0.2036
+19:27:51 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:51 | INFO |   Mixed targets (α=0.0): mean=0.2223
+19:27:52 | INFO |   Threshold tuned: 0.25 (F1=0.5241)
+19:27:52 | INFO |   CB-KD trained: depth=6, leaves=58, KT_score=0.9143, threshold=0.25
+19:27:52 | INFO |   Soft labels: mean=0.2223, std=0.2036
+19:27:52 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:52 | INFO |   Mixed targets (α=0.0): mean=0.2223
+19:27:52 | INFO |   Threshold tuned: 0.25 (F1=0.5241)
+19:27:52 | INFO |   CB-KD trained: depth=6, leaves=58, KT_score=0.9143, threshold=0.25
+19:27:52 | INFO |   Soft labels: mean=0.2223, std=0.2036
+19:27:52 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:52 | INFO |   Mixed targets (α=0.0): mean=0.2223
+19:27:52 | INFO |   Threshold tuned: 0.25 (F1=0.5241)
+19:27:52 | INFO |   CB-KD trained: depth=6, leaves=58, KT_score=0.9143, threshold=0.25
+19:27:52 | INFO |   Soft labels: mean=0.2223, std=0.2036
+19:27:52 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:52 | INFO |   Mixed targets (α=0.0): mean=0.2223
+19:27:52 | INFO |   Threshold tuned: 0.25 (F1=0.5241)
+19:27:52 | INFO |   CB-KD trained: depth=6, leaves=58, KT_score=0.9143, threshold=0.25
+19:27:52 | INFO |   Soft labels: mean=0.2223, std=0.2036
+19:27:52 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:52 | INFO |   Mixed targets (α=0.0): mean=0.2223
+19:27:53 | INFO |   Threshold tuned: 0.25 (F1=0.5241)
+19:27:53 | INFO |   CB-KD trained: depth=6, leaves=58, KT_score=0.9143, threshold=0.25
+19:27:53 | INFO |       T=1.0: AUC=0.7551±0.0000, KT=0.9143
+19:27:53 | INFO |   Soft labels: mean=0.3249, std=0.1316
+19:27:53 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:53 | INFO |   Mixed targets (α=0.0): mean=0.3249
+19:27:53 | INFO |   Threshold tuned: 0.40 (F1=0.5382)
+19:27:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9261, threshold=0.40
+19:27:53 | INFO |   Soft labels: mean=0.3249, std=0.1316
+19:27:53 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:53 | INFO |   Mixed targets (α=0.0): mean=0.3249
+19:27:53 | INFO |   Threshold tuned: 0.40 (F1=0.5382)
+19:27:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9261, threshold=0.40
+19:27:53 | INFO |   Soft labels: mean=0.3249, std=0.1316
+19:27:53 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:53 | INFO |   Mixed targets (α=0.0): mean=0.3249
+19:27:53 | INFO |   Threshold tuned: 0.40 (F1=0.5382)
+19:27:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9261, threshold=0.40
+19:27:54 | INFO |   Soft labels: mean=0.3249, std=0.1316
+19:27:54 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:54 | INFO |   Mixed targets (α=0.0): mean=0.3249
+19:27:54 | INFO |   Threshold tuned: 0.40 (F1=0.5382)
+19:27:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9261, threshold=0.40
+19:27:54 | INFO |   Soft labels: mean=0.3249, std=0.1316
+19:27:54 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:54 | INFO |   Mixed targets (α=0.0): mean=0.3249
+19:27:54 | INFO |   Threshold tuned: 0.40 (F1=0.5382)
+19:27:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9261, threshold=0.40
+19:27:54 | INFO |       T=2.0: AUC=0.7649±0.0000, KT=0.9261
+19:27:54 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:54 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:54 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:54 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:54 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:54 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:54 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:55 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:55 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:55 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:55 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:55 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:55 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:55 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:55 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:55 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:55 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:55 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:55 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:55 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:55 | INFO |       T=4.0: AUC=0.7645±0.0000, KT=0.9251
+19:27:55 | INFO |   Soft labels: mean=0.4515, std=0.0374
+19:27:55 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:55 | INFO |   Mixed targets (α=0.0): mean=0.4515
+19:27:56 | INFO |   Threshold tuned: 0.50 (F1=0.4923)
+19:27:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9250, threshold=0.50
+19:27:56 | INFO |   Soft labels: mean=0.4515, std=0.0374
+19:27:56 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:56 | INFO |   Mixed targets (α=0.0): mean=0.4515
+19:27:56 | INFO |   Threshold tuned: 0.50 (F1=0.4923)
+19:27:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9250, threshold=0.50
+19:27:56 | INFO |   Soft labels: mean=0.4515, std=0.0374
+19:27:56 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:56 | INFO |   Mixed targets (α=0.0): mean=0.4515
+19:27:56 | INFO |   Threshold tuned: 0.50 (F1=0.4923)
+19:27:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9250, threshold=0.50
+19:27:56 | INFO |   Soft labels: mean=0.4515, std=0.0374
+19:27:56 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:56 | INFO |   Mixed targets (α=0.0): mean=0.4515
+19:27:56 | INFO |   Threshold tuned: 0.50 (F1=0.4923)
+19:27:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9250, threshold=0.50
+19:27:57 | INFO |   Soft labels: mean=0.4515, std=0.0374
+19:27:57 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:57 | INFO |   Mixed targets (α=0.0): mean=0.4515
+19:27:57 | INFO |   Threshold tuned: 0.50 (F1=0.4923)
+19:27:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9250, threshold=0.50
+19:27:57 | INFO |       T=8.0: AUC=0.7612±0.0000, KT=0.9250
+19:27:57 | INFO |     Ablation 2: Alpha (hard-label weight)
+19:27:57 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:57 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:57 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:57 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:57 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:57 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:57 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:57 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:57 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:57 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:57 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:58 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:58 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:58 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:58 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:58 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:58 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:58 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:58 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:27:58 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:27:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:27:58 | INFO |       alpha=0.0 (SoftOnly): AUC=0.7645±0.0000
+19:27:58 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:58 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:58 | INFO |   Mixed targets (α=0.3): mean=0.3500
+19:27:58 | INFO |   Threshold tuned: 0.50 (F1=0.5291)
+19:27:58 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8928, threshold=0.50
+19:27:59 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:59 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:59 | INFO |   Mixed targets (α=0.3): mean=0.3500
+19:27:59 | INFO |   Threshold tuned: 0.50 (F1=0.5291)
+19:27:59 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8928, threshold=0.50
+19:27:59 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:59 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:59 | INFO |   Mixed targets (α=0.3): mean=0.3500
+19:27:59 | INFO |   Threshold tuned: 0.50 (F1=0.5291)
+19:27:59 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8928, threshold=0.50
+19:27:59 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:59 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:59 | INFO |   Mixed targets (α=0.3): mean=0.3500
+19:27:59 | INFO |   Threshold tuned: 0.50 (F1=0.5291)
+19:27:59 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8928, threshold=0.50
+19:27:59 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:27:59 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:27:59 | INFO |   Mixed targets (α=0.3): mean=0.3500
+19:28:00 | INFO |   Threshold tuned: 0.50 (F1=0.5291)
+19:28:00 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8928, threshold=0.50
+19:28:00 | INFO |       alpha=0.3 (Mixed): AUC=0.7564±0.0000
+19:28:00 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:00 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:00 | INFO |   Mixed targets (α=0.5): mean=0.3132
+19:28:00 | INFO |   Threshold tuned: 0.50 (F1=0.5269)
+19:28:00 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8827, threshold=0.50
+19:28:00 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:00 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:00 | INFO |   Mixed targets (α=0.5): mean=0.3132
+19:28:00 | INFO |   Threshold tuned: 0.50 (F1=0.5269)
+19:28:00 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8827, threshold=0.50
+19:28:00 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:00 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:00 | INFO |   Mixed targets (α=0.5): mean=0.3132
+19:28:00 | INFO |   Threshold tuned: 0.50 (F1=0.5269)
+19:28:00 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8827, threshold=0.50
+19:28:01 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:01 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:01 | INFO |   Mixed targets (α=0.5): mean=0.3132
+19:28:01 | INFO |   Threshold tuned: 0.50 (F1=0.5269)
+19:28:01 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8827, threshold=0.50
+19:28:01 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:01 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:01 | INFO |   Mixed targets (α=0.5): mean=0.3132
+19:28:01 | INFO |   Threshold tuned: 0.50 (F1=0.5269)
+19:28:01 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8827, threshold=0.50
+19:28:01 | INFO |       alpha=0.5 (Mixed): AUC=0.7548±0.0000
+19:28:01 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:01 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:01 | INFO |   Mixed targets (α=0.7): mean=0.2764
+19:28:01 | INFO |   Threshold tuned: 0.55 (F1=0.5264)
+19:28:01 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8675, threshold=0.55
+19:28:01 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:01 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:01 | INFO |   Mixed targets (α=0.7): mean=0.2764
+19:28:02 | INFO |   Threshold tuned: 0.55 (F1=0.5264)
+19:28:02 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8675, threshold=0.55
+19:28:02 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:02 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:02 | INFO |   Mixed targets (α=0.7): mean=0.2764
+19:28:02 | INFO |   Threshold tuned: 0.55 (F1=0.5264)
+19:28:02 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8675, threshold=0.55
+19:28:02 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:02 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:02 | INFO |   Mixed targets (α=0.7): mean=0.2764
+19:28:02 | INFO |   Threshold tuned: 0.55 (F1=0.5264)
+19:28:02 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8675, threshold=0.55
+19:28:02 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:02 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:02 | INFO |   Mixed targets (α=0.7): mean=0.2764
+19:28:02 | INFO |   Threshold tuned: 0.55 (F1=0.5264)
+19:28:02 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8675, threshold=0.55
+19:28:02 | INFO |       alpha=0.7 (Mixed): AUC=0.7534±0.0000
+19:28:03 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:03 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:03 | INFO |   Mixed targets (α=1.0): mean=0.2212
+19:28:03 | INFO |   Threshold tuned: 0.60 (F1=0.5272)
+19:28:03 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8492, threshold=0.60
+19:28:03 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:03 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:03 | INFO |   Mixed targets (α=1.0): mean=0.2212
+19:28:03 | INFO |   Threshold tuned: 0.60 (F1=0.5278)
+19:28:03 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8492, threshold=0.60
+19:28:03 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:03 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:03 | INFO |   Mixed targets (α=1.0): mean=0.2212
+19:28:03 | INFO |   Threshold tuned: 0.60 (F1=0.5278)
+19:28:03 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8492, threshold=0.60
+19:28:03 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:03 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:03 | INFO |   Mixed targets (α=1.0): mean=0.2212
+19:28:03 | INFO |   Threshold tuned: 0.60 (F1=0.5272)
+19:28:03 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8492, threshold=0.60
+19:28:04 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:04 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:04 | INFO |   Mixed targets (α=1.0): mean=0.2212
+19:28:04 | INFO |   Threshold tuned: 0.60 (F1=0.5278)
+19:28:04 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8492, threshold=0.60
+19:28:04 | INFO |       alpha=1.0 (HardOnly): AUC=0.7510±0.0004
+19:28:04 | INFO |     Ablation 3: Max Depth
+19:28:04 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:04 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:04 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:04 | INFO |   Threshold tuned: 0.45 (F1=0.5218)
+19:28:04 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8774, threshold=0.45
+19:28:04 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:04 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:04 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:04 | INFO |   Threshold tuned: 0.45 (F1=0.5218)
+19:28:04 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8774, threshold=0.45
+19:28:04 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:04 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:04 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:04 | INFO |   Threshold tuned: 0.45 (F1=0.5218)
+19:28:04 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8774, threshold=0.45
+19:28:05 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:05 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:05 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:05 | INFO |   Threshold tuned: 0.45 (F1=0.5218)
+19:28:05 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8774, threshold=0.45
+19:28:05 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:05 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:05 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:05 | INFO |   Threshold tuned: 0.45 (F1=0.5218)
+19:28:05 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.8774, threshold=0.45
+19:28:05 | INFO |       max_depth=3: AUC=0.7386±0.0000, leaves=8
+19:28:05 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:05 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:05 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:05 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:05 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.9005, threshold=0.45
+19:28:05 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:05 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:05 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:05 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:05 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.9005, threshold=0.45
+19:28:05 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:05 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:05 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:06 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:06 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.9005, threshold=0.45
+19:28:06 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:06 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:06 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:06 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:06 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.9005, threshold=0.45
+19:28:06 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:06 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:06 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:06 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:06 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.9005, threshold=0.45
+19:28:06 | INFO |       max_depth=4: AUC=0.7535±0.0000, leaves=16
+19:28:06 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:06 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:06 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:06 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:06 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:06 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:06 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:06 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:07 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:07 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:07 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:07 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:07 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:07 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:07 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:07 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:07 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:07 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:07 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:07 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:07 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:07 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:07 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:07 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:07 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:07 | INFO |       max_depth=6: AUC=0.7645±0.0000, leaves=64
+19:28:07 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:07 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:07 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:08 | INFO |   Threshold tuned: 0.45 (F1=0.5344)
+19:28:08 | INFO |   CB-KD trained: depth=8, leaves=229, KT_score=0.9419, threshold=0.45
+19:28:08 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:08 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:08 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:08 | INFO |   Threshold tuned: 0.45 (F1=0.5342)
+19:28:08 | INFO |   CB-KD trained: depth=8, leaves=229, KT_score=0.9419, threshold=0.45
+19:28:08 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:08 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:08 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:08 | INFO |   Threshold tuned: 0.45 (F1=0.5342)
+19:28:08 | INFO |   CB-KD trained: depth=8, leaves=229, KT_score=0.9419, threshold=0.45
+19:28:08 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:08 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:08 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:09 | INFO |   Threshold tuned: 0.45 (F1=0.5334)
+19:28:09 | INFO |   CB-KD trained: depth=8, leaves=229, KT_score=0.9419, threshold=0.45
+19:28:09 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:09 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:09 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:09 | INFO |   Threshold tuned: 0.45 (F1=0.5344)
+19:28:09 | INFO |   CB-KD trained: depth=8, leaves=229, KT_score=0.9419, threshold=0.45
+19:28:09 | INFO |       max_depth=8: AUC=0.7684±0.0001, leaves=229
+19:28:09 | INFO |     Ablation 4: Class Balance Effect
+19:28:09 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:09 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:09 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:09 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:28:09 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:09 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:09 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:09 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:28:10 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:10 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:10 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:10 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:28:10 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:10 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:10 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:10 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:28:10 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:10 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:10 | INFO |   Threshold tuned: 0.45 (F1=0.5324)
+19:28:10 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.9270, threshold=0.45
+19:28:10 | INFO |       class_balance=False: AUC=0.7628±0.0000, KT=0.9270
+19:28:10 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:10 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:10 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:11 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:11 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:11 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:11 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:11 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:11 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:11 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:11 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:11 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:11 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:11 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:11 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:11 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:11 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:11 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:11 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:11 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:12 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:12 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:12 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:12 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:12 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:12 | INFO |       class_balance=True: AUC=0.7645±0.0000, KT=0.9251
+19:28:12 | INFO |     Ablation 5: Split Criterion
+19:28:12 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:12 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:12 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:12 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:12 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:12 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:12 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:12 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:12 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:12 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:13 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:13 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:13 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:13 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:13 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:13 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:13 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:13 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:13 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:13 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:13 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:13 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:13 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:13 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:13 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:13 | INFO |       criterion=gini: AUC=0.7645±0.0000, leaves=64
+19:28:13 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:13 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:13 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:14 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:14 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:14 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:14 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:14 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:14 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:14 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:14 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:14 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:14 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:14 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:14 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:14 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:14 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:14 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:14 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:14 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:15 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:15 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:15 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:15 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:15 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:15 | INFO |       criterion=entropy: AUC=0.7612±0.0000, leaves=64
+19:28:15 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:15 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:15 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:15 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:15 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:15 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:15 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:15 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:15 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:15 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:15 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:15 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:15 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:16 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:16 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:16 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:16 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:16 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:16 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:16 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:16 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:16 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:16 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:16 | INFO |   Threshold tuned: 0.45 (F1=0.5416)
+19:28:16 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:16 | INFO |       criterion=log_loss: AUC=0.7612±0.0000, leaves=64
+19:28:16 | INFO |     Ablation 6: Cost Ratio (minority class weight multiplier)
+19:28:16 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:16 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:16 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:16 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:16 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:17 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:17 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:17 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:17 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:17 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:17 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:17 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:17 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:17 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:17 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:17 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:17 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:17 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:17 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:17 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:17 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:17 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=2.260
+19:28:17 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:18 | INFO |   Threshold tuned: 0.45 (F1=0.5404)
+19:28:18 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9251, threshold=0.45
+19:28:18 | INFO |       cost_ratio=1.0: AUC=0.7645±0.0000, default_rules=19.0/64
+19:28:18 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:18 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=4.520
+19:28:18 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:18 | INFO |   Threshold tuned: 0.45 (F1=0.5363)
+19:28:18 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9179, threshold=0.45
+19:28:18 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:18 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=4.520
+19:28:18 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:18 | INFO |   Threshold tuned: 0.45 (F1=0.5363)
+19:28:18 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9179, threshold=0.45
+19:28:18 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:18 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=4.520
+19:28:18 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:18 | INFO |   Threshold tuned: 0.45 (F1=0.5363)
+19:28:18 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9179, threshold=0.45
+19:28:19 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:19 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=4.520
+19:28:19 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:19 | INFO |   Threshold tuned: 0.45 (F1=0.5363)
+19:28:19 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9179, threshold=0.45
+19:28:19 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:19 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=4.520
+19:28:19 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:19 | INFO |   Threshold tuned: 0.45 (F1=0.5363)
+19:28:19 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9179, threshold=0.45
+19:28:19 | INFO |       cost_ratio=2.0: AUC=0.7648±0.0000, default_rules=20.0/64
+19:28:19 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:19 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=6.781
+19:28:19 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:19 | INFO |   Threshold tuned: 0.45 (F1=0.5228)
+19:28:19 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9156, threshold=0.45
+19:28:19 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:19 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=6.781
+19:28:19 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:20 | INFO |   Threshold tuned: 0.45 (F1=0.5230)
+19:28:20 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9156, threshold=0.45
+19:28:20 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:20 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=6.781
+19:28:20 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:20 | INFO |   Threshold tuned: 0.45 (F1=0.5228)
+19:28:20 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9156, threshold=0.45
+19:28:20 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:20 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=6.781
+19:28:20 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:20 | INFO |   Threshold tuned: 0.45 (F1=0.5228)
+19:28:20 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9156, threshold=0.45
+19:28:20 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:20 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=6.781
+19:28:20 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:20 | INFO |   Threshold tuned: 0.45 (F1=0.5230)
+19:28:20 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9156, threshold=0.45
+19:28:20 | INFO |       cost_ratio=3.0: AUC=0.7616±0.0000, default_rules=22.0/64
+19:28:21 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:21 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=11.301
+19:28:21 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:21 | INFO |   Threshold tuned: 0.50 (F1=0.5169)
+19:28:21 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9072, threshold=0.50
+19:28:21 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:21 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=11.301
+19:28:21 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:21 | INFO |   Threshold tuned: 0.50 (F1=0.5169)
+19:28:21 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9072, threshold=0.50
+19:28:21 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:21 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=11.301
+19:28:21 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:21 | INFO |   Threshold tuned: 0.50 (F1=0.5169)
+19:28:21 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9072, threshold=0.50
+19:28:21 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:21 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=11.301
+19:28:21 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:22 | INFO |   Threshold tuned: 0.50 (F1=0.5169)
+19:28:22 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9072, threshold=0.50
+19:28:22 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:22 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=11.301
+19:28:22 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:22 | INFO |   Threshold tuned: 0.50 (F1=0.5169)
+19:28:22 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.9072, threshold=0.50
+19:28:22 | INFO |       cost_ratio=5.0: AUC=0.7512±0.0000, default_rules=32.0/64
+19:28:22 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:22 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=18.081
+19:28:22 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:22 | INFO |   Threshold tuned: 0.50 (F1=0.5156)
+19:28:22 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8980, threshold=0.50
+19:28:22 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:22 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=18.081
+19:28:22 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:22 | INFO |   Threshold tuned: 0.50 (F1=0.5156)
+19:28:22 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8980, threshold=0.50
+19:28:22 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:22 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=18.081
+19:28:22 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:23 | INFO |   Threshold tuned: 0.50 (F1=0.5156)
+19:28:23 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8980, threshold=0.50
+19:28:23 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:23 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=18.081
+19:28:23 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:23 | INFO |   Threshold tuned: 0.50 (F1=0.5156)
+19:28:23 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8980, threshold=0.50
+19:28:23 | INFO |   Soft labels: mean=0.4051, std=0.0727
+19:28:23 | INFO |   Class balance: n0=14018, n1=3982, ratio=3.52, beta=1.00, w0=0.642, w1=18.081
+19:28:23 | INFO |   Mixed targets (α=0.0): mean=0.4051
+19:28:23 | INFO |   Threshold tuned: 0.50 (F1=0.5156)
+19:28:23 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8980, threshold=0.50
+19:28:23 | INFO |       cost_ratio=8.0: AUC=0.7425±0.0000, default_rules=32.0/64
+19:28:23 | INFO | 
+✓ 蒸馏实验完成 (0.6 分钟)
+19:28:23 | INFO | 
+✓ UCI 完整流水线完成
+19:28:23 | INFO | 
+[4/4] 处理数据集: XINWANG
+19:28:23 | INFO | 
+######################################################################
+19:28:23 | INFO | # 完整流水线: XINWANG
+19:28:23 | INFO | ######################################################################
+19:28:23 | INFO | 
+============================================================
+19:28:23 | INFO | STAGE 1: 教师模型准备 - XINWANG
+19:28:23 | INFO | ============================================================
+19:28:23 | INFO | [xinwang] 缓存有效: XGBoost-Tuned (AUC=0.7486)
+19:28:23 | INFO | [OK] 使用缓存的教师: XGBoost-Tuned
+19:28:23 | INFO |   验证集AUC: 0.7486
+19:28:23 | INFO |   测试集AUC: 0.7432
+19:28:23 | INFO | 
+============================================================
+19:28:23 | INFO | STAGE 2: 知识蒸馏实验 - XINWANG
+19:28:23 | INFO | ============================================================
+19:28:23 | INFO | [xinwang] 缓存有效: XGBoost-Tuned (AUC=0.7486)
+19:28:23 | INFO | 使用教师: XGBoost-Tuned (AUC=0.7486)
+19:28:23 | INFO | [xinwang] 缓存有效: XGBoost-Tuned (AUC=0.7486)
+19:28:23 | INFO | [xinwang] 缓存有效: XGBoost-Tuned (AUC=0.7486)
+19:28:23 | INFO | 已加载SHAP值: shape=(10730, 100)
+19:28:23 | INFO | 
+运行蒸馏实验...
+19:28:23 | INFO |   Running distillation experiments (Student=DecisionTree)...
+19:28:23 | INFO |     [Best Teacher] XGBoost-Tuned (AUC: 0.7486) [cached]
+19:28:23 | INFO |     Teacher...
+19:28:24 | INFO |       AUC: 0.7432±0.0000
+19:28:24 | INFO |     StudentBaseline...
+19:28:25 | INFO |       AUC: 0.6247±0.0014
+19:28:25 | INFO |     VanillaKD...
+19:28:25 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:25 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:25 | INFO |   Threshold tuned: 0.35 (F1=0.2434)
+19:28:25 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:25 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:25 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:25 | INFO |   Threshold tuned: 0.35 (F1=0.2433)
+19:28:25 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:25 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:25 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:26 | INFO |   Threshold tuned: 0.35 (F1=0.2436)
+19:28:26 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:26 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:26 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:26 | INFO |   Threshold tuned: 0.35 (F1=0.2433)
+19:28:26 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:26 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:26 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:26 | INFO |   Threshold tuned: 0.35 (F1=0.2434)
+19:28:26 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:26 | INFO |       AUC: 0.6502±0.0002
+19:28:26 | INFO |     SoftLabelKD...
+19:28:27 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:27 | INFO |   Mixed targets (α=0.2): mean=0.3003
+19:28:27 | INFO |   Threshold tuned: 0.30 (F1=0.2478)
+19:28:27 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8476, threshold=0.30
+19:28:27 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:27 | INFO |   Mixed targets (α=0.2): mean=0.3003
+19:28:27 | INFO |   Threshold tuned: 0.30 (F1=0.2478)
+19:28:27 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8476, threshold=0.30
+19:28:27 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:27 | INFO |   Mixed targets (α=0.2): mean=0.3003
+19:28:28 | INFO |   Threshold tuned: 0.30 (F1=0.2478)
+19:28:28 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8476, threshold=0.30
+19:28:28 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:28 | INFO |   Mixed targets (α=0.2): mean=0.3003
+19:28:28 | INFO |   Threshold tuned: 0.30 (F1=0.2479)
+19:28:28 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8476, threshold=0.30
+19:28:28 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:28 | INFO |   Mixed targets (α=0.2): mean=0.3003
+19:28:28 | INFO |   Threshold tuned: 0.30 (F1=0.2478)
+19:28:28 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8476, threshold=0.30
+19:28:28 | INFO |       AUC: 0.6475±0.0001
+19:28:28 | INFO |     CBKD...
+19:28:28 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:28 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:28 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:29 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:29 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:29 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:29 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:29 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:29 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:29 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:29 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:29 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:29 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:29 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:29 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:29 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:29 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:29 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:30 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:30 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:30 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:30 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:30 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:30 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:30 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:30 | INFO |       AUC: 0.6538±0.0000
+19:28:30 | INFO |     [Rules] Saved to results\rules\xinwang_CBKD_rules.txt
+19:28:30 | INFO | 
+运行消融实验...
+19:28:30 | INFO |   Running ablation experiments (Student=DecisionTree)...
+19:28:30 | INFO |     [Best Teacher] XGBoost-Tuned (AUC: 0.7486) [cached]
+19:28:30 | INFO |     Ablation 1: Temperature (τ)
+19:28:30 | INFO |   Soft labels: mean=0.1016, std=0.0843
+19:28:30 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:30 | INFO |   Mixed targets (α=0.0): mean=0.1016
+19:28:30 | INFO |   Threshold tuned: 0.15 (F1=0.2568)
+19:28:30 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8391, threshold=0.15
+19:28:31 | INFO |   Soft labels: mean=0.1016, std=0.0843
+19:28:31 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:31 | INFO |   Mixed targets (α=0.0): mean=0.1016
+19:28:31 | INFO |   Threshold tuned: 0.15 (F1=0.2568)
+19:28:31 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8391, threshold=0.15
+19:28:31 | INFO |   Soft labels: mean=0.1016, std=0.0843
+19:28:31 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:31 | INFO |   Mixed targets (α=0.0): mean=0.1016
+19:28:31 | INFO |   Threshold tuned: 0.15 (F1=0.2568)
+19:28:31 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8391, threshold=0.15
+19:28:31 | INFO |   Soft labels: mean=0.1016, std=0.0843
+19:28:31 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:31 | INFO |   Mixed targets (α=0.0): mean=0.1016
+19:28:32 | INFO |   Threshold tuned: 0.15 (F1=0.2568)
+19:28:32 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8391, threshold=0.15
+19:28:32 | INFO |   Soft labels: mean=0.1016, std=0.0843
+19:28:32 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:32 | INFO |   Mixed targets (α=0.0): mean=0.1016
+19:28:32 | INFO |   Threshold tuned: 0.15 (F1=0.2568)
+19:28:32 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8391, threshold=0.15
+19:28:32 | INFO |       T=1.0: AUC=0.6482±0.0000, KT=0.8391
+19:28:32 | INFO |   Soft labels: mean=0.2321, std=0.0820
+19:28:32 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:32 | INFO |   Mixed targets (α=0.0): mean=0.2321
+19:28:32 | INFO |   Threshold tuned: 0.30 (F1=0.2645)
+19:28:32 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8605, threshold=0.30
+19:28:32 | INFO |   Soft labels: mean=0.2321, std=0.0820
+19:28:32 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:32 | INFO |   Mixed targets (α=0.0): mean=0.2321
+19:28:33 | INFO |   Threshold tuned: 0.30 (F1=0.2645)
+19:28:33 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8605, threshold=0.30
+19:28:33 | INFO |   Soft labels: mean=0.2321, std=0.0820
+19:28:33 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:33 | INFO |   Mixed targets (α=0.0): mean=0.2321
+19:28:33 | INFO |   Threshold tuned: 0.30 (F1=0.2645)
+19:28:33 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8605, threshold=0.30
+19:28:33 | INFO |   Soft labels: mean=0.2321, std=0.0820
+19:28:33 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:33 | INFO |   Mixed targets (α=0.0): mean=0.2321
+19:28:33 | INFO |   Threshold tuned: 0.30 (F1=0.2645)
+19:28:33 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8605, threshold=0.30
+19:28:33 | INFO |   Soft labels: mean=0.2321, std=0.0820
+19:28:33 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:33 | INFO |   Mixed targets (α=0.0): mean=0.2321
+19:28:34 | INFO |   Threshold tuned: 0.30 (F1=0.2645)
+19:28:34 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8605, threshold=0.30
+19:28:34 | INFO |       T=2.0: AUC=0.6515±0.0001, KT=0.8605
+19:28:34 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:34 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:34 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:34 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:34 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:34 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:34 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:34 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:34 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:34 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:34 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:34 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:34 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:35 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:35 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:35 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:35 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:35 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:35 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:35 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:35 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:35 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:35 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:35 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:35 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:35 | INFO |       T=4.0: AUC=0.6538±0.0000, KT=0.8608
+19:28:35 | INFO |   Soft labels: mean=0.4224, std=0.0293
+19:28:35 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:35 | INFO |   Mixed targets (α=0.0): mean=0.4224
+19:28:36 | INFO |   Threshold tuned: 0.45 (F1=0.2613)
+19:28:36 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8616, threshold=0.45
+19:28:36 | INFO |   Soft labels: mean=0.4224, std=0.0293
+19:28:36 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:36 | INFO |   Mixed targets (α=0.0): mean=0.4224
+19:28:36 | INFO |   Threshold tuned: 0.45 (F1=0.2613)
+19:28:36 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8616, threshold=0.45
+19:28:36 | INFO |   Soft labels: mean=0.4224, std=0.0293
+19:28:36 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:36 | INFO |   Mixed targets (α=0.0): mean=0.4224
+19:28:36 | INFO |   Threshold tuned: 0.45 (F1=0.2596)
+19:28:36 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8616, threshold=0.45
+19:28:37 | INFO |   Soft labels: mean=0.4224, std=0.0293
+19:28:37 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:37 | INFO |   Mixed targets (α=0.0): mean=0.4224
+19:28:37 | INFO |   Threshold tuned: 0.45 (F1=0.2596)
+19:28:37 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8616, threshold=0.45
+19:28:37 | INFO |   Soft labels: mean=0.4224, std=0.0293
+19:28:37 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:37 | INFO |   Mixed targets (α=0.0): mean=0.4224
+19:28:37 | INFO |   Threshold tuned: 0.45 (F1=0.2596)
+19:28:37 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8616, threshold=0.45
+19:28:37 | INFO |       T=8.0: AUC=0.6455±0.0001, KT=0.8616
+19:28:37 | INFO |     Ablation 2: Alpha (hard-label weight)
+19:28:37 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:37 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:37 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:38 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:38 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:38 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:38 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:38 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:38 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:38 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:38 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:38 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:38 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:38 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:38 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:38 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:38 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:38 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:39 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:39 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:39 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:39 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:39 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:39 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:39 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:39 | INFO |       alpha=0.0 (SoftOnly): AUC=0.6538±0.0000
+19:28:39 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:39 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:39 | INFO |   Mixed targets (α=0.3): mean=0.2754
+19:28:39 | INFO |   Threshold tuned: 0.40 (F1=0.2603)
+19:28:39 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8222, threshold=0.40
+19:28:39 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:39 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:39 | INFO |   Mixed targets (α=0.3): mean=0.2754
+19:28:40 | INFO |   Threshold tuned: 0.40 (F1=0.2605)
+19:28:40 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8222, threshold=0.40
+19:28:40 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:40 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:40 | INFO |   Mixed targets (α=0.3): mean=0.2754
+19:28:40 | INFO |   Threshold tuned: 0.40 (F1=0.2606)
+19:28:40 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8222, threshold=0.40
+19:28:40 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:40 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:40 | INFO |   Mixed targets (α=0.3): mean=0.2754
+19:28:40 | INFO |   Threshold tuned: 0.40 (F1=0.2603)
+19:28:40 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8222, threshold=0.40
+19:28:40 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:40 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:40 | INFO |   Mixed targets (α=0.3): mean=0.2754
+19:28:41 | INFO |   Threshold tuned: 0.40 (F1=0.2599)
+19:28:41 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8222, threshold=0.40
+19:28:41 | INFO |       alpha=0.3 (Mixed): AUC=0.6429±0.0001
+19:28:41 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:41 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:41 | INFO |   Mixed targets (α=0.5): mean=0.2258
+19:28:41 | INFO |   Threshold tuned: 0.40 (F1=0.2366)
+19:28:41 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7854, threshold=0.40
+19:28:41 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:41 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:41 | INFO |   Mixed targets (α=0.5): mean=0.2258
+19:28:41 | INFO |   Threshold tuned: 0.40 (F1=0.2363)
+19:28:41 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7854, threshold=0.40
+19:28:41 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:41 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:41 | INFO |   Mixed targets (α=0.5): mean=0.2258
+19:28:42 | INFO |   Threshold tuned: 0.40 (F1=0.2369)
+19:28:42 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7854, threshold=0.40
+19:28:42 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:42 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:42 | INFO |   Mixed targets (α=0.5): mean=0.2258
+19:28:42 | INFO |   Threshold tuned: 0.40 (F1=0.2363)
+19:28:42 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7854, threshold=0.40
+19:28:42 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:42 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:42 | INFO |   Mixed targets (α=0.5): mean=0.2258
+19:28:42 | INFO |   Threshold tuned: 0.40 (F1=0.2369)
+19:28:42 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7854, threshold=0.40
+19:28:42 | INFO |       alpha=0.5 (Mixed): AUC=0.6243±0.0002
+19:28:42 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:42 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:42 | INFO |   Mixed targets (α=0.7): mean=0.1761
+19:28:43 | INFO |   Threshold tuned: 0.45 (F1=0.2415)
+19:28:43 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7351, threshold=0.45
+19:28:43 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:43 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:43 | INFO |   Mixed targets (α=0.7): mean=0.1761
+19:28:43 | INFO |   Threshold tuned: 0.45 (F1=0.2413)
+19:28:43 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7351, threshold=0.45
+19:28:43 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:43 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:43 | INFO |   Mixed targets (α=0.7): mean=0.1761
+19:28:43 | INFO |   Threshold tuned: 0.45 (F1=0.2423)
+19:28:43 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7351, threshold=0.45
+19:28:43 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:43 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:43 | INFO |   Mixed targets (α=0.7): mean=0.1761
+19:28:44 | INFO |   Threshold tuned: 0.45 (F1=0.2421)
+19:28:44 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7351, threshold=0.45
+19:28:44 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:44 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:44 | INFO |   Mixed targets (α=0.7): mean=0.1761
+19:28:44 | INFO |   Threshold tuned: 0.45 (F1=0.2413)
+19:28:44 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.7351, threshold=0.45
+19:28:44 | INFO |       alpha=0.7 (Mixed): AUC=0.6275±0.0005
+19:28:44 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:44 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:44 | INFO |   Mixed targets (α=1.0): mean=0.1017
+19:28:45 | INFO |   Threshold tuned: 0.45 (F1=0.2440)
+19:28:45 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.6816, threshold=0.45
+19:28:45 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:45 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:45 | INFO |   Mixed targets (α=1.0): mean=0.1017
+19:28:45 | INFO |   Threshold tuned: 0.45 (F1=0.2444)
+19:28:45 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.6816, threshold=0.45
+19:28:45 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:45 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:45 | INFO |   Mixed targets (α=1.0): mean=0.1017
+19:28:45 | INFO |   Threshold tuned: 0.45 (F1=0.2438)
+19:28:45 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.6819, threshold=0.45
+19:28:45 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:45 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:45 | INFO |   Mixed targets (α=1.0): mean=0.1017
+19:28:46 | INFO |   Threshold tuned: 0.45 (F1=0.2442)
+19:28:46 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.6816, threshold=0.45
+19:28:46 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:46 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:46 | INFO |   Mixed targets (α=1.0): mean=0.1017
+19:28:46 | INFO |   Threshold tuned: 0.45 (F1=0.2436)
+19:28:46 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.6816, threshold=0.45
+19:28:46 | INFO |       alpha=1.0 (HardOnly): AUC=0.6199±0.0002
+19:28:46 | INFO |     Ablation 3: Max Depth
+19:28:46 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:46 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:46 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:46 | INFO |   Threshold tuned: 0.35 (F1=0.2257)
+19:28:46 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.7670, threshold=0.35
+19:28:46 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:46 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:46 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:46 | INFO |   Threshold tuned: 0.35 (F1=0.2257)
+19:28:46 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.7670, threshold=0.35
+19:28:46 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:46 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:46 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:47 | INFO |   Threshold tuned: 0.35 (F1=0.2257)
+19:28:47 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.7670, threshold=0.35
+19:28:47 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:47 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:47 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:47 | INFO |   Threshold tuned: 0.35 (F1=0.2257)
+19:28:47 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.7670, threshold=0.35
+19:28:47 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:47 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:47 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:47 | INFO |   Threshold tuned: 0.35 (F1=0.2257)
+19:28:47 | INFO |   CB-KD trained: depth=3, leaves=8, KT_score=0.7670, threshold=0.35
+19:28:47 | INFO |       max_depth=3: AUC=0.6159±0.0000, leaves=8
+19:28:47 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:47 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:47 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:47 | INFO |   Threshold tuned: 0.40 (F1=0.2485)
+19:28:47 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8046, threshold=0.40
+19:28:47 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:47 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:47 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:48 | INFO |   Threshold tuned: 0.40 (F1=0.2485)
+19:28:48 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8046, threshold=0.40
+19:28:48 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:48 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:48 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:48 | INFO |   Threshold tuned: 0.40 (F1=0.2485)
+19:28:48 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8046, threshold=0.40
+19:28:48 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:48 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:48 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:48 | INFO |   Threshold tuned: 0.40 (F1=0.2485)
+19:28:48 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8046, threshold=0.40
+19:28:48 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:48 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:48 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:48 | INFO |   Threshold tuned: 0.40 (F1=0.2485)
+19:28:48 | INFO |   CB-KD trained: depth=4, leaves=16, KT_score=0.8046, threshold=0.40
+19:28:48 | INFO |       max_depth=4: AUC=0.6284±0.0000, leaves=16
+19:28:48 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:48 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:48 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:49 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:49 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:49 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:49 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:49 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:49 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:49 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:49 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:49 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:49 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:49 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:49 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:49 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:49 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:49 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:50 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:50 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:50 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:50 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:50 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:50 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:50 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:50 | INFO |       max_depth=6: AUC=0.6538±0.0000, leaves=64
+19:28:50 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:50 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:50 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:50 | INFO |   Threshold tuned: 0.40 (F1=0.2563)
+19:28:50 | INFO |   CB-KD trained: depth=8, leaves=236, KT_score=0.9021, threshold=0.40
+19:28:50 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:50 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:50 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:51 | INFO |   Threshold tuned: 0.40 (F1=0.2563)
+19:28:51 | INFO |   CB-KD trained: depth=8, leaves=236, KT_score=0.9021, threshold=0.40
+19:28:51 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:51 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:51 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:51 | INFO |   Threshold tuned: 0.40 (F1=0.2577)
+19:28:51 | INFO |   CB-KD trained: depth=8, leaves=236, KT_score=0.9021, threshold=0.40
+19:28:51 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:51 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:51 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:52 | INFO |   Threshold tuned: 0.40 (F1=0.2577)
+19:28:52 | INFO |   CB-KD trained: depth=8, leaves=236, KT_score=0.9021, threshold=0.40
+19:28:52 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:52 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:52 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:52 | INFO |   Threshold tuned: 0.40 (F1=0.2577)
+19:28:52 | INFO |   CB-KD trained: depth=8, leaves=236, KT_score=0.9021, threshold=0.40
+19:28:52 | INFO |       max_depth=8: AUC=0.6663±0.0003, leaves=236
+19:28:52 | INFO |     Ablation 4: Class Balance Effect
+19:28:52 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:52 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:53 | INFO |   Threshold tuned: 0.35 (F1=0.2434)
+19:28:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:53 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:53 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:53 | INFO |   Threshold tuned: 0.35 (F1=0.2433)
+19:28:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:53 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:53 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:53 | INFO |   Threshold tuned: 0.35 (F1=0.2436)
+19:28:53 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:53 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:53 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:54 | INFO |   Threshold tuned: 0.35 (F1=0.2433)
+19:28:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:54 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:54 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:54 | INFO |   Threshold tuned: 0.35 (F1=0.2434)
+19:28:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8649, threshold=0.35
+19:28:54 | INFO |       class_balance=False: AUC=0.6502±0.0002, KT=0.8649
+19:28:54 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:54 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:54 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:54 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:54 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:54 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:54 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:54 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:55 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:55 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:55 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:55 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:55 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:55 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:55 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:55 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:55 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:55 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:55 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:55 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:55 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:56 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:56 | INFO |       class_balance=True: AUC=0.6538±0.0000, KT=0.8608
+19:28:56 | INFO |     Ablation 5: Split Criterion
+19:28:56 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:56 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:56 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:56 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:56 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:56 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:56 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:56 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:56 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:56 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:56 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:56 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:57 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:57 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:57 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:57 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:57 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:28:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:57 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:57 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:57 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:57 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:57 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:57 | INFO |       criterion=gini: AUC=0.6538±0.0000, leaves=64
+19:28:57 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:57 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:57 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:58 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:58 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:58 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:58 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:58 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:58 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:58 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:58 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:58 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:58 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:59 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:59 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:59 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:59 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:59 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:59 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:59 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:59 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:28:59 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:28:59 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:28:59 | INFO |       criterion=entropy: AUC=0.6537±0.0000, leaves=64
+19:28:59 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:28:59 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:28:59 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:00 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:00 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:00 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:00 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:00 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:00 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:00 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:00 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:00 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:00 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:00 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:00 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:00 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:00 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:00 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:01 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:01 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:01 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:01 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:01 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:01 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:01 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:01 | INFO |       criterion=log_loss: AUC=0.6537±0.0000, leaves=64
+19:29:01 | INFO |     Ablation 6: Cost Ratio (minority class weight multiplier)
+19:29:01 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:01 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:01 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:02 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:02 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:02 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:02 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:02 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:02 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:02 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:02 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:02 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:02 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:02 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:02 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:02 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:02 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:02 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:03 | INFO |   Threshold tuned: 0.40 (F1=0.2627)
+19:29:03 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:03 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:03 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=3.415
+19:29:03 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:03 | INFO |   Threshold tuned: 0.40 (F1=0.2644)
+19:29:03 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8608, threshold=0.40
+19:29:03 | INFO |       cost_ratio=1.0: AUC=0.6538±0.0000, default_rules=2.0/64
+19:29:03 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:03 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=6.830
+19:29:03 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:03 | INFO |   Threshold tuned: 0.40 (F1=0.2721)
+19:29:03 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8573, threshold=0.40
+19:29:03 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:03 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=6.830
+19:29:03 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:04 | INFO |   Threshold tuned: 0.40 (F1=0.2721)
+19:29:04 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8573, threshold=0.40
+19:29:04 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:04 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=6.830
+19:29:04 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:04 | INFO |   Threshold tuned: 0.40 (F1=0.2721)
+19:29:04 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8573, threshold=0.40
+19:29:04 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:04 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=6.830
+19:29:04 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:04 | INFO |   Threshold tuned: 0.40 (F1=0.2721)
+19:29:04 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8573, threshold=0.40
+19:29:04 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:04 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=6.830
+19:29:04 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:05 | INFO |   Threshold tuned: 0.40 (F1=0.2721)
+19:29:05 | INFO |   CB-KD trained: depth=6, leaves=64, KT_score=0.8573, threshold=0.40
+19:29:05 | INFO |       cost_ratio=2.0: AUC=0.6373±0.0001, default_rules=1.0/64
+19:29:05 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:05 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=10.245
+19:29:05 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:05 | INFO |   Threshold tuned: 0.40 (F1=0.2588)
+19:29:05 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8483, threshold=0.40
+19:29:05 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:05 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=10.245
+19:29:05 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:05 | INFO |   Threshold tuned: 0.40 (F1=0.2588)
+19:29:05 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8483, threshold=0.40
+19:29:05 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:05 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=10.245
+19:29:05 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:06 | INFO |   Threshold tuned: 0.40 (F1=0.2588)
+19:29:06 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8483, threshold=0.40
+19:29:06 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:06 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=10.245
+19:29:06 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:06 | INFO |   Threshold tuned: 0.40 (F1=0.2588)
+19:29:06 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8483, threshold=0.40
+19:29:06 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:06 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=10.245
+19:29:06 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:06 | INFO |   Threshold tuned: 0.40 (F1=0.2588)
+19:29:06 | INFO |   CB-KD trained: depth=6, leaves=62, KT_score=0.8483, threshold=0.40
+19:29:06 | INFO |       cost_ratio=3.0: AUC=0.6481±0.0000, default_rules=1.0/62
+19:29:06 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:06 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=17.076
+19:29:06 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:07 | INFO |   Threshold tuned: 0.40 (F1=0.2539)
+19:29:07 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8379, threshold=0.40
+19:29:07 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:07 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=17.076
+19:29:07 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:07 | INFO |   Threshold tuned: 0.40 (F1=0.2539)
+19:29:07 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8379, threshold=0.40
+19:29:07 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:07 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=17.076
+19:29:07 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:07 | INFO |   Threshold tuned: 0.40 (F1=0.2539)
+19:29:07 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8379, threshold=0.40
+19:29:08 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:08 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=17.076
+19:29:08 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:08 | INFO |   Threshold tuned: 0.40 (F1=0.2539)
+19:29:08 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8379, threshold=0.40
+19:29:08 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:08 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=17.076
+19:29:08 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:08 | INFO |   Threshold tuned: 0.40 (F1=0.2539)
+19:29:08 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8379, threshold=0.40
+19:29:08 | INFO |       cost_ratio=5.0: AUC=0.6479±0.0000, default_rules=0.0/63
+19:29:08 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:08 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=27.321
+19:29:08 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:09 | INFO |   Threshold tuned: 0.40 (F1=0.2407)
+19:29:09 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8297, threshold=0.40
+19:29:09 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:09 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=27.321
+19:29:09 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:09 | INFO |   Threshold tuned: 0.40 (F1=0.2408)
+19:29:09 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8297, threshold=0.40
+19:29:09 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:09 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=27.321
+19:29:09 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:09 | INFO |   Threshold tuned: 0.40 (F1=0.2407)
+19:29:09 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8297, threshold=0.40
+19:29:09 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:09 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=27.321
+19:29:09 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:10 | INFO |   Threshold tuned: 0.40 (F1=0.2407)
+19:29:10 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8297, threshold=0.40
+19:29:10 | INFO |   Soft labels: mean=0.3499, std=0.0539
+19:29:10 | INFO |   Class balance: n0=9639, n1=1091, ratio=8.84, beta=0.62, w0=0.727, w1=27.321
+19:29:10 | INFO |   Mixed targets (α=0.0): mean=0.3499
+19:29:10 | INFO |   Threshold tuned: 0.40 (F1=0.2407)
+19:29:10 | INFO |   CB-KD trained: depth=6, leaves=63, KT_score=0.8297, threshold=0.40
+19:29:10 | INFO |       cost_ratio=8.0: AUC=0.6401±0.0000, default_rules=0.0/63
+19:29:10 | INFO | 
+✓ 蒸馏实验完成 (0.8 分钟)
+19:29:10 | INFO | 
+✓ XINWANG 完整流水线完成
+19:29:10 | INFO | 
+汇总报告已保存到: results\experiment_summary.xlsx
+19:29:10 | INFO | 
+生成消融实验图表...
+19:29:11 | INFO |   ✓ 生成 3 张消融图
+19:29:11 | INFO | 
+============================================================
+19:29:11 | INFO | 总耗时: 0:01:36.601466
+19:29:11 | INFO | 结果目录: results
+19:29:11 | INFO | 图表目录: results\figures
+19:29:11 | INFO | ============================================================
+19:29:11 | INFO | 完成!

@@ -1,0 +1,22 @@
+{
+  "teacher_info": {
+    "name": "RF-Tuned",
+    "model_type": "ensemble",
+    "auc_val": 0.7885227406685071,
+    "auc_test": 0.7736339416207296,
+    "dataset_name": "uci",
+    "n_features": 23,
+    "hyperparams": {
+      "n_estimators": 491,
+      "max_depth": 16,
+      "min_samples_split": 10,
+      "min_samples_leaf": 6,
+      "max_features": "log2",
+      "bootstrap": true
+    },
+    "shap_computed": true
+  },
+  "model_path": "results\\teacher_cache\\uci_teacher_RF_Tuned.pkl",
+  "shap_values_path": "results\\teacher_cache\\uci_teacher_shap.npz",
+  "shap_plot_path": "results\\figures\\shap_uci_top10.png"
+}

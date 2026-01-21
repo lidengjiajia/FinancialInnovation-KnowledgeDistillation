@@ -1,0 +1,72 @@
+{
+  "RF-Tuned": {
+    "path": "results\\teacher_cache\\xinwang_teacher_RF_Tuned.pkl",
+    "auc": 0.7341175786553937,
+    "type": "ensemble"
+  },
+  "GBDT-Tuned": {
+    "path": "results\\teacher_cache\\xinwang_teacher_GBDT_Tuned.pkl",
+    "auc": 0.7413880081947308,
+    "type": "ensemble"
+  },
+  "XGBoost-Tuned": {
+    "path": "results\\teacher_cache\\xinwang_teacher_XGBoost_Tuned.pkl",
+    "auc": 0.748630221319297,
+    "type": "ensemble"
+  },
+  "LightGBM-Tuned": {
+    "path": "results\\teacher_cache\\xinwang_teacher_LightGBM_Tuned.pkl",
+    "auc": 0.7400712421720825,
+    "type": "ensemble"
+  },
+  "CatBoost-Tuned": {
+    "path": "results\\teacher_cache\\xinwang_teacher_CatBoost_Tuned.pkl",
+    "auc": 0.7421395908790867,
+    "type": "ensemble"
+  },
+  "LR-Ridge": {
+    "path": "results\\teacher_cache\\xinwang_teacher_LR_Ridge.pkl",
+    "auc": 0.7085073345577547,
+    "type": "ensemble"
+  },
+  "LR-Lasso": {
+    "path": "results\\teacher_cache\\xinwang_teacher_LR_Lasso.pkl",
+    "auc": 0.710262737573662,
+    "type": "ensemble"
+  },
+  "LR-ElasticNet": {
+    "path": "results\\teacher_cache\\xinwang_teacher_LR_ElasticNet.pkl",
+    "auc": 0.7096984092782412,
+    "type": "ensemble"
+  },
+  "SVM-RBF": {
+    "path": "results\\teacher_cache\\xinwang_teacher_SVM_RBF.pkl",
+    "auc": 0.61922375787922,
+    "type": "ensemble"
+  },
+  "SVM-Linear": {
+    "path": "results\\teacher_cache\\xinwang_teacher_SVM_Linear.pkl",
+    "auc": 0.5762262169825195,
+    "type": "ensemble"
+  },
+  "DT": {
+    "path": "results\\teacher_cache\\xinwang_teacher_DT.pkl",
+    "auc": 0.5870395166613654,
+    "type": "ensemble"
+  },
+  "KNN": {
+    "path": "results\\teacher_cache\\xinwang_teacher_KNN.pkl",
+    "auc": 0.5635638870932989,
+    "type": "ensemble"
+  },
+  "NB": {
+    "path": "results\\teacher_cache\\xinwang_teacher_NB.pkl",
+    "auc": 0.5379733089817124,
+    "type": "ensemble"
+  },
+  "CreditNet": {
+    "path": "results\\teacher_cache\\xinwang_teacher_CreditNet.pkl",
+    "auc": 0.7159786991719764,
+    "type": "neural"
+  }
+}

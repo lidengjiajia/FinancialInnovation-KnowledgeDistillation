@@ -1,0 +1,234 @@
+Dataset: uci
+Method: SHAP-KD
+Teacher: RF-Tuned
+Tree Depth: 6
+Number of Leaves: 56
+
+============================================================
+DECISION RULES EXTRACTED FROM SHAP-KD MODEL
+============================================================
+Total rules: 56
+
+[R1] (Samples: 0, Confidence: 56.59%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 <= -0.6927 AND PAY_AMT3 <= -0.3013 AND AGE <= 2.1841
+  THEN credit_risk = Non-default
+
+[R2] (Samples: 1, Confidence: 58.85%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 <= -0.6927 AND PAY_AMT3 <= -0.3013 AND AGE > 2.1841
+  THEN credit_risk = Default
+
+[R3] (Samples: 1, Confidence: 68.35%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 <= -0.6927 AND PAY_AMT3 > -0.3013 AND PAY_0 <= -1.3340
+  THEN credit_risk = Non-default
+
+[R4] (Samples: 1, Confidence: 61.44%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 <= -0.6927 AND PAY_AMT3 > -0.3013 AND PAY_0 > -1.3340
+  THEN credit_risk = Non-default
+
+[R5] (Samples: 0, Confidence: 63.60%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 > -0.6927 AND LIMIT_BAL <= -0.6358 AND PAY_4 <= 1.0426
+  THEN credit_risk = Non-default
+
+[R6] (Samples: 0, Confidence: 52.62%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 > -0.6927 AND LIMIT_BAL <= -0.6358 AND PAY_4 > 1.0426
+  THEN credit_risk = Non-default
+
+[R7] (Samples: 0, Confidence: 66.56%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 > -0.6927 AND LIMIT_BAL > -0.6358 AND BILL_AMT1 <= -0.5847
+  THEN credit_risk = Non-default
+
+[R8] (Samples: 0, Confidence: 71.02%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 <= -0.1527 AND BILL_AMT1 > -0.6927 AND LIMIT_BAL > -0.6358 AND BILL_AMT1 > -0.5847
+  THEN credit_risk = Non-default
+
+[R9] (Samples: 1, Confidence: 68.67%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL <= -0.1727 AND PAY_AMT3 <= -0.1395 AND BILL_AMT4 <= -0.3237
+  THEN credit_risk = Non-default
+
+[R10] (Samples: 0, Confidence: 64.18%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL <= -0.1727 AND PAY_AMT3 <= -0.1395 AND BILL_AMT4 > -0.3237
+  THEN credit_risk = Non-default
+
+[R11] (Samples: 0, Confidence: 70.11%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL <= -0.1727 AND PAY_AMT3 > -0.1395 AND BILL_AMT3 <= 1.2449
+  THEN credit_risk = Non-default
+
+[R12] (Samples: 0, Confidence: 60.64%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL <= -0.1727 AND PAY_AMT3 > -0.1395 AND BILL_AMT3 > 1.2449
+  THEN credit_risk = Non-default
+
+[R13] (Samples: 0, Confidence: 69.22%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL > -0.1727 AND BILL_AMT1 <= 1.1273 AND BILL_AMT2 <= -0.6418
+  THEN credit_risk = Non-default
+
+[R14] (Samples: 0, Confidence: 75.55%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL > -0.1727 AND BILL_AMT1 <= 1.1273 AND BILL_AMT2 > -0.6418
+  THEN credit_risk = Non-default
+
+[R15] (Samples: 1, Confidence: 70.82%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL > -0.1727 AND BILL_AMT1 > 1.1273 AND BILL_AMT4 <= 2.1155
+  THEN credit_risk = Non-default
+
+[R16] (Samples: 0, Confidence: 67.25%)
+  IF PAY_0 <= 1.3535 AND PAY_2 <= 1.3656 AND PAY_AMT2 > -0.1527 AND LIMIT_BAL > -0.1727 AND BILL_AMT1 > 1.1273 AND BILL_AMT4 > 2.1155
+  THEN credit_risk = Non-default
+
+[R17] (Samples: 1, Confidence: 62.29%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 <= 0.9737 AND LIMIT_BAL <= 0.0589 AND PAY_AMT5 <= -0.2277
+  THEN credit_risk = Non-default
+
+[R18] (Samples: 1, Confidence: 50.84%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 <= 0.9737 AND LIMIT_BAL <= 0.0589 AND PAY_AMT5 > -0.2277
+  THEN credit_risk = Non-default
+
+[R19] (Samples: 1, Confidence: 64.12%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 <= 0.9737 AND LIMIT_BAL > 0.0589 AND PAY_AMT2 <= -0.2765
+  THEN credit_risk = Default
+
+[R20] (Samples: 0, Confidence: 65.93%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 <= 0.9737 AND LIMIT_BAL > 0.0589 AND PAY_AMT2 > -0.2765
+  THEN credit_risk = Non-default
+
+[R21] (Samples: 0, Confidence: 60.99%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 > 0.9737 AND LIMIT_BAL <= -0.3270 AND PAY_AMT6 <= -0.2738
+  THEN credit_risk = Default
+
+[R22] (Samples: 1, Confidence: 50.70%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 > 0.9737 AND LIMIT_BAL <= -0.3270 AND PAY_AMT6 > -0.2738
+  THEN credit_risk = Default
+
+[R23] (Samples: 0, Confidence: 56.19%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 > 0.9737 AND LIMIT_BAL > -0.3270 AND BILL_AMT1 <= -0.6825
+  THEN credit_risk = Default
+
+[R24] (Samples: 0, Confidence: 60.41%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 <= 1.1192 AND PAY_3 > 0.9737 AND LIMIT_BAL > -0.3270 AND BILL_AMT1 > -0.6825
+  THEN credit_risk = Non-default
+
+[R25] (Samples: 1, Confidence: 61.28%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 <= -0.1245 AND PAY_6 <= 1.1203 AND PAY_AMT3 <= -0.1429
+  THEN credit_risk = Default
+
+[R26] (Samples: 0, Confidence: 56.93%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 <= -0.1245 AND PAY_6 <= 1.1203 AND PAY_AMT3 > -0.1429
+  THEN credit_risk = Non-default
+
+[R27] (Samples: 1, Confidence: 64.39%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 <= -0.1245 AND PAY_6 > 1.1203 AND PAY_6 <= 4.1640
+  THEN credit_risk = Default
+
+[R28] (Samples: 1, Confidence: 65.67%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 <= -0.1245 AND PAY_6 > 1.1203 AND PAY_6 > 4.1640
+  THEN credit_risk = Non-default
+
+[R29] (Samples: 1, Confidence: 60.24%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 > -0.1245 AND AGE <= 1.0979 AND BILL_AMT1 <= 1.0462
+  THEN credit_risk = Non-default
+
+[R30] (Samples: 1, Confidence: 63.28%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 > -0.1245 AND AGE <= 1.0979 AND BILL_AMT1 > 1.0462
+  THEN credit_risk = Default
+
+[R31] (Samples: 0, Confidence: 66.56%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 > -0.1245 AND AGE > 1.0979 AND PAY_AMT2 <= 0.1673
+  THEN credit_risk = Default
+
+[R32] (Samples: 1, Confidence: 59.97%)
+  IF PAY_0 <= 1.3535 AND PAY_2 > 1.3656 AND PAY_5 > 1.1192 AND PAY_AMT2 > -0.1245 AND AGE > 1.0979 AND PAY_AMT2 > 0.1673
+  THEN credit_risk = Default
+
+[R33] (Samples: 1, Confidence: 66.77%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 <= -0.2413 AND BILL_AMT4 <= -0.4321 AND BILL_AMT1 <= -0.6609 AND PAY_AMT6 <= 0.3763
+  THEN credit_risk = Non-default
+
+[R34] (Samples: 1, Confidence: 50.96%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 <= -0.2413 AND BILL_AMT4 <= -0.4321 AND BILL_AMT1 <= -0.6609 AND PAY_AMT6 > 0.3763
+  THEN credit_risk = Default
+
+[R35] (Samples: 1, Confidence: 65.98%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 <= -0.2413 AND BILL_AMT4 <= -0.4321 AND BILL_AMT1 > -0.6609
+  THEN credit_risk = Default
+
+[R36] (Samples: 1, Confidence: 62.32%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 <= -0.2413 AND BILL_AMT4 > -0.4321
+  THEN credit_risk = Default
+
+[R37] (Samples: 1, Confidence: 68.12%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 > -0.2413 AND PAY_AMT1 <= -0.3010
+  THEN credit_risk = Non-default
+
+[R38] (Samples: 0, Confidence: 54.51%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 > -0.2413 AND PAY_AMT1 > -0.3010 AND AGE <= 1.0979 AND AGE <= -0.9658
+  THEN credit_risk = Non-default
+
+[R39] (Samples: 1, Confidence: 66.53%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 > -0.2413 AND PAY_AMT1 > -0.3010 AND AGE <= 1.0979 AND AGE > -0.9658
+  THEN credit_risk = Default
+
+[R40] (Samples: 1, Confidence: 66.73%)
+  IF PAY_0 > 1.3535 AND PAY_2 <= -0.3056 AND PAY_4 > -0.2413 AND PAY_AMT1 > -0.3010 AND AGE > 1.0979
+  THEN credit_risk = Non-default
+
+[R41] (Samples: 0, Confidence: 53.90%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6674 AND PAY_AMT5 <= -0.1692 AND BILL_AMT6 <= -0.6455
+  THEN credit_risk = Default
+
+[R42] (Samples: 1, Confidence: 65.93%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6674 AND PAY_AMT5 <= -0.1692 AND BILL_AMT6 > -0.6455
+  THEN credit_risk = Default
+
+[R43] (Samples: 0, Confidence: 66.41%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6674 AND PAY_AMT5 > -0.1692 AND PAY_AMT4 <= -0.1824
+  THEN credit_risk = Non-default
+
+[R44] (Samples: 1, Confidence: 67.46%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 <= -0.6674 AND PAY_AMT5 > -0.1692 AND PAY_AMT4 > -0.1824
+  THEN credit_risk = Non-default
+
+[R45] (Samples: 0, Confidence: 67.74%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6674 AND AGE <= 3.1616 AND PAY_AMT1 <= 1.8670
+  THEN credit_risk = Default
+
+[R46] (Samples: 0, Confidence: 66.34%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6674 AND AGE <= 3.1616 AND PAY_AMT1 > 1.8670
+  THEN credit_risk = Non-default
+
+[R47] (Samples: 1, Confidence: 66.29%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6674 AND AGE > 3.1616 AND PAY_3 <= 0.9737
+  THEN credit_risk = Non-default
+
+[R48] (Samples: 1, Confidence: 58.90%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 <= 1.1203 AND BILL_AMT1 > -0.6674 AND AGE > 3.1616 AND PAY_3 > 0.9737
+  THEN credit_risk = Default
+
+[R49] (Samples: 0, Confidence: 66.58%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 <= -0.6103 AND BILL_AMT3 <= -0.6721 AND MARRIAGE <= -0.1154
+  THEN credit_risk = Non-default
+
+[R50] (Samples: 0, Confidence: 66.33%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 <= -0.6103 AND BILL_AMT3 <= -0.6721 AND MARRIAGE > -0.1154
+  THEN credit_risk = Default
+
+[R51] (Samples: 0, Confidence: 76.61%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 <= -0.6103 AND BILL_AMT3 > -0.6721 AND PAY_3 <= 2.2268
+  THEN credit_risk = Default
+
+[R52] (Samples: 1, Confidence: 71.75%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 <= -0.6103 AND BILL_AMT3 > -0.6721 AND PAY_3 > 2.2268
+  THEN credit_risk = Default
+
+[R53] (Samples: 1, Confidence: 69.76%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 > -0.6103 AND PAY_AMT3 <= 0.0449 AND PAY_2 <= 3.0367
+  THEN credit_risk = Default
+
+[R54] (Samples: 0, Confidence: 66.71%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 > -0.6103 AND PAY_AMT3 <= 0.0449 AND PAY_2 > 3.0367
+  THEN credit_risk = Default
+
+[R55] (Samples: 1, Confidence: 63.66%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 > -0.6103 AND PAY_AMT3 > 0.0449 AND LIMIT_BAL <= -0.4814
+  THEN credit_risk = Non-default
+
+[R56] (Samples: 1, Confidence: 67.72%)
+  IF PAY_0 > 1.3535 AND PAY_2 > -0.3056 AND PAY_6 > 1.1203 AND BILL_AMT6 > -0.6103 AND PAY_AMT3 > 0.0449 AND LIMIT_BAL > -0.4814
+  THEN credit_risk = Default
